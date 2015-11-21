@@ -1,0 +1,7 @@
+client ID:5095
+
+Client Secret: IwVS5w)fEHBY0LmHNq2g1w((
+
+key:cEDXpI8j)HgElPhC3)Z*sw((
+
+URI:https://api.stackexchange.com/2.2/questions?page=10&pagesize=25&order=desc&sort=votes&site=stackoverflow

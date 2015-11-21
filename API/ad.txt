@@ -1,0 +1,14 @@
+glyphicon glyphicon-education
+
+glyphicon glyphicon-certificate
+
+glyphicon glyphicon-map-marker
+
+
+<%--<div class="col-sm-3 col-md-4 hidden-xs">
+    <div id="map-canvas" style="width:300px; height:300px"></div>
+        <br />
+    <div>
+     <iframe src='http://www.aspspider.com/ads/CubeAd.htm' width='300' height='250' frameborder='0' marginwidth='0' marginheight='0'></iframe>
+    </div>
+</div>--%>

@@ -1,0 +1,5 @@
+flickr.photos.getSizes
+
+https:\/\/farm1.staticflickr.com\/462\/19805964254_277b280450_t.jpg
+
+https://www.flickr.com/photos/135358381@N04/20419032562/sizes/n/
