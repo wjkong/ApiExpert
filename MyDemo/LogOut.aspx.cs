@@ -15,7 +15,7 @@ namespace MyDemo
             FormsAuthentication.SignOut();
             this.Session.Clear();
             this.Session.Abandon();
-            base.Response.Redirect("~/Default.aspx");
+            base.Response.Redirect("~/Default.aspx") ;
         }
     }
 }
