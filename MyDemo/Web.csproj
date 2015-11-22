@@ -409,6 +409,7 @@
     <Content Include="Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\Deployment.pubxml" />
     <None Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <PropertyGroup>
