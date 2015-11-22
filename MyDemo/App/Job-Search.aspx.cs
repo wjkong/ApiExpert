@@ -10,7 +10,7 @@ using System.Web.Script.Services;
 using System.Net;
 using System.Text;
 
-namespace MyDemo.Search
+namespace Kong.ApiExpert.Web.Search
 {
     public partial class Job_Search : System.Web.UI.Page
     {

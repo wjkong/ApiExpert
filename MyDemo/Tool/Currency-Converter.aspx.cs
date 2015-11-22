@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo.Demos
+namespace Kong.ApiExpert.Web.Demos
 {
     public partial class CurrencyConverter : System.Web.UI.Page
     {

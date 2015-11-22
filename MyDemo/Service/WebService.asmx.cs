@@ -14,7 +14,7 @@ using System.Xml.XPath;
 using Kong.ApiExpert.Logic;
 using Kong.ApiExpert.Model;
 
-namespace MyDemo.Service
+namespace Kong.ApiExpert.Web.Service
 {
     /// <summary>
     /// Summary description for WebService

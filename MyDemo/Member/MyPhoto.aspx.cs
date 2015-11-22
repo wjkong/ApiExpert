@@ -10,7 +10,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 
-namespace MyDemo.Member
+namespace Kong.ApiExpert.Web.Member
 {
     public partial class MyPhoto : System.Web.UI.Page
     {

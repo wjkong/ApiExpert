@@ -9,7 +9,7 @@ using System.Web.Services;
 using System.Web.Script.Services;
 using System.Text;
 
-namespace MyDemo.App
+namespace Kong.ApiExpert.Web.App
 {
     public partial class place_finder : System.Web.UI.Page
     {

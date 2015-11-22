@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyDemo.Search {
+namespace Kong.ApiExpert.Web.Search {
     
     
     public partial class Ask_StackOverflow {

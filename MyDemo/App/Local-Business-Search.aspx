@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Local Business Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Local-Business-Search.aspx.cs" Inherits="MyDemo.Search.Local_Business_Search" %>
+﻿<%@ Page Title="Local Business Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Local-Business-Search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Local_Business_Search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {

@@ -12,7 +12,7 @@ using SimpleOAuth;
 using System.IO;
 using System.Text;
 
-namespace MyDemo.Search
+namespace Kong.ApiExpert.Web.Search
 {
     public partial class Local_Business_Search : System.Web.UI.Page
     {

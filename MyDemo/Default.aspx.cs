@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using Kong.ApiExpert.Logic;
 
 
-namespace MyDemo
+namespace Kong.ApiExpert.Web
 {
     public partial class Default : System.Web.UI.Page
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo.Search
+namespace Kong.ApiExpert.Web.Search
 {
     public partial class Ask_StackOverflow : System.Web.UI.Page
     {

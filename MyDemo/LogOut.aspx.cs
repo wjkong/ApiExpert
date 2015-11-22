@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 
-namespace MyDemo
+namespace Kong.ApiExpert.Web
 {
     public partial class LogOut : System.Web.UI.Page
     {

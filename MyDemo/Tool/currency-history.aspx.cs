@@ -9,7 +9,7 @@ using System.Web.Script.Services;
 using System.Net;
 using System.Text;
 
-namespace MyDemo.Tool
+namespace Kong.ApiExpert.Web.Tool
 {
     public partial class currency_history : System.Web.UI.Page
     {

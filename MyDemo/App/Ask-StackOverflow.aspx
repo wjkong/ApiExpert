@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Question/Answer Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Ask-StackOverflow.aspx.cs" Inherits="MyDemo.Search.Ask_StackOverflow" %>
+﻿<%@ Page Title="Question/Answer Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Ask-StackOverflow.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Ask_StackOverflow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 <style type="text/css">

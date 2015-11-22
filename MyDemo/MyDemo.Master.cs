@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo
+namespace Kong.ApiExpert.Web
 {
     public partial class MyDemo : System.Web.UI.MasterPage
     {

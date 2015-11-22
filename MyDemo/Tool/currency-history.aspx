@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="currency-history.aspx.cs" Inherits="MyDemo.Tool.currency_history" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="currency-history.aspx.cs" Inherits="Kong.ApiExpert.Web.Tool.currency_history" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

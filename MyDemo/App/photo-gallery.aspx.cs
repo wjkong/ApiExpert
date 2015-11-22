@@ -11,7 +11,7 @@ using SimpleOAuth;
 using System.IO;
 using System.Text;
 
-namespace MyDemo.App
+namespace Kong.ApiExpert.Web.App
 {
     public partial class photo_gallery : System.Web.UI.Page
     {

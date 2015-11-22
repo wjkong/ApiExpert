@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Documentaion" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Blog.aspx.cs" Inherits="MyDemo.Blog.Blog" %>
+﻿<%@ Page Title="Documentaion" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Blog.aspx.cs" Inherits="Kong.ApiExpert.Web.Blog.Blog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

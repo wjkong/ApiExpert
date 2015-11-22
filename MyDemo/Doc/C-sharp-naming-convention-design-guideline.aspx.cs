@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo.Blog
+namespace Kong.ApiExpert.Web.Blog
 {
     public partial class naming_convention_design_guideline : System.Web.UI.Page
     {

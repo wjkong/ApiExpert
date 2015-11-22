@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Job Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Job-Search.aspx.cs" Inherits="MyDemo.Search.Job_Search" %>
+﻿<%@ Page Title="Job Search" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Job-Search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Job_Search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

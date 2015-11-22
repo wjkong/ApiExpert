@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyDemo {
+namespace Kong.ApiExpert.Web {
     
     
     public partial class Mobile {

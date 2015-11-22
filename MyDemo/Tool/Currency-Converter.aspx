@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Currency Converter" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Currency-Converter.aspx.cs" Inherits="MyDemo.Demos.CurrencyConverter" %>
+﻿<%@ Page Title="Currency Converter" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Currency-Converter.aspx.cs" Inherits="Kong.ApiExpert.Web.Demos.CurrencyConverter" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

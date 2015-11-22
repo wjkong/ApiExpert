@@ -1,4 +1,4 @@
-﻿<%@ Page Title="World Weather Forecast" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="world-weather-forecast.aspx.cs" Inherits="MyDemo.Tool.world_weather_forecast" %>
+﻿<%@ Page Title="World Weather Forecast" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="world-weather-forecast.aspx.cs" Inherits="Kong.ApiExpert.Web.Tool.world_weather_forecast" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .glyphicon-plus, .glyphicon-minus

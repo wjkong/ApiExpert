@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo.Tool
+namespace Kong.ApiExpert.Web.Tool
 {
     public partial class world_weather_forecast : System.Web.UI.Page
     {

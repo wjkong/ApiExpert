@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyDemo.Prototype
+namespace Kong.ApiExpert.Web.Prototype
 {
     public partial class ApplicationForm : System.Web.UI.Page
     {

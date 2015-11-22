@@ -13,7 +13,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace MyDemo
+namespace Kong.ApiExpert.Web
 {
     public partial class Login : System.Web.UI.Page
     {

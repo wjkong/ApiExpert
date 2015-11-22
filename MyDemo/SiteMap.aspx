@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Site Map" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="SiteMap.aspx.cs" Inherits="MyDemo.SiteMap" %>
+﻿<%@ Page Title="Site Map" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="SiteMap.aspx.cs" Inherits="Kong.ApiExpert.Web.SiteMap" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .tree {

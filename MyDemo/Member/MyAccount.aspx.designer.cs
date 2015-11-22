@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyDemo.Member
+namespace Kong.ApiExpert.Web.Member
 {
 
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyDemo.Tool
+namespace Kong.ApiExpert.Web.Tool
 {
 
 
