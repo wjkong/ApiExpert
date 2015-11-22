@@ -1,1 +1,0 @@
-http://mymemory.translated.net/api/get?q=Hello World!&langpair=en|it
