@@ -291,7 +291,7 @@ function callback(results,   status,   page) {
             str.push("<tr>");
             str.push(detail.format(place.place_id,   labels[index],   place.name));
             str.push("<td class=hidden-xs><span class=stars>",   place.rating == undefined ? 0 : place.rating,   "</span></td>");
-            str.push(address.format(place.geometry.location.G,   place.geometry.location.K,   place.vicinity));
+            str.push(address.format(place.geometry.location.lat,   place.geometry.location.lng,   place.vicinity));
             str.push("</tr>");
         });
 
@@ -314,8 +314,8 @@ function callback(results,   status,   page) {
 function DetermineLocation() {
     var place = autocomplete.getPlace();
 
-    $('#hidLat').val(place.geometry.location.G);
-    $('#hidLng').val(place.geometry.location.K);
+    $('#hidLat').val(place.geometry.location.lat);
+    $('#hidLng').val(place.geometry.location.lng);
 }
 
 var placeType = [
