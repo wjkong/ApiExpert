@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using Model;
+using Kong.ApiExpert.Model;
 
-namespace DAL
+namespace Kong.ApiExpert.DAL
 {
     public class CommentDacMgr : DataAccessBase
     {

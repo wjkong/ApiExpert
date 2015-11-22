@@ -11,8 +11,8 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using Logic;
-using Model;
+using Kong.ApiExpert.Logic;
+using Kong.ApiExpert.Model;
 
 namespace MyDemo.Service
 {

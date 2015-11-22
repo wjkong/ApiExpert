@@ -5,9 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
-using Model;
+using Kong.ApiExpert.Model;
 
-namespace DAL
+namespace Kong.ApiExpert.DAL
 {
     public abstract class SQLHelper
     {

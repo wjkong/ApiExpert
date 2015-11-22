@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
-using Logic;
-using Model;
+using Kong.ApiExpert.Logic;
+using Kong.ApiExpert.Model;
 using System.Web.Services;
 using System.Web.Script.Services;
 using System.Net;
@@ -38,7 +38,7 @@ namespace MyDemo
             {
                 if (!IsRobot(response))
                 {
-                    Logic.AccountMgr accountMgr = new AccountMgr();
+                    Kong.ApiExpert.Logic.AccountMgr accountMgr = new AccountMgr();
                     Account account = new Account();
                     account.UserName = username;
                     account.Password = password;

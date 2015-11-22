@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 
-namespace DAL
+namespace Kong.ApiExpert.DAL
 {
     public class DataAccessBase
     {

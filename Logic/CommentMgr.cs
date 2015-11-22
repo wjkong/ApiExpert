@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Model;
-using DAL;
+using Kong.ApiExpert.Model;
+using Kong.ApiExpert.DAL;
 
-namespace Logic
+namespace Kong.ApiExpert.Logic
 {
     public class CommentMgr
     {

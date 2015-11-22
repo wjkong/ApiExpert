@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DAL;
-using Model;
+using Kong.ApiExpert.DAL;
+using Kong.ApiExpert.Model;
 
-namespace Logic
+namespace Kong.ApiExpert.Logic
 {
     public class AccountMgr
     {
