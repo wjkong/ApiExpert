@@ -154,6 +154,7 @@ function ResetCurrentPage(target, pageIndex) {
 }
 
 function Refresh(target) {
+    debugger;
     var start = new Date().getTime();
 
     var term = $('#txtBusiness').val();
@@ -165,7 +166,6 @@ function Refresh(target) {
     if ($.trim(location).length == 0)
         return false;
 
-    //    var url = "../Service/WebService.asmx/RetrieveLocalInfo";
     var url = "Local-Business-Search.aspx/RetrieveLocalInfo"
     var param = "{ 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }";
     param = param.format(term, location, startIndex, pageSize, radius);
