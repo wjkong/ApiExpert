@@ -1,4 +1,4 @@
-﻿<%@ Page Title="C Sharp Naming Convention Design Guideline" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="C-sharp-naming-convention-design-guideline.aspx.cs" Inherits="Kong.ApiExpert.Web.Blog.naming_convention_design_guideline" %>
+﻿<%@ Page Title="C Sharp Naming Convention Design Guideline" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="C-sharp-naming-convention-design-guideline.aspx.cs" Inherits="Kong.ApiExpert.Web.Blog.naming_convention_design_guideline" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 td 

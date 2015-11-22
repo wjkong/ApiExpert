@@ -10,7 +10,7 @@
 namespace Kong.ApiExpert.Web {
     
     
-    public partial class MyDemo {
+    public partial class Site {
         
         /// <summary>
         /// head control.

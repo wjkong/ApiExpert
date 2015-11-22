@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyDemo.master.cs" Inherits="Kong.ApiExpert.Web.MyDemo" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Kong.ApiExpert.Web.Site" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">

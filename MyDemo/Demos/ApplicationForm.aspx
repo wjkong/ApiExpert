@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="ApplicationForm.aspx.cs" Inherits="Kong.ApiExpert.Web.Prototype.ApplicationForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ApplicationForm.aspx.cs" Inherits="Kong.ApiExpert.Web.Prototype.ApplicationForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script src="../Scripts/CountryState.js" type="text/javascript"></script>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Mortgage Calculator" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="Mortgage-Calculator.aspx.cs" Inherits="Kong.ApiExpert.Web.Demos.MortgageCalculator" %>
+﻿<%@ Page Title="Mortgage Calculator" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Mortgage-Calculator.aspx.cs" Inherits="Kong.ApiExpert.Web.Demos.MortgageCalculator" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

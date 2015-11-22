@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Place Finder" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="place-finder.aspx.cs" Inherits="Kong.ApiExpert.Web.App.place_finder" %>
+﻿<%@ Page Title="Place Finder" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="place-finder.aspx.cs" Inherits="Kong.ApiExpert.Web.App.place_finder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

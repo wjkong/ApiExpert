@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Language Translator" Language="C#" MasterPageFile="~/MyDemo.Master" AutoEventWireup="true" CodeBehind="language-translator.aspx.cs" Inherits="Kong.ApiExpert.Web.Tool.language_translator" %>
+﻿<%@ Page Title="Language Translator" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="language-translator.aspx.cs" Inherits="Kong.ApiExpert.Web.Tool.language_translator" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
