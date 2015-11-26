@@ -154,7 +154,6 @@ function ResetCurrentPage(target, pageIndex) {
 }
 
 function Refresh(target) {
-    debugger;
     var start = new Date().getTime();
 
     var term = $('#txtBusiness').val();
