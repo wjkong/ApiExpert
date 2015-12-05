@@ -39,9 +39,9 @@ namespace Kong.ApiExpert.DAL
             com.Connection = GetConnection();
         }
 
-        private static SqlConnection GetConnection()
+        public static SqlConnection GetConnection()
         {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["MyDemo"].ToString());
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["ApiExpertConn"].ToString());
         }
 
         public static SqlParameter PrepareOutputParam(SqlCommand com, string param)

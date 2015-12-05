@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace Kong.ApiExpert.Model
@@ -22,5 +23,23 @@ namespace Kong.ApiExpert.Model
         //[Display(Name = "Confirm password")]
         //[Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public Account()
+        {
+            
+        }
+
+        public Account(Account info)
+        {
+            this.Clone(info);
+        }
+
+        public void Clone(Account info)
+        {
+            foreach (PropertyInfo property in base.GetType().GetProperties())
+            {
+                property.SetValue(this, property.GetValue(info, null), null);
+            }
+        }
     }
 }

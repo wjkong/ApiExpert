@@ -8,26 +8,31 @@ using Kong.ApiExpert.Model;
 
 namespace Kong.ApiExpert.DAL
 {
-    public class AccountDacMgr : DataAccessBase
+    public class AccountDacMgr : Account
     {
         protected SqlDataReader dreader;
+        
+        public AccountDacMgr(Account info) : base(info)
+        {
+        }
 
-        public bool InsertUser(Account info)
+
+        public bool InsertUser()
         {
             bool success = false;
             SqlCommand cmd = null;
 
             try
             {
-                using (var connection = new SqlConnection(ConnectionString))
+                using (var connection = SQLHelper.GetConnection())
                 {
                     cmd = new SqlCommand();
 
                     cmd.CommandText = @"INSERT INTO [User] (UserName, Password) VALUES (@UserName, @Password)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
-                    cmd.Parameters.AddWithValue("@UserName", info.UserName);
-                    cmd.Parameters.AddWithValue("@Password", info.Password);
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
+                    cmd.Parameters.AddWithValue("@Password", Password);
 
                     cmd.Connection.Open();
                     cmd.ExecuteNonQuery();
@@ -47,7 +52,7 @@ namespace Kong.ApiExpert.DAL
             return success;
         }
 
-        public bool LoginDAC(Account info)
+        public bool LoginDAC()
         {
             bool flag = false;
 
@@ -56,15 +61,15 @@ namespace Kong.ApiExpert.DAL
          
             try
             {
-                using (var connection = new SqlConnection(ConnectionString))
+                using (var connection = SQLHelper.GetConnection())
                 {
                     cmd = new SqlCommand();
 
-                    cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password";
+                    cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password AND (Status = 'C' or Status = 'A')";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
-                    cmd.Parameters.AddWithValue("@Password", info.Password);
-                    cmd.Parameters.AddWithValue("@UserName", info.UserName);
+                    cmd.Parameters.AddWithValue("@Password", Password);
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
 
 
                     if (cmd.Connection.State == ConnectionState.Closed)

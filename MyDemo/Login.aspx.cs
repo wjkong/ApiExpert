@@ -38,12 +38,13 @@ namespace Kong.ApiExpert.Web
             {
                 if (!IsRobot(response))
                 {
-                    Kong.ApiExpert.Logic.AccountMgr accountMgr = new AccountMgr();
                     Account account = new Account();
                     account.UserName = username;
                     account.Password = password;
 
-                    if (accountMgr.Login(account))
+                    var accountMgr = new AccountMgr(account);
+
+                    if (accountMgr.Login())
                     {
                         FormsAuthentication.SetAuthCookie(account.UserName, false);
 

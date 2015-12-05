@@ -7,13 +7,18 @@ using Kong.ApiExpert.Model;
 
 namespace Kong.ApiExpert.Logic
 {
-    public class AccountMgr
+    public class AccountMgr : Account
     {
-        protected AccountDacMgr dacMgr = new AccountDacMgr();
+        protected AccountDacMgr dacMgr;  
 
-        public bool Login(Account info)
+        public AccountMgr(Account info) : base(info)
         {
-            return dacMgr.LoginDAC(info);
+        }
+
+        public bool Login()
+        {
+            dacMgr = new AccountDacMgr(this);
+            return dacMgr.LoginDAC();
         }
     }
 }
