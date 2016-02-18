@@ -166,8 +166,9 @@ function Refresh(target) {
         return false;
 
     var url = "Local-Business-Search.aspx/RetrieveLocalInfo"
-    var param = "{ 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }";
+    var param = "{business: { 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }}";
     param = param.format(term, location, startIndex, pageSize, radius);
+
     var str = [];
     var i = 0;
     $.ajax({

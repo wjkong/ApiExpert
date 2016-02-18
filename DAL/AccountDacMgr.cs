@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
+﻿using Kong.ApiExpert.Model;
 using System.Data;
-using Kong.ApiExpert.Model;
+using System.Data.SqlClient;
 
 namespace Kong.ApiExpert.DAL
 {
@@ -58,14 +54,14 @@ namespace Kong.ApiExpert.DAL
 
 
             SqlCommand cmd = null;
-         
+
             try
             {
                 using (var connection = SQLHelper.GetConnection())
                 {
                     cmd = new SqlCommand();
 
-                    cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password AND (Status = 'C' or Status = 'A')";
+                    cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
                     cmd.Parameters.AddWithValue("@Password", Password);
@@ -76,7 +72,7 @@ namespace Kong.ApiExpert.DAL
                     {
                         cmd.Connection.Open();
                     }
-                    
+
                     this.dreader = cmd.ExecuteReader();
 
                     if (this.dreader.Read())
@@ -96,7 +92,7 @@ namespace Kong.ApiExpert.DAL
                 {
                     this.dreader.Close();
                 }
-                
+
                 cmd.Connection.Close();
             }
 

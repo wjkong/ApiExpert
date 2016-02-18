@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Kong.ApiExpert.Model
 {
@@ -19,8 +16,8 @@ namespace Kong.ApiExpert.Model
         public string Type { set; get; }
 
 
-        public string Url 
-        { 
+        public string Url
+        {
             set
             {
                 _url = value;
@@ -28,7 +25,7 @@ namespace Kong.ApiExpert.Model
                 if (!string.IsNullOrEmpty(_url) && _url == "http://apiexpert.net/")
                     _url = "http://apiexpert.net/Default.aspx";
             }
-            
+
             get
             {
                 return _url;
@@ -61,5 +58,21 @@ namespace Kong.ApiExpert.Model
         //public string FromAge { get; set; }
         //public string UserIp { get; set; }
         //public string UserAgent { get; set; }
+    }
+
+    public class ParamBusiness
+    {
+        public string Term { get; set; }
+        public string Location { get; set; }
+        public int StartIndex { get; set; }
+        public int PageSize { get; set; }
+        public int Radius { get; set; }
+    }
+
+
+    public class City
+    {
+        public string Name { get; set; }
+        public int Population { get; set; }
     }
 }

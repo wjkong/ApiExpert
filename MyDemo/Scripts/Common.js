@@ -85,10 +85,6 @@ $.fn.ShowProgressIndicator = function () {
 
 
 $(function () {
-//    var k = "page3ddd";
-
-//    k = toSHA1(k);
-
     if ($('.page-header').length) {
         var pageHeader = document.title.replace("Api Expert - ", emptyStr);
 
