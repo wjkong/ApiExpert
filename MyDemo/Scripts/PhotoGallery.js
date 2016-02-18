@@ -148,20 +148,17 @@ function SetScreen(pageIndex, target) {
 
     var start = new Date().getTime();
 
-    var url = "photo-gallery.aspx/GetRecentPhoto";
-    var param = "{ 'pageIndex': '{0}',  'pageSize': '{1}'}";
-    param = param.format(pageIndex, 9);
+
+    var pageSize = 9;
+    var uri = "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=444944a3544fd05499d50adaaa0d5188&per_page={0}&page={1}&format=json&jsoncallback=onSuccess";
+             
+    uri = uri.format(pageSize, pageIndex);
 
     $.ajax({
-        type: 'POST',
-        url: url,
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: param,
-        success: onSuccess,
-        error: function (xhr, status, error) {
-            alert(error);
-        },
+        type: 'GET',
+        url: uri,
+        dataType: "jsonp",
+        crossDomain: true,
         complete: function (xhr, status) {
             if (target != null) {
                 $('.progressIndicator').fadeOut(100).remove();
@@ -175,22 +172,21 @@ function SetScreen(pageIndex, target) {
     });
 }
 
-function onSuccess(data, status) {
-    var jsonData = JSON.parse(data.d);
-    if (jsonData.stat == "ok") {
+function onSuccess(data) {
+    if (data.stat == "ok") {
 
         var str = [];
 
         var uri = "<img class='img-thumbnail' data-toggle='modal' data-target='#modalPhoto' src='https://farm{0}.staticflickr.com/{1}/{2}_{3}_n.jpg' data-index='{4}' />";
 
 
-        $.each(jsonData.photos.photo, function (index, picture) {
+        $.each(data.photos.photo, function (index, picture) {
             str.push("<div class='col-sm-6 col-md-4'>");
             str.push(uri.format(picture.farm, picture.server, picture.id, picture.secret, index));
             str.push("</div>");
         });
 
-        BuildNavBar(jsonData.photos.pages);
+        BuildNavBar(data.photos.pages);
 
         $('#Main').html(str.join(emptyStr));
 
@@ -204,7 +200,7 @@ function onSuccess(data, status) {
         else
             $('#btnPrev').removeAttr('disabled', 'disabled');
 
-        totalPhoto = jsonData.photos.total
+        totalPhoto = data.photos.total
 
         if (currentPage * pageSize < totalPhoto) {
             $('#btnNext').removeAttr('disabled', 'disabled');
