@@ -43,4 +43,23 @@ namespace Kong.ApiExpert.Model
         public int TotalComment { get; set; }
         public string ErrorMeg { get; set; }
     }
+
+    public class ParamJob
+    {
+        public string Query { get; set; }
+        public string Country { get; set; }
+        //public string State { get; set; }
+
+        //public string City { get; set; }
+        //public string StartIndex { get; set; }
+        //public string PageSize { get; set; }
+        //public string Sort { get; set; }
+        //public string Radius { get; set; }
+
+        //public string SiteType { get; set; }
+        //public string JobType { get; set; }
+        //public string FromAge { get; set; }
+        //public string UserIp { get; set; }
+        //public string UserAgent { get; set; }
+    }
 }

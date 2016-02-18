@@ -6,6 +6,13 @@ using System.Text;
 
 namespace Kong.ApiExpert.Model
 {
+    public interface IAccountDacMgr
+    {
+        bool InsertUser();
+        bool LoginDAC();
+        void SetClone(Account account);
+    }
+
     public class Account
     {
         //[Required]
@@ -34,7 +41,7 @@ namespace Kong.ApiExpert.Model
             this.Clone(info);
         }
 
-        public void Clone(Account info)
+        protected void Clone(Account info)
         {
             foreach (PropertyInfo property in base.GetType().GetProperties())
             {

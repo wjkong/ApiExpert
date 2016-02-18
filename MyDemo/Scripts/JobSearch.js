@@ -141,17 +141,17 @@ function Refresh(target) {
     var fromAge = $('#ddlFromAge').val();
 
 
-    var url = "Job-Search.aspx/RetrieveJobInfo";
-    var param = "{ 'query': '{0}', 'country': '{1}', 'state': '{2}', 'city': '{3}', 'startIndex': '{4}', 'pageSize': '{5}', 'sort': '{6}', 'radius': '{7}', 'siteType': '{8}', 'jobType': '{9}', 'fromAge': '{10}', 'userIp': '{11}', 'userAgent': '{12}'}";
-    param = param.format(query, country, state, city, startIndex, pageSize, sort, radius, siteType, jobType, fromAge, userIp, userAgent);
+    var uri = "http://api.indeed.com/ads/apisearch?publisher=9598812143323456&format=json&q={0}&co={1}&l={2}%2C+{3}&start={4}&limit={5}&sort={6}&radius={7}&st={8}&jt={9}&fromage={10}&filter=&latlong=1&chnl=&userip={11}&useragent={12}&v=2";
+
+    uri = uri.format(query, country, state, city, startIndex, pageSize, sort, radius, siteType, jobType, fromAge, userIp, userAgent);
+
+
     var str = [];
     var i = 0;
     $.ajax({
-        type: 'POST',
-        url: url,
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: param,
+        type: 'GET',
+        url: uri,
+        dataType: "jsonp",
         beforeSend: function (xhr) {
             if (target != null)
                 target.ShowProgressIndicator();
@@ -179,7 +179,6 @@ function OnSuccess(data, status) {
 
     $('#btnPrev, #btnNext').show();
 
-    var jsonData = JSON.parse(data.d)
     var str = [];
 
     var tableHeaders = ["Job Title", "Company", "Job Description", "Location", "Published"];
@@ -200,7 +199,8 @@ function OnSuccess(data, status) {
 
     str.push("</tr>");
 
-    totalResults = jsonData.totalResults;
+    totalResults = data.totalResults;
+
     var pageSize = $('#ddlPageSize').val();
 
     var totalNumOfPages = Math.floor(totalResults / pageSize);
@@ -212,7 +212,7 @@ function OnSuccess(data, status) {
 
     var s = "<td data-latitude='{0}' data-longitude='{1}' class='map text-info hidden-xs' data-toggle='modal' data-target='#modalMap'><span class='glyphicon glyphicon-map-marker'></span>&nbsp;";
 
-    $.each(jsonData.results, function (index, result) {
+    $.each(data.results, function (index, result) {
         str.push("<tr>");
 
         str.push("<td class=text-left>", linkedTitle.format(result.url, result.jobtitle), "</td>");

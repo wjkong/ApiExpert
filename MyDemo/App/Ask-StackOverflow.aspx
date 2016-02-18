@@ -69,7 +69,7 @@
 <div class="page-header">
 </div>
 <div class="row" >
-    <div class = "col-sm-3 col-lg-2">
+    <div class = "col-sm-3 col-md-3 col-lg-2">
       <div class="input-group">
         <span class="input-group-addon"><label class="control-label" for="ddlPageSize">Page Size</label></span>
         <select id="ddlPageSize" class="form-control">
@@ -83,7 +83,7 @@
     </div>  
 </div>
 <br class="visible-xs-block"/>
-<div class="col-sm-9 col-lg-10" >
+<div class="col-sm-9 col-md-9 col-lg-10" >
  <div class="input-group">
       <input type=text  id="txtQuestion" class="form-control" autocomplete="off"" placeholder="Ask question from Stack Overflow ..." autofocus/>
       <span class="input-group-btn">

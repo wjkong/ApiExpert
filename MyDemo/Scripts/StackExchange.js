@@ -111,8 +111,9 @@ function Refresh(target) {
     var currentOrder = $('#hidCurrentOrder').val();
     var currentSort = $('#hidCurrentSort').val();
     var pageSize = $('#ddlPageSize').val();
+    var question = encodeURIComponent($('#txtQuestion').val().trim());
 
-    url = url.format(currentPage, pageSize, currentOrder, currentSort, $('#txtQuestion').val().trim(), filter);
+    url = url.format(currentPage, pageSize, currentOrder, currentSort, question, filter);
     var str = [];
 
     var totalItem;

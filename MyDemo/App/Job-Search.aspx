@@ -9,9 +9,7 @@
     <div class = "col-sm-9 col-lg-8">
         <div class="input-group">
             <span class="input-group-addon"><label class="control-label" for="txtCity">City</label></span>
-        
-            <input type=text  id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus=geolocate()/>
-      
+            <input type=text  id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus="geolocate()" />
         </div>
     </div>
      <div class = "col-sm-3 col-lg-4">
@@ -162,8 +160,8 @@
   <input type=hidden id=hidIpAddress value="1.2.3.4" />
   <input type=hidden id=hidActiveMenu value="hypApp" />
    <input type=hidden id=hidRoot value="../" />
-   <form runat=server id=JobSearch>
-   <asp:HiddenField ID="hidCountry" runat="server" ClientIDMode=Static />
+<form runat=server id=JobSearch>
+ <asp:HiddenField ID="hidCountry" runat="server" ClientIDMode=Static />
 
   <input type=hidden id=country />
   <input type=hidden id=administrative_area_level_1 />

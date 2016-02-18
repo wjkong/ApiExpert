@@ -12,6 +12,8 @@ using System.Web.Script.Services;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
+using Microsoft.Practices.Unity;
+using Kong.ApiExpert.DAL;
 
 namespace Kong.ApiExpert.Web
 {
@@ -38,23 +40,28 @@ namespace Kong.ApiExpert.Web
             {
                 if (!IsRobot(response))
                 {
-                    Account account = new Account();
-                    account.UserName = username;
-                    account.Password = password;
+                    IUnityContainer container = new UnityContainer();
+                    container.RegisterType<AccountMgr>();
+                    container.RegisterType<IAccountDacMgr, AccountDacMgr>();
 
-                    var accountMgr = new AccountMgr(account);
+
+                    AccountMgr accountMgr = container.Resolve<AccountMgr>();
+
+                    accountMgr.UserName = username;
+                    accountMgr.Password = password;
+
 
                     if (accountMgr.Login())
                     {
-                        FormsAuthentication.SetAuthCookie(account.UserName, false);
+                        FormsAuthentication.SetAuthCookie(accountMgr.UserName, false);
 
                         result = "OK";
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
 
             return result;

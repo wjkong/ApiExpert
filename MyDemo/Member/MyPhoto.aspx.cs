@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.Services;
-using System.Web.Script.Services;
-using System.Net;
 using System.IO;
+using System.Net;
 using System.Text;
+using System.Web.Script.Services;
+using System.Web.Services;
 
 namespace Kong.ApiExpert.Web.Member
 {
@@ -18,7 +13,7 @@ namespace Kong.ApiExpert.Web.Member
         {
 
         }
-        
+
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string GetMyPhotos(int pageIndex, int pageSize)
@@ -35,16 +30,6 @@ namespace Kong.ApiExpert.Web.Member
 
                 var request = WebRequest.Create(uriBuilder.ToString());
                 request.Method = "GET";
-
-                //request.SignRequest(
-                //    new Tokens
-                //    {
-                //        ConsumerKey = "e3NrQ4Lh6j3aVLBv-_hukg",
-                //        ConsumerSecret = "f7xptWlZpbUcym_Q-DU2CRxRd78",
-                //        AccessToken = "9kUT1RaLmU8xl4h348n7FSqgP2oDJUDG",
-                //        AccessTokenSecret = "KdmD20ewtRFrX5EpE0UrUajMB_4"
-                //    }
-                //).WithEncryption(EncryptionMethod.HMACSHA1).InHeader();
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 var stream = new StreamReader(response.GetResponseStream(), Encoding.UTF8);

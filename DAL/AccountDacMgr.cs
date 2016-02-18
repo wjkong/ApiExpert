@@ -8,14 +8,14 @@ using Kong.ApiExpert.Model;
 
 namespace Kong.ApiExpert.DAL
 {
-    public class AccountDacMgr : Account
+    public class AccountDacMgr : Account, IAccountDacMgr
     {
         protected SqlDataReader dreader;
-        
-        public AccountDacMgr(Account info) : base(info)
-        {
-        }
 
+        public void SetClone(Account account)
+        {
+            base.Clone(account);
+        }
 
         public bool InsertUser()
         {

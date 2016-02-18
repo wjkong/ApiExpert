@@ -38,16 +38,6 @@ namespace Kong.ApiExpert.Web.App
                 var request = WebRequest.Create(uriBuilder.ToString());
                 request.Method = "GET";
 
-                //request.SignRequest(
-                //    new Tokens
-                //    {
-                //        ConsumerKey = "e3NrQ4Lh6j3aVLBv-_hukg",
-                //        ConsumerSecret = "f7xptWlZpbUcym_Q-DU2CRxRd78",
-                //        AccessToken = "9kUT1RaLmU8xl4h348n7FSqgP2oDJUDG",
-                //        AccessTokenSecret = "KdmD20ewtRFrX5EpE0UrUajMB_4"
-                //    }
-                //).WithEncryption(EncryptionMethod.HMACSHA1).InHeader();
-
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 var stream = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
 

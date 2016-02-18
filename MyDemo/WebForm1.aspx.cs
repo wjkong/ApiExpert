@@ -1,4 +1,6 @@
-﻿using Kong.ApiExpert.Logic.Accounts;
+﻿using Kong.ApiExpert.Logic;
+using Kong.ApiExpert.Logic.Accounts;
+using Kong.ApiExpert.Logic.Users;
 using System;
 
 namespace Kong.ApiExpert.Web
@@ -7,17 +9,21 @@ namespace Kong.ApiExpert.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Account objAccount = new CheckingAccount();
+            //Account objAccount = new CheckingAccount();
 
-            objAccount = new SavingAccount();
+            //objAccount = new SavingAccount();
 
-            IBankAccount objBankAccount = new CheckingAccount();
+            //IBankAccount objBankAccount = new CheckingAccount();
 
-            objBankAccount.Withdraw(1000.00m);
+            //objBankAccount.Withdraw(1000.00m);
 
-            objBankAccount = new SavingAccount();
+            //objBankAccount = new SavingAccount();
 
-            objBankAccount.Deposit(200.00m);
+            //objBankAccount.Deposit(200.00m);
+
+            var user = UserFactory.CreateInstance(NUserType.AdminUser);
+
+            var user2 = UserFactory.CreateInstance(NUserType.StoreUser);
 
         }
     }
