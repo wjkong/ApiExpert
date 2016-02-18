@@ -22,7 +22,7 @@
 <div class="row" >
     <div class = "col-sm-10">
         <div class="input-group">
-          <input type=text  id="txtLocation" class="form-control" placeholder="Enter City/Town, Postal/Zip Code..." onfocus=geolocate()/>
+          <input type=text  id="txtLocation" class="form-control" placeholder="Enter City/Town, Postal/Zip Code..." onfocus="geolocate()" autofocus />
           <span class="input-group-btn">
             <button type="button" class="btn btn-success" id=btnForecast>Forecast</button>
           </span>

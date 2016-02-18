@@ -32,7 +32,7 @@
     <br class="visible-xs-block"/>
     <div class = "col-sm-6">
         <div class="input-group">
-          <input type=text  id="txtLocation" class="form-control" placeholder="Enter Address, City/Town, Postal/Zip Code..." onfocus=geolocate() />
+          <input type=text  id="txtLocation" class="form-control" placeholder="Enter Address, City/Town, Postal/Zip Code..." onfocus="geolocate()" autofocus />
           <span class="input-group-btn">
             <button type="button" class="btn btn-success" id=btnSearch><span class="glyphicon glyphicon-search"></span></button>
           </span>

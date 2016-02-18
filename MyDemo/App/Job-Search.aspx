@@ -9,7 +9,7 @@
     <div class = "col-sm-9 col-lg-8">
         <div class="input-group">
             <span class="input-group-addon"><label class="control-label" for="txtCity">City</label></span>
-            <input type=text  id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus="geolocate()" />
+            <input type=text  id="txtCity" class="form-control" placeholder="Enter your preferred city" onfocus="geolocate()" autofocus/>
         </div>
     </div>
      <div class = "col-sm-3 col-lg-4">
@@ -34,7 +34,7 @@
 <br class="visible-xs-block"/>
 <div class="col-sm-9 col-lg-10" >
  <div class="input-group">
-      <input type=text  id="txtQuery" class="form-control" placeholder="Search job by title, keywords or company name ..."/>
+      <input type=text  id="txtQuery" class="form-control" placeholder="Search job by title, keywords or company name ..." />
       <span class="input-group-btn">
         <button type="button" class="btn btn-success" id=btnSearch><span class="glyphicon glyphicon-search"></span></button>
       </span>

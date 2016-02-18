@@ -55,7 +55,7 @@
             <span class="input-group-addon"><label class="control-label  required" for="txtLocation">Location</label></span>
         
             <div class="inner-addon right-addon">
-            <input type=text  id="txtLocation" class="form-control" onfocus=geolocate() placeholder="Address, City, Postal Code or Road Intersaction..."/>
+            <input type=text  id="txtLocation" class="form-control" onfocus="geolocate()" autofocus placeholder="Address, City, Postal Code or Road Intersaction..."/>
             </div>
         </div>
     </div>

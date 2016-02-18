@@ -8,7 +8,7 @@
      <label class="control-label required col-sm-3" for=txtUsername>User Name</label>
      
     <div class="col-sm-9">
-         <input type=text id=txtUsername class="form-control" maxlength=16 />
+         <input type=text id=txtUsername class="form-control" maxlength=16 autofocus />
     </div>
   </div>
    <div class="form-group required">

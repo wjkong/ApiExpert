@@ -210,7 +210,6 @@
     <Content Include="Scripts\MortgageCalculator.js" />
     <Content Include="Scripts\PhotoGallery.js" />
     <Content Include="Scripts\StackExchange.js" />
-    <Content Include="Service\DataService.svc" />
     <Content Include="Service\WebService.asmx" />
     <Content Include="SiteMap.aspx" />
     <Content Include="Tool\world-weather-forecast.aspx" />
@@ -398,10 +397,6 @@
     <Compile Include="Demos\ApplicationForm.aspx.designer.cs">
       <DependentUpon>ApplicationForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Service\DataService.svc.cs">
-      <DependentUpon>DataService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="Service\IDataService.cs" />
     <Compile Include="Service\WebService.asmx.cs">
       <DependentUpon>WebService.asmx</DependentUpon>
       <SubType>Component</SubType>

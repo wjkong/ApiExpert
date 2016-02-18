@@ -11,7 +11,7 @@ namespace Kong.ApiExpert.Web.Tool
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //7f059d6f26f9a7440aa5a8c0fa5e0
+            
         }
     }
 }
