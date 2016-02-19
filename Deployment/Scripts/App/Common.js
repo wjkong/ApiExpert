@@ -8,7 +8,8 @@ var space = " ";
 var root = emptyStr;
 var linkText = "<a target=_blank href='{0}'>{1}</a>";
 var mapLink = "<span data-latitude='{0}' data-longitude='{1}' class='map text-info' data-toggle='modal' data-target='#modalMap'><span class='glyphicon glyphicon-map-marker'></span>{2}</span>";
-var imgLink = "<img src='{0}' alt=icon />"; 
+var imgLink = "<img src='{0}' alt=icon />";
+var jsonFormat = "application/json; charset=utf-8";
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -85,10 +86,6 @@ $.fn.ShowProgressIndicator = function () {
 
 
 $(function () {
-//    var k = "page3ddd";
-
-//    k = toSHA1(k);
-
     if ($('.page-header').length) {
         var pageHeader = document.title.replace("Api Expert - ", emptyStr);
 

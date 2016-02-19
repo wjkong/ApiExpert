@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Kong.ApiExpert.Logic;
-
+﻿using NLog;
+using System;
 
 namespace Kong.ApiExpert.Web
 {
     public partial class Default : System.Web.UI.Page
     {
-        
+        private Logger logMgr = LogManager.GetCurrentClassLogger();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            logMgr.Info("Hello World");
+
             string s = string.Empty;
         }
     }

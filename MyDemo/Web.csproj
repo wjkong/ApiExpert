@@ -171,6 +171,12 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Configs\AppSetting.config" />
+    <Content Include="Configs\ConnectionString.config" />
+    <Content Include="Configs\NLog.config" />
+    <None Include="Configs\NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -208,7 +214,6 @@
     <Content Include="Images\mcad.gif" />
     <Content Include="Images\mcsd.gif" />
     <Content Include="Images\MsSql.jpg" />
-    <Content Include="Images\Portait_sm.jpg" />
     <Content Include="Images\Portait_xs.jpg" />
     <Content Include="Images\Portait_xs2.jpg" />
     <Content Include="Images\Portrait_sm2.jpg" />

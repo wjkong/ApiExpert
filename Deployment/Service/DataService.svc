@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Kong.ApiExpert.Web.Service.DataService" CodeBehind="DataService.svc.cs" %>
