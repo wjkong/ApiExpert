@@ -65,5 +65,5 @@ Yes, it could. It should be used protected, rather than public. Also, it will be
 </div>
 <input type=hidden id=hidActiveMenu value="hypBlog" />
 <input type=hidden id=hidRoot value="../" />
-<script src="../Scripts/Common.js" type="text/javascript"></script>
+
 </asp:Content>

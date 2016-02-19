@@ -149,6 +149,6 @@
       <input type=hidden id=hidLat  />
          <input type=hidden id=hidLng  />
 
-    <script src="../Scripts/Common.js" type="text/javascript"></script>
-    <script src="../Scripts/PlaceFinder.js" type="text/javascript"></script>
+
+    <script src="/Scripts/App/PlaceFinder.js" type="text/javascript"></script>
 </asp:Content>

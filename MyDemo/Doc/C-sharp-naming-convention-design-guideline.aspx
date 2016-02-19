@@ -484,6 +484,5 @@ Any methods that have more than 30 lines of coding should be broken down to othe
 </div>
 <input type=hidden id=hidActiveMenu value="hypBlog" />
 <input type=hidden id=hidRoot value="../" />
-<script src="../Scripts/Common.js" type="text/javascript"></script>
 
 </asp:Content>

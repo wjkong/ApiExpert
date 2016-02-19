@@ -70,14 +70,12 @@
             </li>
         </ul>
         <p>This site is takes advantage of Service Oriented Architecture open data platform with REST-based APIs and heavily leverages API-based access to data and services.  </p>
-     <%--   <p>
-            Without data, the applicaton will be useless to user. By utilizing a great number of API Web Service in Internet. 
-        </p>--%>
+   
         <p>Since open source is the trend of programming industry. Thus, we carefully choose open source technologies and heavily use for development, such as HTML5, JQuery, Bootstrap, Angular, JSON, Google Map API and CSS3. 
         </p>
      </div>
 </div>
 </div>
 <input type=hidden id=hidActiveMenu value="hypHome" />
-<script src="Scripts/Common.js" type="text/javascript"></script>
+
 </asp:Content>

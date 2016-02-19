@@ -4,7 +4,7 @@
 .glyphicon-plus, .glyphicon-minus
 {
     cursor: pointer;
-    cursor: hand;
+
     
     font-family: 'Glyphicons Halflings';
     font-weight: normal;
@@ -133,7 +133,6 @@
               'packages':['corechart']
             }]
           }"></script>
- <script src="../Scripts/Common.js" type="text/javascript"></script>
-  <script src="../Scripts/weatherforecast.js" type="text/javascript"></script>
- 
+
+  <script src="/Scripts/App/weatherforecast.js" type="text/javascript"></script>
 </asp:Content>

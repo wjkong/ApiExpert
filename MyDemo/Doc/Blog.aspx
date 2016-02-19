@@ -19,5 +19,4 @@
 </div>
 <input type=hidden id=hidActiveMenu value="hypBlog" />
 <input type=hidden id=hidRoot value="../" />
-<script src="../Scripts/Common.js" type="text/javascript"></script>
 </asp:Content>

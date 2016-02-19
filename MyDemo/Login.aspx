@@ -51,7 +51,7 @@
 </div>
 </div>
 </div>
-<script src="Scripts/Common.js" type="text/javascript"></script>
-<script src="Scripts/Login.js" type="text/javascript"></script>
+
+<script src="/Scripts/App/Login.js" type="text/javascript"></script>
 <script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
 </asp:Content>

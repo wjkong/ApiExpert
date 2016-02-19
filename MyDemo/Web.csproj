@@ -106,6 +106,12 @@
   <ItemGroup>
     <Content Include="App\photo-gallery.aspx" />
     <Content Include="App\place-finder.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -142,13 +148,15 @@
     <Content Include="Doc\Blog.aspx" />
     <Content Include="Doc\C-sharp-interview-question.aspx" />
     <Content Include="Doc\C-sharp-naming-convention-design-guideline.aspx" />
-    <Content Include="CSS\Style.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Data\GoogleSiteMap.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Data\Photos.xml" />
     <Content Include="Default.aspx" />
     <Content Include="App\Local-Business-Search.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\AskQuestion.PNG" />
@@ -158,18 +166,25 @@
     <Content Include="Member\ImageManage.aspx" />
     <Content Include="Member\MyPhoto.aspx" />
     <Content Include="robots.txt" />
-    <Content Include="Scripts\jquery-2.1.4-vsdoc.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
-    <Content Include="Scripts\MyPhoto.js" />
-    <Content Include="Scripts\CurrencyHistory.js" />
-    <Content Include="Scripts\Login.js" />
-    <Content Include="Scripts\PlaceFinder.js" />
-    <Content Include="Scripts\LanguageTranslator.js" />
-    <Content Include="Scripts\LocalBusinessSearch.js" />
-    <Content Include="Scripts\weatherforecast.js" />
+    <Content Include="Scripts\App\MyPhoto.js" />
+    <Content Include="Scripts\App\CurrencyHistory.js" />
+    <Content Include="Scripts\App\Login.js" />
+    <Content Include="Scripts\App\PlaceFinder.js" />
+    <Content Include="Scripts\App\LanguageTranslator.js" />
+    <Content Include="Scripts\App\LocalBusinessSearch.js" />
+    <Content Include="Scripts\App\weatherforecast.js" />
     <Content Include="Tool\Currency-Converter.aspx" />
     <Content Include="App\Job-Search.aspx" />
     <Content Include="Tool\currency-history.aspx" />
@@ -203,13 +218,13 @@
     <Content Include="LogOut.aspx" />
     <Content Include="Member\MyAccount.aspx" />
     <Content Include="Demos\ApplicationForm.aspx" />
-    <Content Include="Scripts\Common.js" />
-    <Content Include="Scripts\CountryState.js" />
-    <Content Include="Scripts\CurrencyConverter.js" />
-    <Content Include="Scripts\JobSearch.js" />
-    <Content Include="Scripts\MortgageCalculator.js" />
-    <Content Include="Scripts\PhotoGallery.js" />
-    <Content Include="Scripts\StackExchange.js" />
+    <Content Include="Scripts\App\Common.js" />
+    <Content Include="Scripts\App\CountryState.js" />
+    <Content Include="Scripts\App\CurrencyConverter.js" />
+    <Content Include="Scripts\App\JobSearch.js" />
+    <Content Include="Scripts\App\MortgageCalculator.js" />
+    <Content Include="Scripts\App\PhotoGallery.js" />
+    <Content Include="Scripts\App\StackExchange.js" />
     <Content Include="Service\WebService.asmx" />
     <Content Include="SiteMap.aspx" />
     <Content Include="Tool\world-weather-forecast.aspx" />
@@ -433,7 +448,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\Pictures\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -456,8 +470,16 @@
     <Content Include="Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\Deployment.pubxml" />
-    <None Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -167,5 +167,4 @@
      </ul>
 </div>
 <input type=hidden id=hidActiveMenu value="HypSiteMap" />
-<script src="Scripts/Common.js" type="text/javascript"></script>
 </asp:Content>
