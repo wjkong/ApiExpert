@@ -150,5 +150,5 @@
          <input type=hidden id=hidLng  />
 
 
-    <script src="/Scripts/App/PlaceFinder.js" type="text/javascript"></script>
+    <script src="../Scripts/App/PlaceFinder.js" type="text/javascript"></script>
 </asp:Content>

@@ -123,6 +123,6 @@
   <input type=hidden id=hidActiveMenu value="hypApp" />
   <input type=hidden id=hidRoot value="../" />
   
-  <script src="/Scripts/App/StackExchange.js" type="text/javascript"></script>
+  <script src="../Scripts/App/StackExchange.js" type="text/javascript"></script>
 
 </asp:Content>

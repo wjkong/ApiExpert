@@ -163,6 +163,7 @@
     <Content Include="Images\AskQuestion_sm.png" />
     <Content Include="Images\JobSearch.PNG" />
     <Content Include="Images\JobSearch_sm.png" />
+    <Content Include="index.html" />
     <Content Include="Member\ImageManage.aspx" />
     <Content Include="Member\MyPhoto.aspx" />
     <Content Include="robots.txt" />

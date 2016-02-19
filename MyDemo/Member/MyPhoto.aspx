@@ -36,5 +36,5 @@
 
    <input type=hidden id=hidRoot value="../" />
 
-  <script src="/Scripts/App/MyPhoto.js" type="text/javascript"></script>
+  <script src="../Scripts/App/MyPhoto.js" type="text/javascript"></script>
 </asp:Content>

@@ -134,5 +134,5 @@
             }]
           }"></script>
 
-  <script src="/Scripts/App/weatherforecast.js" type="text/javascript"></script>
+  <script src="../Scripts/App/weatherforecast.js" type="text/javascript"></script>
 </asp:Content>

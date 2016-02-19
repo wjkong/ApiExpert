@@ -171,6 +171,6 @@
    
 
 
-<script src="/Scripts/App/JobSearch.js" type="text/javascript"></script>
+<script src="../Scripts/App/JobSearch.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://gdc.indeed.com/ads/apiresults.js" async></script>
 </asp:Content>

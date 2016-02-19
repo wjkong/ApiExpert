@@ -357,5 +357,5 @@
 <input type=hidden id=hidActiveMenu value="hypTool" />
   <input type=hidden id=hidRoot value="../" />
 
- <script src="/Scripts/App/LanguageTranslator.js" type="text/javascript"></script>
+ <script src="../Scripts/App/LanguageTranslator.js" type="text/javascript"></script>
 </asp:Content>
