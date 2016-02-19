@@ -108,7 +108,7 @@ $(function () {
         $.ajax({
             type: 'POST',
             url: url,
-            contentType: "application/json; charset=utf-8",
+            contentType: jsonFormat,
             dataType: "json",
             data: param,
             success: OnSuccess,
@@ -129,7 +129,7 @@ $(function () {
 
 });
 
-function OnSuccess(data,   status) {
+function OnSuccess(data, status) {
     var jsonData = JSON.parse(data.d);
 
     if (jsonData.status == "OK") {

@@ -174,7 +174,7 @@ function Refresh(target) {
     $.ajax({
         type: 'POST',
         url: url,
-        contentType: "application/json; charset=utf-8",
+        contentType: jsonFormat,
         dataType: "json",
         data: param,
         beforeSend: function (xhr) {
