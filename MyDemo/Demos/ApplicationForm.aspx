@@ -134,6 +134,5 @@ label.required:after
 </form>
 
 <input type=hidden id=hidActiveMenu value="hypApp" />
-  <input type=hidden id=hidRoot value="../" />
-    <script src="../Scripts/Common.js" type="text/javascript"></script>
+
 </asp:Content>

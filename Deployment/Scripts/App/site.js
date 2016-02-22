@@ -68,7 +68,7 @@ $.fn.stars = function () {
 
 $.fn.ShowProgressIndicator = function () {
     // To prevent double-click, create an invisible layer to cover the submit button. Also, display a progress indicator.
-    $(this).append("<span class='progressIndicator'><img src='../Images/loading.gif' /></span>");
+    $(this).append("<span class='progressIndicator'><img src='/Images/loading.gif' /></span>");
 
     var position = $(this).position();
 
@@ -93,9 +93,7 @@ $(function () {
                         .addClass('hidden-xs')
                         .after("<div class='page-header-xs visible-xs'><h4>" + pageHeader + "</h4><hr /></div>");
     }
-
-    if ($('#hidRoot').length)
-        root = $('#hidRoot').val();
+    
 
     $('#' + $('#hidActiveMenu').val()).parent().addClass('active');
 
@@ -113,7 +111,7 @@ $(function () {
 
         $(this).next().html(numOfLike);
 
-        var url = root + "Service/WebService.asmx/AddFeedback";
+        var url = "/Service/WebService.asmx/AddFeedback";
         var param = "{ 'url': '{0}', 'type': '{1}' }";
         var type = $(this).hasClass('glyphicon-thumbs-up') ? "LIKE" : "DISLIKE";
         param = param.format(window.location.href, type);

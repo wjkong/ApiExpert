@@ -142,7 +142,6 @@
 </div>
 </div>
  <input type=hidden id=hidActiveMenu value="hypApp" />
-<input type=hidden id=hidRoot value="../" />
 
     <input type=hidden id=hidLat  />
         <input type=hidden id=hidLng  />

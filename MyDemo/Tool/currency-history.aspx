@@ -3,7 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
      <input type=hidden id=hidActiveMenu value="hypTool" />
-  <input type=hidden id=hidRoot value="../" />
     <script src="../Scripts/App/Common.js" type="text/javascript"></script>
     <script src="../Scripts/App/CurrencyHistory.js" type="text/javascript"></script>
 </asp:Content>

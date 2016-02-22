@@ -98,49 +98,49 @@ $(function () {
     });
 });
 
-function SetLargeScreen(pageIndex) {
-    $.ajax({
-        type: "GET",
-        url: "../Data/Photos.xml",
-        dataType: "xml",
-        success: function (xml) {
-            var str = [];
-            var index = 0;
-            var baseUrl = "../Data/Pictures/";
-            var extention = ".jpg";
+//function SetLargeScreen(pageIndex) {
+//    $.ajax({
+//        type: "GET",
+//        url: "../Data/Photos.xml",
+//        dataType: "xml",
+//        success: function (xml) {
+//            var str = [];
+//            var index = 0;
+//            var baseUrl = "../Data/Pictures/";
+//            var extention = ".jpg";
 
-            $(xml).find('Photo').each(function () {
-                var url = $(this).find('Url').text();
+//            $(xml).find('Photo').each(function () {
+//                var url = $(this).find('Url').text();
 
-                index++;
+//                index++;
 
-                if (pageIndex == index) {
-                    str.push("<div class='text-center'>");
-                    str.push("<img class='img-responsive img-rounded' src='", baseUrl, url, extention, "' />");
-                    str.push("</div>");
-                }
-            });
+//                if (pageIndex == index) {
+//                    str.push("<div class='text-center'>");
+//                    str.push("<img class='img-responsive img-rounded' src='", baseUrl, url, extention, "' />");
+//                    str.push("</div>");
+//                }
+//            });
 
-            $('#Main').html(str.join(emptyStr));
+//            $('#Main').html(str.join(emptyStr));
 
-            if (totalPhoto <= pageIndex) {
-                $('#btnNext').attr('disabled', 'disabled');
-            }
-            else
-                $('#btnNext').removeAttr('disabled', 'disabled');
+//            if (totalPhoto <= pageIndex) {
+//                $('#btnNext').attr('disabled', 'disabled');
+//            }
+//            else
+//                $('#btnNext').removeAttr('disabled', 'disabled');
 
-            if (pageIndex == 1) {
-                $('#btnPrev').attr('disabled', 'disabled');
-            }
-            else
-                $('#btnPrev').removeAttr('disabled', 'disabled');
+//            if (pageIndex == 1) {
+//                $('#btnPrev').attr('disabled', 'disabled');
+//            }
+//            else
+//                $('#btnPrev').removeAttr('disabled', 'disabled');
 
-            var totalNumOfPages = totalPhoto;
+//            var totalNumOfPages = totalPhoto;
 
-            BuildNavBar(totalNumOfPages);
-        }
-    });
-}
+//            BuildNavBar(totalNumOfPages);
+//        }
+//    });
+//}
 
 function SetScreen(pageIndex, target) {
     if (target != null)

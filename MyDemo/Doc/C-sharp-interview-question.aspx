@@ -1,4 +1,4 @@
-﻿<%@ Page Title="C Sharp Interview Question" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="C-sharp-interview-question.aspx.cs" Inherits="Kong.ApiExpert.Web.Doc.C_sharp_interview_question" %>
+﻿<%@ Page Title="C Sharp Interview Question" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="c-sharp-interview-question.aspx.cs" Inherits="Kong.ApiExpert.Web.Doc.C_sharp_interview_question" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
@@ -64,6 +64,4 @@ Yes, it could. It should be used protected, rather than public. Also, it will be
 </div>
 </div>
 <input type=hidden id=hidActiveMenu value="hypBlog" />
-<input type=hidden id=hidRoot value="../" />
-
 </asp:Content>

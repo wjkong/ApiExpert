@@ -355,8 +355,6 @@
 </form>
 </div>
 <input type=hidden id=hidActiveMenu value="hypTool" />
-  <input type=hidden id=hidRoot value="../" />
-
 </asp:Content>
 <asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
     <%: System.Web.Optimization.Scripts.Render("~/Scripts/LanguageTranslator") %>

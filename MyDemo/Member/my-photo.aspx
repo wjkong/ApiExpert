@@ -34,7 +34,6 @@
   <input type=hidden id=hidFullPicture value="N" />
   <input type=hidden id=hidLastPageIndex />
 
-   <input type=hidden id=hidRoot value="../" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">

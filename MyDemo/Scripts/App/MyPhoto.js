@@ -13,7 +13,7 @@ $(function () {
         if ($('#hidFullPicture').val() == "Y")
             SetLargeScreen(currentPage);
         else
-            SetScreen(currentPage);
+            SetScreen(currentPage, $(this));
     });
 
     $('#btnPrev').click(function () {
@@ -25,7 +25,7 @@ $(function () {
         if ($('#hidFullPicture').val() == "Y")
             SetLargeScreen(currentPage);
         else
-            SetScreen(currentPage);
+            SetScreen(currentPage, $(this));
     });
 
     $('.pagination').on('click', 'a', function () {
@@ -37,7 +37,7 @@ $(function () {
         if ($('#hidFullPicture').val() == "Y")
             SetLargeScreen(currentPage);
         else
-            SetScreen(currentPage);
+            SetScreen(currentPage, $(this).parent().parent());
     });
 
     $('#Main').on('click', 'img.img-thumbnail', function () {
@@ -98,67 +98,71 @@ $(function () {
 
 });
 
-function SetLargeScreen(pageIndex) {
-    $.ajax({
-        type: "GET",
-        url: "../Data/Photos.xml",
-        dataType: "xml",
-        success: function (xml) {
-            var str = [];
-            var index = 0;
-            var baseUrl = "../Data/Pictures/";
-            var extention = ".jpg";
+//function SetLargeScreen(pageIndex) {
+//    $.ajax({
+//        type: "GET",
+//        url: "../Data/Photos.xml",
+//        dataType: "xml",
+//        success: function (xml) {
+//            var str = [];
+//            var index = 0;
+//            var baseUrl = "../Data/Pictures/";
+//            var extention = ".jpg";
 
-            $(xml).find('Photo').each(function () {
-                var url = $(this).find('Url').text();
+//            $(xml).find('Photo').each(function () {
+//                var url = $(this).find('Url').text();
 
-                index++;
+//                index++;
 
-                if (pageIndex == index) {
-                    str.push("<div class='text-center'>");
-                    str.push("<img class='img-responsive img-rounded' src='", baseUrl, url, extention, "' />");
-                    str.push("</div>");
-                }
-            });
+//                if (pageIndex == index) {
+//                    str.push("<div class='text-center'>");
+//                    str.push("<img class='img-responsive img-rounded' src='", baseUrl, url, extention, "' />");
+//                    str.push("</div>");
+//                }
+//            });
 
-            $('#Main').html(str.join(emptyStr));
+//            $('#Main').html(str.join(emptyStr));
 
-            if (totalPhoto <= pageIndex) {
-                $('#btnNext').attr('disabled', 'disabled');
-            }
-            else
-                $('#btnNext').removeAttr('disabled', 'disabled');
+//            if (totalPhoto <= pageIndex) {
+//                $('#btnNext').attr('disabled', 'disabled');
+//            }
+//            else
+//                $('#btnNext').removeAttr('disabled', 'disabled');
 
-            if (pageIndex == 1) {
-                $('#btnPrev').attr('disabled', 'disabled');
-            }
-            else
-                $('#btnPrev').removeAttr('disabled', 'disabled');
+//            if (pageIndex == 1) {
+//                $('#btnPrev').attr('disabled', 'disabled');
+//            }
+//            else
+//                $('#btnPrev').removeAttr('disabled', 'disabled');
 
-            var totalNumOfPages = totalPhoto;
+//            var totalNumOfPages = totalPhoto;
 
-            BuildNavBar(totalNumOfPages);
-        }
-    });
-}
+//            BuildNavBar(totalNumOfPages);
+//        }
+//    });
+//}
 
-function SetScreen(pageIndex) {
-    //var url = "MyPhoto.aspx/GetMyPhotos";
-    //var param = "{ 'pageIndex': '{0}',  'pageSize': '{1}'}";
-    //param = param.format(pageIndex, 9);
+function SetScreen(pageIndex, target) {
+
+    if (target != null)
+        target.ShowProgressIndicator();
+
 
     var pageSize = 9;
     var uri = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=444944a3544fd05499d50adaaa0d5188&user_id=135358381%40N04&&per_page={0}&page={1}&format=json&jsoncallback=onSuccess";
     
     uri = uri.format(pageSize, pageIndex);
 
-
-
     $.ajax({
         type: 'GET',
         url: uri,
         dataType: "jsonp",
-        crossDomain: true
+        crossDomain: true,
+        complete: function (xhr, status) {
+            if (target != null) {
+                $('.progressIndicator').fadeOut(100).remove();
+            }
+        }
     });
 }
 

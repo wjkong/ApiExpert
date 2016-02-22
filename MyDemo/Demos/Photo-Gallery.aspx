@@ -37,7 +37,6 @@
   <input type=hidden id=hidFullPicture value="N" />
   <input type=hidden id=hidLastPageIndex />
   <input type=hidden id=hidActiveMenu value="hypApp" />
-   <input type=hidden id=hidRoot value="../" />
   <script src="../Scripts/Common.js" type="text/javascript"></script>
   <script src="../Scripts/PhotoGallery.js" type="text/javascript"></script>
 </asp:Content>

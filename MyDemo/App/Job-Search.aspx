@@ -158,7 +158,6 @@
   
   <input type=hidden id=hidIpAddress value="1.2.3.4" />
   <input type=hidden id=hidActiveMenu value="hypApp" />
-   <input type=hidden id=hidRoot value="../" />
 <form runat=server id=JobSearch>
  <asp:HiddenField ID="hidCountry" runat="server" ClientIDMode=Static />
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Site Map" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SiteMap.aspx.cs" Inherits="Kong.ApiExpert.Web.SiteMap" %>
+﻿<%@ Page Title="Site Map" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="site-map.aspx.cs" Inherits="Kong.ApiExpert.Web.SiteMap" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .tree {
@@ -75,30 +75,13 @@
 }
 
 </style>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(function () {
-            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-            $('.tree li.parent_li > span').on('click', function (e) {
-                var children = $(this).parent('li.parent_li').find(' > ul > li');
-                if (children.is(":visible")) {
-                    children.hide('fast');
-                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
-                } else {
-                    children.show('fast');
-                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
-                }
-                e.stopPropagation();
-            });
-        });
-    });
-  </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class="tree">
     <ul>
         <li>
-            <span class="glyphicon glyphicon-home parentIcon" ></span><a href="Default.aspx"><span><i class="icon-folder-open"></i>Home</span></a>
+            <span class="glyphicon glyphicon-home parentIcon" ></span><a href="default.aspx"><span><i class="icon-folder-open"></i>Home</span></a>
             <ul>
                 <li>
                 	<span class="glyphicon glyphicon-th parentIcon"></span><span><i class="icon-minus-sign"></i>Application</span>
@@ -107,14 +90,14 @@
 	                         <a href="App/place-finder.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Place Finder</span></a>
                         </li>
                         <li>
-	                        <a href="App/Job-Search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Job Search</span></a>
+	                        <a href="App/job-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Job Search</span></a>
                         </li>
                         <li>
-	                        <a href="App/Ask-StackOverflow.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-question-sign"></span>Question Search</span></a>
+	                        <a href="App/ask-stackoverflow.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-question-sign"></span>Question Search</span></a>
                         </li>
                       
                          <li>
-	                        <a href="App/Local-Business-Search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</span></a>
+	                        <a href="App/local-business-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</span></a>
                         </li>
                          <li>
 	                        <a href="App/photo-gallery.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-picture"></span>Photo Gallery</span></a>
@@ -136,10 +119,10 @@
                 	<span class="glyphicon glyphicon-wrench parentIcon"></span><span><i class="icon-minus-sign"></i>Tool</span> 
                     <ul>
                           <li>
-	                        <a href="Tool/Mortgage-Calculator.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</span></a>
+	                        <a href="Tool/mortgage-calculator.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</span></a>
                         </li>
                         <li>
-	                         <a href="Tool/Currency-Converter.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-usd"></span>Currency Converter</span></a>
+	                         <a href="Tool/currency-converter.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-usd"></span>Currency Converter</span></a>
                         </li>
                         <li>
 	                         <a href="Tool/language-translator.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-transfer"></span>Language Translator</span></a>
@@ -151,13 +134,13 @@
                     </ul>
                 </li>
                    <li>
-                	 <a href="Doc/Blog.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-list-alt"></span>Documentaton</span></a>
+                	 <a href="Doc/blog.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-list-alt"></span>Documentaton</span></a>
                 </li>
                <%-- <li>
                 	 <a href="FAQ.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-question-sign"></span>&nbsp;Frequence Ask Question</span></a>
                 </li>--%>
                 <li>
-                	 <a href="SiteMap.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-globe"></span>Site Map</span></a>
+                	 <a href="site-map.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-globe"></span>Site Map</span></a>
                 </li>
                 <li>
                 	 <a href="mailto:wjkonger@gmail.com"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-envelope"></span>Contact</span></a>
@@ -167,4 +150,26 @@
      </ul>
 </div>
 <input type=hidden id=hidActiveMenu value="HypSiteMap" />
+</asp:Content>
+
+<asp:Content runat="server" ID="pageScript" ContentPlaceHolderID="ScriptSection">
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(function () {
+            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+            $('.tree li.parent_li > span').on('click', function (e) {
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+                if (children.is(":visible")) {
+                    children.hide('fast');
+                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                } else {
+                    children.show('fast');
+                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                }
+                e.stopPropagation();
+            });
+        });
+    });
+  </script>
+
 </asp:Content>

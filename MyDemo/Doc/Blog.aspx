@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Documentaion" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Blog.aspx.cs" Inherits="Kong.ApiExpert.Web.Blog.Blog" %>
+﻿<%@ Page Title="Documentaion" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="blog.aspx.cs" Inherits="Kong.ApiExpert.Web.Blog.Blog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #Item li 
@@ -25,5 +25,4 @@
 </div>
 </div>
 <input type=hidden id=hidActiveMenu value="hypBlog" />
-<input type=hidden id=hidRoot value="../" />
 </asp:Content>

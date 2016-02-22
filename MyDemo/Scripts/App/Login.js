@@ -68,7 +68,7 @@ function OnSuccess(data, status) {
             setCookie("userName", username);
         }
 
-        window.location.href = "Member/MyPhoto.aspx";
+        window.location.href = "Member/my-photo.aspx";
     }
     else {
         PopupValidation("Invalid username and password");

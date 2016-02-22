@@ -38,7 +38,7 @@
                       <ul class="dropdown-menu">
                         <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/App/place-finder.aspx" runat=server><span class="glyphicon glyphicon-search"></span>Place Finder</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/App/job-search.aspx" runat=server><span class="glyphicon glyphicon-search"></span>Job Search</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/App/ssk-stackoverflow.aspx" runat=server><span class="glyphicon glyphicon-question-sign"></span>Question Search</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/App/ask-stackoverflow.aspx" runat=server><span class="glyphicon glyphicon-question-sign"></span>Question Search</asp:HyperLink></li>
                         
                         <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/App/local-business-search.aspx" runat=server><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/App/photo-gallery.aspx" runat=server><span class="glyphicon glyphicon-picture"></span>Photo Gallery</asp:HyperLink></li>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MyPhoto.aspx.cs" Inherits="Kong.ApiExpert.Web.Member.MyPhoto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="my-photo.aspx.cs" Inherits="Kong.ApiExpert.Web.Member.MyPhoto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
@@ -34,7 +34,8 @@
   <input type=hidden id=hidFullPicture value="N" />
   <input type=hidden id=hidLastPageIndex />
 
-   <input type=hidden id=hidRoot value="../" />
+</asp:Content>
 
-  <script src="../Scripts/App/MyPhoto.js" type="text/javascript"></script>
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/MyPhoto") %>
 </asp:Content>

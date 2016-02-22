@@ -161,9 +161,9 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
-    <Content Include="Doc\Blog.aspx" />
-    <Content Include="Doc\C-sharp-interview-question.aspx" />
-    <Content Include="Doc\C-sharp-naming-convention-design-guideline.aspx" />
+    <Content Include="Doc\blog.aspx" />
+    <Content Include="Doc\c-sharp-interview-question.aspx" />
+    <Content Include="Doc\c-sharp-naming-convention-design-guideline.aspx" />
     <Content Include="Content\site.css" />
     <Content Include="Data\GoogleSiteMap.xml">
       <SubType>Designer</SubType>
@@ -202,7 +202,7 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\App\myphoto.js" />
-    <Content Include="Scripts\App\CurrencyHistory.js" />
+    <Content Include="Scripts\App\currencyhistory.js" />
     <Content Include="Scripts\App\login.js" />
     <Content Include="Scripts\App\placefinder.js" />
     <Content Include="Scripts\App\LanguageTranslator.js" />
@@ -242,7 +242,7 @@
     <Content Include="Member\MyAccount.aspx" />
     <Content Include="Demos\ApplicationForm.aspx" />
     <Content Include="Scripts\App\site.js" />
-    <Content Include="Scripts\App\CountryState.js" />
+    <Content Include="Scripts\App\countrystate.js" />
     <Content Include="Scripts\App\currencyconverter.js" />
     <Content Include="Scripts\App\jobsearch.js" />
     <Content Include="Scripts\App\mortgagecalculator.js" />
@@ -278,26 +278,26 @@
       <DependentUpon>place-finder.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Doc\Blog.aspx.cs">
-      <DependentUpon>Blog.aspx</DependentUpon>
+    <Compile Include="Doc\blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Doc\Blog.aspx.designer.cs">
-      <DependentUpon>Blog.aspx</DependentUpon>
+    <Compile Include="Doc\blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Doc\C-sharp-interview-question.aspx.cs">
-      <DependentUpon>C-sharp-interview-question.aspx</DependentUpon>
+    <Compile Include="Doc\c-sharp-interview-question.aspx.cs">
+      <DependentUpon>c-sharp-interview-question.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Doc\C-sharp-interview-question.aspx.designer.cs">
-      <DependentUpon>C-sharp-interview-question.aspx</DependentUpon>
+    <Compile Include="Doc\c-sharp-interview-question.aspx.designer.cs">
+      <DependentUpon>c-sharp-interview-question.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Doc\C-sharp-naming-convention-design-guideline.aspx.cs">
-      <DependentUpon>C-sharp-naming-convention-design-guideline.aspx</DependentUpon>
+    <Compile Include="Doc\c-sharp-naming-convention-design-guideline.aspx.cs">
+      <DependentUpon>c-sharp-naming-convention-design-guideline.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Doc\C-sharp-naming-convention-design-guideline.aspx.designer.cs">
-      <DependentUpon>C-sharp-naming-convention-design-guideline.aspx</DependentUpon>
+    <Compile Include="Doc\c-sharp-naming-convention-design-guideline.aspx.designer.cs">
+      <DependentUpon>c-sharp-naming-convention-design-guideline.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
