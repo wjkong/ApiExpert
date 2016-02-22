@@ -5,7 +5,6 @@ var yes = "Y";
 var singleQuote = "'";
 var comma = ",";
 var space = " ";
-var root = emptyStr;
 var linkText = "<a target=_blank href='{0}'>{1}</a>";
 var mapLink = "<span data-latitude='{0}' data-longitude='{1}' class='map text-info' data-toggle='modal' data-target='#modalMap'><span class='glyphicon glyphicon-map-marker'></span>{2}</span>";
 var imgLink = "<img src='{0}' alt=icon />";
@@ -111,7 +110,7 @@ $(function () {
 
         $(this).next().html(numOfLike);
 
-        var url = "/Service/WebService.asmx/AddFeedback";
+        var url = root + "Service/WebService.asmx/AddFeedback";
         var param = "{ 'url': '{0}', 'type': '{1}' }";
         var type = $(this).hasClass('glyphicon-thumbs-up') ? "LIKE" : "DISLIKE";
         param = param.format(window.location.href, type);

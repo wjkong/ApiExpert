@@ -18,6 +18,7 @@ namespace Kong.ApiExpert.Web
                      "~/Scripts/jquery-ui-{version}.js",
                      "~/Scripts/bootstrap.js",
                      "~/Scripts/respond.js",
+                     "~/Scripts/App/config.js",
                      "~/Scripts/App/site.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/Modernizr").Include("~/Scripts/modernizr-*"));
