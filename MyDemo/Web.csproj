@@ -47,6 +47,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -75,6 +79,10 @@
     <Reference Include="Microsoft.Web.Deployment.Tracing">
       <HintPath>..\packages\Microsoft.Web.Deployment.3.5.0\lib\Net40\Microsoft.Web.Deployment.Tracing.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -97,11 +105,19 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\photo-gallery.aspx" />
@@ -153,8 +169,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Data\Photos.xml" />
-    <Content Include="Default.aspx" />
-    <Content Include="App\Local-Business-Search.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="App\local-business-search.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -165,7 +181,7 @@
     <Content Include="Images\JobSearch_sm.png" />
     <Content Include="index.html" />
     <Content Include="Member\ImageManage.aspx" />
-    <Content Include="Member\MyPhoto.aspx" />
+    <Content Include="Member\my-photo.aspx" />
     <Content Include="robots.txt" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
@@ -185,20 +201,21 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
-    <Content Include="Scripts\App\MyPhoto.js" />
+    <Content Include="Scripts\App\myphoto.js" />
     <Content Include="Scripts\App\CurrencyHistory.js" />
-    <Content Include="Scripts\App\Login.js" />
-    <Content Include="Scripts\App\PlaceFinder.js" />
+    <Content Include="Scripts\App\login.js" />
+    <Content Include="Scripts\App\placefinder.js" />
     <Content Include="Scripts\App\LanguageTranslator.js" />
-    <Content Include="Scripts\App\LocalBusinessSearch.js" />
+    <Content Include="Scripts\App\searchlocalbusiness.js" />
     <Content Include="Scripts\App\weatherforecast.js" />
-    <Content Include="Tool\Currency-Converter.aspx" />
-    <Content Include="App\Job-Search.aspx" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Tool\currency-converter.aspx" />
+    <Content Include="App\job-search.aspx" />
     <Content Include="Tool\currency-history.aspx" />
     <Content Include="Tool\language-translator.aspx" />
-    <Content Include="Tool\Mortgage-Calculator.aspx" />
+    <Content Include="Tool\mortgage-calculator.aspx" />
     <Content Include="Demos\Photo-Gallery.aspx" />
-    <Content Include="App\Ask-StackOverflow.aspx" />
+    <Content Include="App\ask-stackoverflow.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="Images\Angular.png" />
     <Content Include="Images\ASPNET.jpg" />
@@ -220,19 +237,19 @@
     <Content Include="Images\Portrait_sm2.jpg" />
     <Content Include="Images\YinYang.ico" />
     <Content Include="Images\YinYangM.ico" />
-    <Content Include="Login.aspx" />
-    <Content Include="LogOut.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="Member\MyAccount.aspx" />
     <Content Include="Demos\ApplicationForm.aspx" />
-    <Content Include="Scripts\App\Common.js" />
+    <Content Include="Scripts\App\site.js" />
     <Content Include="Scripts\App\CountryState.js" />
-    <Content Include="Scripts\App\CurrencyConverter.js" />
-    <Content Include="Scripts\App\JobSearch.js" />
-    <Content Include="Scripts\App\MortgageCalculator.js" />
-    <Content Include="Scripts\App\PhotoGallery.js" />
-    <Content Include="Scripts\App\StackExchange.js" />
+    <Content Include="Scripts\App\currencyconverter.js" />
+    <Content Include="Scripts\App\jobsearch.js" />
+    <Content Include="Scripts\App\mortgagecalculator.js" />
+    <Content Include="Scripts\App\photogallery.js" />
+    <Content Include="Scripts\App\askquestion.js" />
     <Content Include="Service\WebService.asmx" />
-    <Content Include="SiteMap.aspx" />
+    <Content Include="site-map.aspx" />
     <Content Include="Tool\world-weather-forecast.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -260,6 +277,7 @@
     <Compile Include="App\place-finder.aspx.designer.cs">
       <DependentUpon>place-finder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Doc\Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,19 +299,19 @@
     <Compile Include="Doc\C-sharp-naming-convention-design-guideline.aspx.designer.cs">
       <DependentUpon>C-sharp-naming-convention-design-guideline.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Local-Business-Search.aspx.cs">
-      <DependentUpon>Local-Business-Search.aspx</DependentUpon>
+    <Compile Include="App\local-business-search.aspx.cs">
+      <DependentUpon>local-business-search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Local-Business-Search.aspx.designer.cs">
-      <DependentUpon>Local-Business-Search.aspx</DependentUpon>
+    <Compile Include="App\local-business-search.aspx.designer.cs">
+      <DependentUpon>local-business-search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -312,12 +330,12 @@
     <Compile Include="Member\ImageManage.aspx.designer.cs">
       <DependentUpon>ImageManage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Member\MyPhoto.aspx.cs">
-      <DependentUpon>MyPhoto.aspx</DependentUpon>
+    <Compile Include="Member\my-photo.aspx.cs">
+      <DependentUpon>my-photo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Member\MyPhoto.aspx.designer.cs">
-      <DependentUpon>MyPhoto.aspx</DependentUpon>
+    <Compile Include="Member\my-photo.aspx.designer.cs">
+      <DependentUpon>my-photo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile.Master.cs">
       <DependentUpon>Mobile.Master</DependentUpon>
@@ -326,19 +344,19 @@
     <Compile Include="Mobile.Master.designer.cs">
       <DependentUpon>Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Tool\Currency-Converter.aspx.cs">
-      <DependentUpon>Currency-Converter.aspx</DependentUpon>
+    <Compile Include="Tool\currency-converter.aspx.cs">
+      <DependentUpon>currency-converter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tool\Currency-Converter.aspx.designer.cs">
-      <DependentUpon>Currency-Converter.aspx</DependentUpon>
+    <Compile Include="Tool\currency-converter.aspx.designer.cs">
+      <DependentUpon>currency-converter.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Job-Search.aspx.cs">
-      <DependentUpon>Job-Search.aspx</DependentUpon>
+    <Compile Include="App\job-search.aspx.cs">
+      <DependentUpon>job-search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Job-Search.aspx.designer.cs">
-      <DependentUpon>Job-Search.aspx</DependentUpon>
+    <Compile Include="App\job-search.aspx.designer.cs">
+      <DependentUpon>job-search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tool\currency-history.aspx.cs">
       <DependentUpon>currency-history.aspx</DependentUpon>
@@ -354,12 +372,12 @@
     <Compile Include="Tool\language-translator.aspx.designer.cs">
       <DependentUpon>language-translator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tool\Mortgage-Calculator.aspx.cs">
-      <DependentUpon>Mortgage-Calculator.aspx</DependentUpon>
+    <Compile Include="Tool\mortgage-calculator.aspx.cs">
+      <DependentUpon>mortgage-calculator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tool\Mortgage-Calculator.aspx.designer.cs">
-      <DependentUpon>Mortgage-Calculator.aspx</DependentUpon>
+    <Compile Include="Tool\mortgage-calculator.aspx.designer.cs">
+      <DependentUpon>mortgage-calculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\Photo-Gallery.aspx.cs">
       <DependentUpon>Photo-Gallery.aspx</DependentUpon>
@@ -368,12 +386,12 @@
     <Compile Include="Demos\Photo-Gallery.aspx.designer.cs">
       <DependentUpon>Photo-Gallery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Ask-StackOverflow.aspx.cs">
-      <DependentUpon>Ask-StackOverflow.aspx</DependentUpon>
+    <Compile Include="App\ask-stackoverflow.aspx.cs">
+      <DependentUpon>ask-stackoverflow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Ask-StackOverflow.aspx.designer.cs">
-      <DependentUpon>Ask-StackOverflow.aspx</DependentUpon>
+    <Compile Include="App\ask-stackoverflow.aspx.designer.cs">
+      <DependentUpon>ask-stackoverflow.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQ.aspx.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
@@ -382,19 +400,19 @@
     <Compile Include="FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LogOut.aspx.cs">
-      <DependentUpon>LogOut.aspx</DependentUpon>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LogOut.aspx.designer.cs">
-      <DependentUpon>LogOut.aspx</DependentUpon>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member\MyAccount.aspx.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
@@ -422,12 +440,12 @@
       <DependentUpon>WebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SiteMap.aspx.cs">
-      <DependentUpon>SiteMap.aspx</DependentUpon>
+    <Compile Include="site-map.aspx.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SiteMap.aspx.designer.cs">
-      <DependentUpon>SiteMap.aspx</DependentUpon>
+    <Compile Include="site-map.aspx.designer.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tool\world-weather-forecast.aspx.cs">
       <DependentUpon>world-weather-forecast.aspx</DependentUpon>

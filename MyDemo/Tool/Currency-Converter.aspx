@@ -1,6 +1,4 @@
-﻿<%@ Page Title="Currency Converter" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Currency-Converter.aspx.cs" Inherits="Kong.ApiExpert.Web.Demos.CurrencyConverter" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+﻿<%@ Page Title="Currency Converter" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="currency-converter.aspx.cs" Inherits="Kong.ApiExpert.Web.Demos.CurrencyConverter" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
 <div class="page-header">
@@ -42,5 +40,8 @@
  <input type=hidden id=hidActiveMenu value="hypTool" />
   <input type=hidden id=hidRoot value="../" />
 
-    <script src="../Scripts/App/CurrencyConverter.js" type="text/javascript"></script>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/CurrencyConverter") %>
 </asp:Content>

@@ -1,25 +1,19 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Kong.ApiExpert.Web.Site" %>
+<%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8">
     <title></title>
-      <meta name="keyword" content="Michael Kong API Expert">
-      <meta name="description" content="Michael Kong API Expert">
-      <meta name="author" content="Michael Kong">
-      <meta name="viewport" content="width=device-width">
-      <link rel="icon" href="Images/YinYang.ico" />
-      <link href="/Content/bootstrap.min.css" rel="stylesheet" />
-      <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" />
-      <link href="/Content/font-awesome.min.css" rel="stylesheet" />
-      <link href="/Content/site.css" rel="stylesheet" />
-      <script src="/Scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
-      <script src="/Scripts/jquery-ui-1.11.4.min.js" type="text/javascript"></script>
-      <script src="/Scripts/bootstrap.min.js" type="text/javascript"></script>
-      <script src="/Scripts/App/Common.js" type="text/javascript"></script>
+    <meta name="keyword" content="Michael Kong API Expert">
+    <meta name="description" content="Michael Kong API Expert">
+    <meta name="author" content="Michael Kong">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="Images/YinYang.ico" />
+    <%: Styles.Render("~/Content/Style") %>
+    <%: Scripts.Render("~/Scripts/Modernizr") %>
       
-    <asp:ContentPlaceHolder ID="head" runat="server">
-      </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server" />        
 </head>
 <body>
     <div class="row" id="wrap">
@@ -33,28 +27,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <asp:HyperLink ID="HyperLink1" class="navbar-brand" NavigateUrl="~/Default.aspx" runat=server><span style="font-family:Script MT Bold">&nbsp;&nbsp;Api Expert&nbsp;&nbsp;</span></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" class="navbar-brand" NavigateUrl="~/default.aspx" runat=server><span style="font-family:Script MT Bold">&nbsp;&nbsp;Api Expert&nbsp;&nbsp;</span></asp:HyperLink>
             </div>
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><asp:HyperLink ID="hypHome" NavigateUrl="~/Default.aspx" runat=server><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="hypHome" NavigateUrl="~/default.aspx" runat=server><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                      <li class="dropdown">
                       <asp:HyperLink ID="hypApp" NavigateUrl="#" runat=server class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span>App<span class="caret"></span></asp:HyperLink>
                       <ul class="dropdown-menu">
                         <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/App/place-finder.aspx" runat=server><span class="glyphicon glyphicon-search"></span>Place Finder</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/App/Job-Search.aspx" runat=server><span class="glyphicon glyphicon-search"></span>Job Search</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/App/Ask-StackOverflow.aspx" runat=server><span class="glyphicon glyphicon-question-sign"></span>Question Search</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/App/job-search.aspx" runat=server><span class="glyphicon glyphicon-search"></span>Job Search</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/App/ssk-stackoverflow.aspx" runat=server><span class="glyphicon glyphicon-question-sign"></span>Question Search</asp:HyperLink></li>
                         
-                        <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/App/Local-Business-Search.aspx" runat=server><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/App/local-business-search.aspx" runat=server><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/App/photo-gallery.aspx" runat=server><span class="glyphicon glyphicon-picture"></span>Photo Gallery</asp:HyperLink></li>
                     </ul>
                     </li>
                     <li class="dropdown">
                       <asp:HyperLink ID="hypTool" NavigateUrl="#" runat=server class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>Tool<span class="caret"></span></asp:HyperLink>
                       <ul class="dropdown-menu">
-                        <li><asp:HyperLink ID="hypMortagageCalculator" NavigateUrl="~/Tool/Mortgage-Calculator.aspx" runat=server><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Tool/Currency-Converter.aspx" runat=server><span class="glyphicon glyphicon-usd"></span>Currency Converter</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hypMortagageCalculator" NavigateUrl="~/Tool/mortgage-calculator.aspx" runat=server><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Tool/currency-converter.aspx" runat=server><span class="glyphicon glyphicon-usd"></span>Currency Converter</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/Tool/language-translator.aspx" runat=server><span class="glyphicon glyphicon-transfer"></span>Language Translator</asp:HyperLink></li>
                            <li role="separator" class="divider"></li>
                         <li><asp:HyperLink ID="HyperLink9" NavigateUrl="~/Tool/world-weather-forecast.aspx" runat=server><span class="glyphicon glyphicon-cloud"></span>Weather Forecast</asp:HyperLink></li>
@@ -64,24 +58,23 @@
                      <li class="dropdown" runat=server visible=false id="MyAccountMenu">
                       <asp:HyperLink ID="hypMyAccount" NavigateUrl="#" runat=server class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account<span class="caret"></span></asp:HyperLink>
                       <ul class="dropdown-menu">
-                        <li><asp:HyperLink ID="HyperLink11" NavigateUrl="~/Member/MyPhoto.aspx" runat=server><span class="glyphicon glyphicon-picture"></span>My Photo</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink11" NavigateUrl="~/Member/my-photo.aspx" runat=server><span class="glyphicon glyphicon-picture"></span>My Photo</asp:HyperLink></li>
                       </ul>
                     </li>
-                     <li><asp:HyperLink ID="hypBlog" NavigateUrl="~/Doc/Blog.aspx" runat=server><span class="glyphicon glyphicon-list-alt"></span>Doc</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HypSiteMap" NavigateUrl="~/SiteMap.aspx" runat=server><span class="glyphicon glyphicon-globe"></span>SiteMap</asp:HyperLink></li>
+                     <li><asp:HyperLink ID="hypBlog" NavigateUrl="~/Doc/blog.aspx" runat=server><span class="glyphicon glyphicon-list-alt"></span>Doc</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HypSiteMap" NavigateUrl="~/site-map.aspx" runat=server><span class="glyphicon glyphicon-globe"></span>SiteMap</asp:HyperLink></li>
                     <li><a href="mailto:support@apiexpert.net"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><asp:HyperLink ID="hypLogOut" NavigateUrl="~/LogOut.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>
-                        <asp:HyperLink ID="hypLogin" NavigateUrl="~/Login.aspx" runat=server><span class="glyphicon glyphicon-log-in"></span>Login</asp:HyperLink>
+                    <li><asp:HyperLink ID="hypLogOut" NavigateUrl="~/logout.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>
+                        <asp:HyperLink ID="hypLogin" NavigateUrl="~/login.aspx" runat=server><span class="glyphicon glyphicon-log-in"></span>Login</asp:HyperLink>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
         <section class="container" id="main">
-              <asp:ContentPlaceHolder ID="content" runat="server">
-            </asp:ContentPlaceHolder>
+              <asp:ContentPlaceHolder ID="content" runat="server" />
         </section>
     </div>
     <footer class="container">
@@ -149,7 +142,12 @@
         </div>
         </div>
     </footer>
+
+    <%: Scripts.Render("~/Scripts/Library") %>
+
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBn29JtdRi1q9yt7HV2DCBl_zvtxiBpnaE&libraries=places" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder ID="ScriptSection" runat="server" />
 </body>
 </html>
        

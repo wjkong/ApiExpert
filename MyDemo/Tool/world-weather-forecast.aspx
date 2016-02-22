@@ -4,14 +4,12 @@
 .glyphicon-plus, .glyphicon-minus
 {
     cursor: pointer;
-
     
     font-family: 'Glyphicons Halflings';
     font-weight: normal;
     font-size: 14px;
     color:Red;
 }
-
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
@@ -125,7 +123,10 @@
 <input type=hidden id=hidActiveMenu value="hypTool" />
   <input type=hidden id=hidRoot value="../" />
 
-   <script type="text/javascript"
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+     <script type="text/javascript"
           src="https://www.google.com/jsapi?autoload={
             'modules':[{
               'name':'visualization',
@@ -133,6 +134,5 @@
               'packages':['corechart']
             }]
           }"></script>
-
-  <script src="../Scripts/App/weatherforecast.js" type="text/javascript"></script>
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/WeatherForecast") %>
 </asp:Content>

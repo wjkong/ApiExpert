@@ -1,2 +1,2 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogOut.aspx.cs" Inherits="Kong.ApiExpert.Web.LogOut" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="logout.aspx.cs" Inherits="Kong.ApiExpert.Web.LogOut" %>
 

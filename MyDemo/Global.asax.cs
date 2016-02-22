@@ -1,6 +1,7 @@
 ﻿using Kong.ApiExpert.Logic.Users;
 using NLog;
 using System;
+using System.Web.Optimization;
 
 namespace Kong.ApiExpert.Web
 {
@@ -13,6 +14,7 @@ namespace Kong.ApiExpert.Web
             logMgr.Info("ApiExpert Application Start");
 
             UserFactory.RegisterAllUser();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         protected void Session_Start(object sender, EventArgs e)

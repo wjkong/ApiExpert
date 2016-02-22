@@ -1,6 +1,4 @@
-﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Kong.ApiExpert.Web.Login" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Kong.ApiExpert.Web.Login" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
 <form class="form-horizontal" role="form" id="LoginForm">
@@ -51,7 +49,9 @@
 </div>
 </div>
 </div>
+</asp:Content>
 
-<script src="Scripts/App/Login.js" type="text/javascript"></script>
-<script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/Login") %>
 </asp:Content>

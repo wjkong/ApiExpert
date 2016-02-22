@@ -1,6 +1,4 @@
 ﻿<%@ Page Title="Place Finder" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="place-finder.aspx.cs" Inherits="Kong.ApiExpert.Web.App.place_finder" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
 <div class="page-header"></div>
@@ -144,11 +142,14 @@
 </div>
 </div>
  <input type=hidden id=hidActiveMenu value="hypApp" />
-   <input type=hidden id=hidRoot value="../" />
+<input type=hidden id=hidRoot value="../" />
 
-      <input type=hidden id=hidLat  />
-         <input type=hidden id=hidLng  />
+    <input type=hidden id=hidLat  />
+        <input type=hidden id=hidLng  />
 
 
-    <script src="../Scripts/App/PlaceFinder.js" type="text/javascript"></script>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/PlaceFinder") %>
 </asp:Content>

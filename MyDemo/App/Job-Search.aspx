@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Job Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Job-Search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Job_Search" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+﻿<%@ Page Title="Job Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="job-search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Job_Search" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
 <div class="page-header">
@@ -169,8 +168,9 @@
   <input type=hidden id=postal_code />
 </form>
    
+</asp:Content>
 
-
-<script src="../Scripts/App/JobSearch.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://gdc.indeed.com/ads/apiresults.js" async></script>
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/JobSearch") %>
+    <script type="text/javascript" src="http://gdc.indeed.com/ads/apiresults.js" async></script>
 </asp:Content>

@@ -6,7 +6,7 @@
 <div class="page-header">
 </div>
 <div class="pull-right text-info">
-   Published: June 15th, 2012
+   Published: Dec 15th, 2015
 </div>
 <br />
 <p>   

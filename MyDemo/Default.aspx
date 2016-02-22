@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Api Expert Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Kong.ApiExpert.Web.Default" %>
+﻿<%@ Page Title="Api Expert Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Kong.ApiExpert.Web.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .carousel-inner > .item > img,

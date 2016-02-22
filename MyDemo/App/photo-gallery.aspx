@@ -1,6 +1,4 @@
 ﻿<%@ Page Title="Photo Gallery" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="photo-gallery.aspx.cs" Inherits="Kong.ApiExpert.Web.App.photo_gallery" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
 <div class="row text-info" >
@@ -49,6 +47,8 @@
   <input type=hidden id=hidLastPageIndex />
   <input type=hidden id=hidActiveMenu value="hypApp" />
    <input type=hidden id=hidRoot value="../" />
+</asp:Content>
 
-  <script src="../Scripts/App/PhotoGallery.js" type="text/javascript"></script>
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/PhotoGallery") %>
 </asp:Content>

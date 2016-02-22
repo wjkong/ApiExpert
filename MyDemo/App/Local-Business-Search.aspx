@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Local Business Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Local-Business-Search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Local_Business_Search" %>
+﻿<%@ Page Title="Local Business Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="local-business-search.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Local_Business_Search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -119,5 +119,9 @@
   <input type=hidden id=hidActiveMenu value="hypApp" />
   <input type=hidden id=hidRoot value="../" />
    
- <script src="../Scripts/App/LocalBusinessSearch.js" type="text/javascript"></script>
+ 
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/SearchLocalBusiness") %>
 </asp:Content>

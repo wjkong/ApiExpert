@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Question/Answer Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ask-StackOverflow.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Ask_StackOverflow" %>
+﻿<%@ Page Title="Question/Answer Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ask-stackoverflow.aspx.cs" Inherits="Kong.ApiExpert.Web.Search.Ask_StackOverflow" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 <style type="text/css">
@@ -122,7 +123,8 @@
   <input type=hidden id=hidLastPageIndex />
   <input type=hidden id=hidActiveMenu value="hypApp" />
   <input type=hidden id=hidRoot value="../" />
-  
-  <script src="../Scripts/App/StackExchange.js" type="text/javascript"></script>
+</asp:Content>
 
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+    <%: System.Web.Optimization.Scripts.Render("~/Scripts/AskQuestion") %>
 </asp:Content>
