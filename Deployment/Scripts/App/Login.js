@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿"use strict";
+
+$(function () {
     var userName = getCookie("userName");
 
     if (userName != undefined && userName.length > 0) {

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://apiexpert.net/aspnet/site-map.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/app/ask-stackoverflow.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/app/job-search.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/app/local-business-search.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/app/place-finder.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/app/photo-gallery.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/tool/world-weather-forecast.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/tool/mortgage-calculator.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/tool/currency-converter.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/tool/language-translator.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/default.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/doc/blog.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/doc/c-sharp-naming-convention-design-guideline.aspx</loc>
+  </url>
+  <url>
+    <loc>http://apiexpert.net/aspnet/doc/c-sharp-interview-question.aspx</loc>
+  </url>
+  
+</urlset>

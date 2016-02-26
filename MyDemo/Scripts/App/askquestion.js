@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿"use strict";
+
+$(function () {
     $('#btnNext').click(function () {
         var currentPage = $('#hidCurrentPage').val();
         currentPage++;

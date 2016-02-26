@@ -1,4 +1,6 @@
-﻿var start;
+﻿"use strict";
+
+var start;
 var urlGeoCode = 'http://maps.googleapis.com/maps/api/geocode/json?latlng={0},{1}&sensor=true';
 
 $(function () {

@@ -37,8 +37,6 @@ namespace Kong.ApiExpert.Web
 
             bundles.Add(new ScriptBundle("~/Scripts/LanguageTranslator").Include("~/Scripts/App/languagetranslator.js"));
 
-            bundles.Add(new ScriptBundle("~/Scripts/LanguageTranslator").Include("~/Scripts/App/languagetranslator.js"));
-
             bundles.Add(new ScriptBundle("~/Scripts/MortgageCalculator").Include("~/Scripts/App/mortgagecalculator.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/WeatherForecast").Include("~/Scripts/App/weatherforecast.js"));
@@ -47,8 +45,7 @@ namespace Kong.ApiExpert.Web
 
             bundles.Add(new ScriptBundle("~/Scripts/Login").Include("~/Scripts/App/login.js"));
 
-            bundles.Add(new ScriptBundle("~/Scripts/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/Scripts/jqueryval").Include("~/Scripts/jquery.validate*"));
 
         }
     }

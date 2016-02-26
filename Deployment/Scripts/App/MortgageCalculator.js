@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿"use strict";
+
+$(function () {
     var mortgageAmt = $('#txtMortgageAmt');
     var interestRate = $('#txtInterestRate');
     var paymentFrequency = $('#ddlPaymentFrequency');

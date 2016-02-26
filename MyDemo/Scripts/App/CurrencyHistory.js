@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿"use strict";
+
+$(function () {
 //    var url = "currency-history.aspx/GetCurrencyHistory";
     var url = "../Service/WebService.asmx/GetCurrencyHistory";
     var str = [];

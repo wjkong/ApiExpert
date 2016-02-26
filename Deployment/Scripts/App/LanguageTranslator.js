@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿"use strict";
+
+$(function () {
     $('#btnTranslate').click(function (evt) {
         Refresh($(this));
     });

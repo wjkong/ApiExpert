@@ -1,4 +1,6 @@
-﻿var currencyValue = ["USD", "CAD", "EUR", "CNY", "AUD", "JPY", "HKD", "INR", "JMD", "ZAR", "MXN"];
+﻿"use strict";
+
+var currencyValue = ["USD", "CAD", "EUR", "CNY", "AUD", "JPY", "HKD", "INR", "JMD", "ZAR", "MXN"];
 var currencyText = ["U.S. Dollars", "Canadian Dollars", "Euros", "Chinese Yuan", "Australian Dollars", "Japan Yen", "Hong Kong Dollars", "Indian Rupees", "Jamaican Dollars", "South African Rands", "Mexican Pesos"];
 
 $(function () {

@@ -1,4 +1,6 @@
-﻿var totalResults;
+﻿"use strict";
+
+var totalResults;
 var componentForm = {
     country: 'short_name',
     administrative_area_level_1: 'short_name',

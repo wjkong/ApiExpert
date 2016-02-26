@@ -1,4 +1,6 @@
-﻿var totalPhoto = 0;
+﻿"use strict";
+
+var totalPhoto = 0;
 
 $(function () {
     SetScreen(1);

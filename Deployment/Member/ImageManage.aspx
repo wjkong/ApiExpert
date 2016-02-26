@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Kong.ApiExpert.Web.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ImageManage.aspx.cs" Inherits="Kong.ApiExpert.Web.Member.ImageManage" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
+    
+        <asp:FileUpload ID="FileUpload1" runat="server" />
     
     </div>
     </form>

@@ -1,4 +1,6 @@
-﻿var data;
+﻿"use strict";
+
+var data;
 
 $(function () {
     initialize('txtLocation');

@@ -122,6 +122,7 @@
   <ItemGroup>
     <Content Include="App\photo-gallery.aspx" />
     <Content Include="App\place-finder.aspx" />
+    <Content Include="App_Data\google97e116fa5c86fd90.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -165,10 +166,9 @@
     <Content Include="Doc\c-sharp-interview-question.aspx" />
     <Content Include="Doc\c-sharp-naming-convention-design-guideline.aspx" />
     <Content Include="Content\site.css" />
-    <Content Include="Data\GoogleSiteMap.xml">
+    <Content Include="App_Data\GoogleSiteMap.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Data\Photos.xml" />
     <Content Include="default.aspx" />
     <Content Include="App\local-business-search.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -217,7 +217,6 @@
     <Content Include="Tool\mortgage-calculator.aspx" />
     <Content Include="Demos\Photo-Gallery.aspx" />
     <Content Include="App\ask-stackoverflow.aspx" />
-    <Content Include="FAQ.aspx" />
     <Content Include="Images\Angular.png" />
     <Content Include="Images\ASPNET.jpg" />
     <Content Include="Images\BootStrap.jpg" />
@@ -261,7 +260,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\photo-gallery.aspx.cs">
@@ -394,13 +392,6 @@
     <Compile Include="App\ask-stackoverflow.aspx.designer.cs">
       <DependentUpon>ask-stackoverflow.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FAQ.aspx.cs">
-      <DependentUpon>FAQ.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FAQ.aspx.designer.cs">
-      <DependentUpon>FAQ.aspx</DependentUpon>
-    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -455,13 +446,6 @@
     <Compile Include="Tool\world-weather-forecast.aspx.designer.cs">
       <DependentUpon>world-weather-forecast.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -471,9 +455,7 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

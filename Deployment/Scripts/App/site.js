@@ -1,4 +1,6 @@
-﻿var emptyStr = '';
+﻿"use strict";
+
+var emptyStr = '';
 var zero = 0.00;
 var lineBreak = '<br />';
 var yes = "Y";

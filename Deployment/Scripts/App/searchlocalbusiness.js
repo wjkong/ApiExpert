@@ -1,5 +1,6 @@
-﻿var totalResults;
+﻿"use strict";
 
+var totalResults;
 
 $(function () {
     initialize('txtLocation');
