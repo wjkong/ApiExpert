@@ -69,7 +69,7 @@ $.fn.stars = function () {
 
 $.fn.ShowProgressIndicator = function () {
     // To prevent double-click, create an invisible layer to cover the submit button. Also, display a progress indicator.
-    $(this).append("<span class='progressIndicator'><img src='/Images/loading.gif' /></span>");
+    $(this).after("<span class='progressIndicator'><img src='/Images/loading.gif' /></span>");
 
     var position = $(this).position();
 

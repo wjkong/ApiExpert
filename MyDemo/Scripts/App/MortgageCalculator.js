@@ -7,6 +7,8 @@ $(function () {
     var amortizationPeriod = $('#ddlAmortizationPeriod');
     var paymentAmtRow = $('#divPaymentAmt');
 
+    mortgageAmt.autoNumeric('init', { aSign: '$', vMax: '99999999.99', wEmpty: 'zero', mDec: '0', aSep: '' });
+    interestRate.autoNumeric('init', { aSign: '%', pSign: 's', vMax: '100.00', wEmpty: 'zero' });
     paymentAmtRow.hide();
 
     for (var i = 1; i <= 30; i++) {
@@ -22,12 +24,13 @@ $(function () {
         //        $('.page-header').hide();
         $('.page-header-xs').hide().removeClass('visible-xs');
         if ($(this).text() == 'Calculate') {
-            var rate = (interestRate.val().length == 0 || isNaN(interestRate.val())) ? zero : interestRate.val();
+
+            var rate = interestRate.autoNumeric('get');
 
             if (rate == 0)
                 interestRate.val(zero)
 
-            var mortgageAmount = (mortgageAmt.val().length == 0 || isNaN(mortgageAmt.val())) ? zero : mortgageAmt.val();
+            var mortgageAmount = mortgageAmt.autoNumeric('get');
 
             if (mortgageAmount == 0) {
                 return false;
@@ -43,16 +46,13 @@ $(function () {
 
             var result = "For a {0} year mortgage for {1} at the rate of {2}%, your {3} payment is: {4}.";
 
-            paymentAmtRow.html(result.format(amortizationPeriod.val(), FormatCurrency(mortgageAmount), interestRate.val(), $('#ddlPaymentFrequency option:selected').text().toLowerCase(), FormatCurrency(paymentAmtPerPeriod)));
+            paymentAmtRow.html(result.format(amortizationPeriod.val(), FormatCurrency(mortgageAmount), rate, $('#ddlPaymentFrequency option:selected').text().toLowerCase(), FormatCurrency(paymentAmtPerPeriod)));
 
             Compare();
-
-            mortgageAmt.val(FormatCurrency(mortgageAmt.val()));
         }
         else {
             $(this).text("Calculate");
             $('#txtMortgageAmt, #txtInterestRate, #ddlPaymentFrequency, #ddlAmortizationPeriod').removeAttr('disabled');
-            mortgageAmt.val(mortgageAmt.val().formatNumber());
             paymentAmtRow.hide();
         }
     }); // end btnCalculate click event
@@ -78,13 +78,16 @@ $(function () {
         str.push("</tr>");
 
         var monthlyCostOfBorrow;
+        var rate = interestRate.autoNumeric('get');
+        var mortgageAmount = mortgageAmt.autoNumeric('get');
+
 
         $.each(freq, function (index, value) {
 
-            var paymentPerPeriod = CalculatePayment(mortgageAmt.val(), interestRate.val(), amortizationPeriod.val(), value);
+            var paymentPerPeriod = CalculatePayment(mortgageAmount, rate, amortizationPeriod.val(), value);
             var monthlyPayment = CalculateMonthlyPayment(paymentPerPeriod, value);
             var totalPayment = CalculateTotalPayment(paymentPerPeriod, amortizationPeriod.val(), value);
-            var costOfBorrow = CalculateCostOfBorrow(mortgageAmt.val(), totalPayment);
+            var costOfBorrow = CalculateCostOfBorrow(mortgageAmount, totalPayment);
 
             if (value == 12)
                 monthlyCostOfBorrow = costOfBorrow;

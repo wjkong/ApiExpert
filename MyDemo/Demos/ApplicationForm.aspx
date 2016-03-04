@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ApplicationForm.aspx.cs" Inherits="Kong.ApiExpert.Web.Prototype.ApplicationForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script src="../Scripts/CountryState.js" type="text/javascript"></script>
 
+  
 <style type="text/css">
 
 .mControl
@@ -24,40 +24,6 @@ label.required:after
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
-<script type="text/javascript">
-    $(function () {
-        $.each(countryStates.Countries, function (index, country) {
-            var text = country.n;
-            var option = new Option(country.v, country.v);
-            $(option).html(text);
-            $('#ddlCountry').append(option);
-        });
-
-        RefreshState();
-
-        $('#ddlCountry').change(function () {
-            RefreshState();
-        });
-    });
-
-    function RefreshState() {
-        $('#ddlState').empty();
-
-        var selectedCountry = $('#ddlCountry').val();
-
-        $.each(countryStates.Countries, function (index, country) {
-            if (country.v == selectedCountry) {
-                $.each(country.s, function (index, state) {
-                    var text = state.n;
-                    var option = new Option(state.v, state.v);
-                    $(option).html(text);
-                    $('#ddlState').append(option);
-                });
-            }
-        });
-    }
-</script>
-
 <form class="form-horizontal" role="form">
   <div class="form-group">
     <div class="col-sm-6 col-md-3 col-lg-2 text-right mControl">
@@ -135,4 +101,16 @@ label.required:after
 
 <input type=hidden id=hidActiveMenu value="hypApp" />
 
+</asp:Content>
+<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
+<%--    <script src="../Scripts/CountryState.js" type="text/javascript"></script>--%>
+    <script src="../Scripts/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#txtLastName").mask("(999) 999-9999");
+
+       
+        });
+
+    </script>
 </asp:Content>

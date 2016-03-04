@@ -196,6 +196,8 @@
     </None>
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\App\config.js" />
+    <Content Include="Scripts\autoNumeric-1.9.25.js" />
+    <Content Include="Scripts\autoNumeric-1.9.25.min.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -209,6 +211,8 @@
     <Content Include="Scripts\App\LanguageTranslator.js" />
     <Content Include="Scripts\App\searchlocalbusiness.js" />
     <Content Include="Scripts\App\weatherforecast.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Tool\currency-converter.aspx" />
     <Content Include="App\job-search.aspx" />

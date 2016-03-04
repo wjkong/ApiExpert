@@ -7,6 +7,8 @@ $(function () {
     var resultRow = $('#divResult');
     var amount = $('#txtAmount');
 
+    amount.autoNumeric('init', { aSign: '$', vMax: '99999999.99', wEmpty: 'zero' });
+
     resultRow.hide();
 
     $.each(currencyValue, function (index, value) {
@@ -29,7 +31,8 @@ $(function () {
 
             var fromCurrency = $('#ddlFromCurrency').val();
             var toCurrency = $('#ddlToCurrency').val();
-            var amt = (amount.val().length == 0 || isNaN(amount.val())) ? zero : amount.val();
+
+            var amt = amount.autoNumeric('get');
 
             if (fromCurrency == toCurrency)
                 return false;
@@ -41,13 +44,11 @@ $(function () {
             resultRow.show();
 
             GetRate(fromCurrency, toCurrency, amt);
-            amount.val(FormatCurrency(amount.val()));
         }
         else {
             $(this).text("Convert");
             $('#txtAmount, #ddlFromCurrency, #ddlToCurrency').removeAttr('disabled');
 
-            amount.val(amount.val().formatNumber());
             resultRow.hide();
         }
     }); // end btnCalculate click event
