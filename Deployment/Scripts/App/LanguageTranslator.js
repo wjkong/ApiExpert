@@ -17,7 +17,7 @@ $(function () {
 
 function Refresh(target) {
     var translatedWords = $('#divTranslatedWords');
-    target.ShowProgressIndicator();
+    target.showProgressIndicator();
 
     var start = new Date().getTime();
 

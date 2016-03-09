@@ -47,7 +47,7 @@ function Refresh(target) {
         return false;
     }
 
-    target.ShowProgressIndicator();
+    target.showProgressIndicator();
 
     var url = "http://api.worldweatheronline.com/free/v2/weather.ashx?q={0}&format=json&num_of_days=5&key=7f059d6f26f9a7440aa5a8c0fa5e0";
 

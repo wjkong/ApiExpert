@@ -10,7 +10,7 @@ $(function () {
     }
 
     $('#btnLogin').click(function () {
-        $(this).ShowProgressIndicator();
+        $(this).showProgressIndicator();
 
         var username = $.trim($('#txtUsername').val());
         var password = $.trim($('#txtPassword').val());

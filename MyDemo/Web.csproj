@@ -204,7 +204,6 @@
     <Content Include="Scripts\App\config.js" />
     <Content Include="Scripts\autoNumeric-1.9.25.js" />
     <Content Include="Scripts\autoNumeric-1.9.25.min.js" />
-    <Content Include="Scripts\bootstrap-formhelpers-phone.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.1.js" />

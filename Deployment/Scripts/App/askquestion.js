@@ -103,7 +103,7 @@ function ResetCurrentPage(target, pageIndex) {
 function Refresh(target) {
     var start = new Date().getTime();
     if (target != null) {
-        target.ShowProgressIndicator();
+        target.showProgressIndicator();
     }
 
     var filter = "!FsaoAlyOR_zUPjccy3_pNwHZ2W";

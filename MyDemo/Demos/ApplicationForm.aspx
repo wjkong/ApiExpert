@@ -108,16 +108,3 @@ label.required:after
 <input type=hidden id=hidActiveMenu value="hypApp" />
 
 </asp:Content>
-<asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
-<%--    <script src="../Scripts/CountryState.js" type="text/javascript"></script>--%>
-    <script src="../Scripts/jquery.maskedinput.js"></script>
-    <script src="../Scripts/bootstrap-formhelpers-phone.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("#txtLastName").mask("(999) 999-9999");
-
-       
-        });
-
-    </script>
-</asp:Content>

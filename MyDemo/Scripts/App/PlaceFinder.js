@@ -240,7 +240,7 @@ function Refresh(target) {
     if (latitude == undefined || longitude == undefined || latitude == emptyStr || longitude == emptyStr) 
         return;
 
-    target.ShowProgressIndicator();
+    target.showProgressIndicator();
     start = new Date().getTime();
 
     var myCenter = new google.maps.LatLng(latitude,   longitude);

@@ -147,7 +147,7 @@ $(function () {
 function SetScreen(pageIndex, target) {
 
     if (target != null)
-        target.ShowProgressIndicator();
+        target.showProgressIndicator();
 
 
     var pageSize = 9;

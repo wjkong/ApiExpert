@@ -180,7 +180,7 @@ function Refresh(target) {
         data: param,
         beforeSend: function (xhr) {
             if (target != null)
-                target.ShowProgressIndicator();
+                target.showProgressIndicator();
         },
         success: OnSuccess,
         error: function (xhr, status, error) {

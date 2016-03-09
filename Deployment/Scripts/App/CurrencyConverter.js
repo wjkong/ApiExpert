@@ -27,7 +27,7 @@ $(function () {
 
     $('#btnConvert').click(function (evt) {
         if ($(this).text() == 'Convert') {
-            $(this).ShowProgressIndicator();
+            $(this).showProgressIndicator();
 
             var fromCurrency = $('#ddlFromCurrency').val();
             var toCurrency = $('#ddlToCurrency').val();
