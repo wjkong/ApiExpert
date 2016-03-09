@@ -7,7 +7,7 @@ $(function () {
     var resultRow = $('#divResult');
     var amount = $('#txtAmount');
 
-    amount.autoNumeric('init', { aSign: '$', vMax: '99999999.99', wEmpty: 'zero' });
+    amount.autoNumeric('init', { aSign: '$', vMax: '99999999.99', lZero: 'deny' });
 
     resultRow.hide();
 

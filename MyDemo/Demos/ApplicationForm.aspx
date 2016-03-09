@@ -61,7 +61,7 @@ label.required:after
     </div>
 
     <div class="col-sm-6 col-md-3 col-lg-2 text-left mControl">
-        <input type=text id=txtAddress class="form-control" />
+        <input type=text id=txtAddress class="form-control bfh-phone"  data-country="US" />
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="clearfix visible-md-block"></div>
@@ -95,7 +95,13 @@ label.required:after
         <select id=ddlState class="form-control">
         </select>
     </div>
+   <div class="col-sm-6 col-md-3 col-lg-2 text-right mControl">
+        <label class="control-label" for=txtAddress>Phone</label>
+    </div>
 
+    <div class="col-sm-6 col-md-3 col-lg-2 text-left mControl">
+        <input type="tel" id=txtAddress class="form-control" />
+    </div>
 </div>
 </form>
 
@@ -105,6 +111,7 @@ label.required:after
 <asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
 <%--    <script src="../Scripts/CountryState.js" type="text/javascript"></script>--%>
     <script src="../Scripts/jquery.maskedinput.js"></script>
+    <script src="../Scripts/bootstrap-formhelpers-phone.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#txtLastName").mask("(999) 999-9999");

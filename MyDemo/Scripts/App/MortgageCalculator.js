@@ -7,8 +7,8 @@ $(function () {
     var amortizationPeriod = $('#ddlAmortizationPeriod');
     var paymentAmtRow = $('#divPaymentAmt');
 
-    mortgageAmt.autoNumeric('init', { aSign: '$', vMax: '99999999.99', wEmpty: 'zero', mDec: '0', aSep: '' });
-    interestRate.autoNumeric('init', { aSign: '%', pSign: 's', vMax: '100.00', wEmpty: 'zero' });
+    mortgageAmt.autoNumeric('init', { aSign: '$', vMax: '99999999.99', mDec: '0', lZero: 'deny' });
+    interestRate.autoNumeric('init', { aSign: '%', pSign: 's', vMax: '100.00' });
     paymentAmtRow.hide();
 
     for (var i = 1; i <= 30; i++) {
