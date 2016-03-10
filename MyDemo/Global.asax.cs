@@ -2,6 +2,7 @@
 using NLog;
 using System;
 using System.Web.Optimization;
+using System.Web.Routing;
 
 namespace Kong.ApiExpert.Web
 {
@@ -15,6 +16,7 @@ namespace Kong.ApiExpert.Web
 
             UserFactory.RegisterAllUser();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)
