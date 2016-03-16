@@ -81,26 +81,26 @@
 <div class="tree">
     <ul>
         <li>
-            <span class="glyphicon glyphicon-home parentIcon" ></span><a href="default.aspx"><span><i class="icon-folder-open"></i>Home</span></a>
+            <span class="glyphicon glyphicon-home parentIcon" ></span><a href="home"><span><i class="icon-folder-open"></i>Home</span></a>
             <ul>
                 <li>
                 	<span class="glyphicon glyphicon-th parentIcon"></span><span><i class="icon-minus-sign"></i>Application</span>
                     <ul>
                         <li>
-	                         <a href="App/place-finder.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Place Finder</span></a>
+	                         <a href="place-finder-google"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Place Finder</span></a>
                         </li>
                         <li>
-	                        <a href="App/job-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Job Search</span></a>
+	                        <a href="job-search-indeed"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Job Search</span></a>
                         </li>
                         <li>
-	                        <a href="App/ask-stackoverflow.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-question-sign"></span>Question Search</span></a>
+	                        <a href="ask-question-stackoverflow"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-question-sign"></span>Question Search</span></a>
                         </li>
                       
                          <li>
-	                        <a href="App/local-business-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</span></a>
+	                        <a href="app/local-business-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</span></a>
                         </li>
                          <li>
-	                        <a href="App/photo-gallery.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-picture"></span>Photo Gallery</span></a>
+	                        <a href="photo-gallery-flickr"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-picture"></span>Photo Gallery</span></a>
                         </li>
                       
                         
@@ -119,28 +119,28 @@
                 	<span class="glyphicon glyphicon-wrench parentIcon"></span><span><i class="icon-minus-sign"></i>Tool</span> 
                     <ul>
                           <li>
-	                        <a href="Tool/mortgage-calculator.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</span></a>
+	                        <a href="mortgage-calculator"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</span></a>
                         </li>
                         <li>
-	                         <a href="Tool/currency-converter.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-usd"></span>Currency Converter</span></a>
+	                         <a href="currency-converter-yahoo"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-usd"></span>Currency Converter</span></a>
                         </li>
                         <li>
-	                         <a href="Tool/language-translator.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-transfer"></span>Language Translator</span></a>
+	                         <a href="language-translator-mymemory"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-transfer"></span>Language Translator</span></a>
                         </li>
                        
                          <li>
-	                         <a href="Tool/world-weather-forecast.aspx"><span><i class="icon-leaf"></i><span class="glyphicon  glyphicon-cloud"></span>Weather Forecast</span></a>
+	                         <a href="world-weather-forecast-worldweatheronline"><span><i class="icon-leaf"></i><span class="glyphicon  glyphicon-cloud"></span>Weather Forecast</span></a>
                         </li>
                     </ul>
                 </li>
                    <li>
-                	 <a href="Doc/blog.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-list-alt"></span>Documentaton</span></a>
+                	 <a href="blog"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-list-alt"></span>Documentaton</span></a>
                 </li>
                <%-- <li>
                 	 <a href="FAQ.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-question-sign"></span>&nbsp;Frequence Ask Question</span></a>
                 </li>--%>
                 <li>
-                	 <a href="site-map.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-globe"></span>Site Map</span></a>
+                	 <a href="site-map"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-globe"></span>Site Map</span></a>
                 </li>
                 <li>
                 	 <a href="mailto:wjkonger@gmail.com"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-envelope"></span>Contact</span></a>

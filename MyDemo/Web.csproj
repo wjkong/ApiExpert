@@ -84,7 +84,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
@@ -123,6 +123,8 @@
     <Content Include="App\photo-gallery.aspx" />
     <Content Include="App\place-finder.aspx" />
     <Content Include="App_Data\google97e116fa5c86fd90.html" />
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -176,6 +178,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Images\AskQuestion.PNG" />
     <Content Include="Images\AskQuestion_sm.png" />
     <Content Include="Images\BusinessSearch.PNG" />
@@ -204,6 +207,8 @@
     <Content Include="Scripts\App\config.js" />
     <Content Include="Scripts\autoNumeric-1.9.25.js" />
     <Content Include="Scripts\autoNumeric-1.9.25.min.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.1.js" />
@@ -231,6 +236,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Tool\currency-converter.aspx" />
     <Content Include="App\job-search.aspx" />
     <Content Include="Tool\currency-history.aspx" />
