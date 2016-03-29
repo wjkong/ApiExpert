@@ -8,19 +8,14 @@
   <div class="form-group required">
     <label class="control-label col-sm-3" for="txtMortgageAmt">Mortgage Amount</label>
     <div class="col-sm-9">
-        <div class=input-group>
-            <span class="input-group-addon">$</span>
+  
             <input type=text  id="txtMortgageAmt" class="form-control" maxlength=9 autofocus placeholder="Enter total mortgage amount"/>
-        </div>
     </div>
   </div>
    <div class="form-group required">
         <label class="control-label col-sm-3" for="txtInterestRate">Interest Rate</label>
     <div class="col-sm-9">
-        <div class=input-group>
-            <span class="input-group-addon">%</span>
             <input type=text id="txtInterestRate" class="form-control" maxlength=4 placeholder="Enter interest rate in percentage" />
-        </div>
     </div>
   </div>
    <div class="form-group">

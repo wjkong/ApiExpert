@@ -15,10 +15,7 @@
    <div class="form-group required">
     <label class="control-label col-sm-3" for="txtAmount">Amount</label>
     <div class="col-sm-9">
-         <div class=input-group>
-            <span class="input-group-addon">$</span>
-            <input type=text  id="txtAmount" class="form-control" maxlength=12 placeholder="Enter Your Amount" autofocus />
-        </div>
+        <input type=text  id="txtAmount" class="form-control" maxlength=12 placeholder="Enter Your Amount" autofocus />
     </div>
   </div>
    <div class="form-group">
