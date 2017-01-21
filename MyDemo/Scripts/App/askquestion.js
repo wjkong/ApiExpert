@@ -1,21 +1,7 @@
 ﻿"use strict";
 
 $(function () {
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnSearch').click(function () {
+     $('#btnSearch').click(function () {
         ResetCurrentPage($(this));
     });
 
@@ -51,54 +37,9 @@ $(function () {
             ResetCurrentPage($(this));
         }
     });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-//    var availableTags = [
-//      "ActionScript",
-//      "AppleScript",
-//      "Asp",
-//      "BASIC",
-//      "C",
-//      "C++",
-//      "Clojure",
-//      "COBOL",
-//      "ColdFusion",
-//      "Erlang",
-//      "Fortran",
-//      "Groovy",
-//      "Haskell",
-//      "Java",
-//      "JavaScript",
-//      "Lisp",
-//      "Perl",
-//      "PHP",
-//      "Python",
-//      "Ruby",
-//      "Scala",
-//      "Scheme"
-//    ];
-//    $("#txtQuestion").autocomplete({
-//        source: availableTags
-//    });
-
-
-  
 });
 
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
 
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
-}
 
 function Refresh(target) {
     var start = new Date().getTime();

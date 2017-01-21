@@ -3,44 +3,44 @@
 var totalPhoto = 0;
 
 $(function () {
-    SetScreen(1);
+    Refresh();
     $('#btnThumbnail').hide();
 
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
+    //$('#btnNext').click(function () {
+    //    var currentPage = $('#hidCurrentPage').val();
+    //    currentPage++;
 
-        $('#hidCurrentPage').val(currentPage);
+    //    $('#hidCurrentPage').val(currentPage);
 
-        if ($('#hidFullPicture').val() == "Y")
-            SetLargeScreen(currentPage);
-        else
-            SetScreen(currentPage, $(this));
-    });
+    //    if ($('#hidFullPicture').val() == "Y")
+    //        SetLargeScreen(currentPage);
+    //    else
+    //        SetScreen(currentPage, $(this));
+    //});
 
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
+    //$('#btnPrev').click(function () {
+    //    var currentPage = $('#hidCurrentPage').val();
+    //    currentPage--;
 
-        $('#hidCurrentPage').val(currentPage);
+    //    $('#hidCurrentPage').val(currentPage);
 
-        if ($('#hidFullPicture').val() == "Y")
-            SetLargeScreen(currentPage);
-        else
-            SetScreen(currentPage, $(this));
-    });
+    //    if ($('#hidFullPicture').val() == "Y")
+    //        SetLargeScreen(currentPage);
+    //    else
+    //        SetScreen(currentPage, $(this));
+    //});
 
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
+    //$('.pagination').on('click', 'a', function () {
+    //    var currentPage = $(this).text();
 
-        $('#hidCurrentPage').val(currentPage);
+    //    $('#hidCurrentPage').val(currentPage);
 
 
-        if ($('#hidFullPicture').val() == "Y")
-            SetLargeScreen(currentPage);
-        else
-            SetScreen(currentPage, $(this).parent().parent());
-    });
+    //    if ($('#hidFullPicture').val() == "Y")
+    //        SetLargeScreen(currentPage);
+    //    else
+    //        SetScreen(currentPage, $(this).parent().parent());
+    //});
 
     $('#Main').on('click', 'img.img-thumbnail', function () {
         var index = $(this).data("index");
@@ -93,63 +93,21 @@ $(function () {
 
     $('#btnThumbnail').click(function () {
         $('#hidFullPicture').val("N");
-
-        SetScreen(1);
         $('#hidCurrentPage').val(1);
+
+        Refresh();
+      
         $(this).hide();
     });
 });
 
-//function SetLargeScreen(pageIndex) {
-//    $.ajax({
-//        type: "GET",
-//        url: "../Data/Photos.xml",
-//        dataType: "xml",
-//        success: function (xml) {
-//            var str = [];
-//            var index = 0;
-//            var baseUrl = "../Data/Pictures/";
-//            var extention = ".jpg";
 
-//            $(xml).find('Photo').each(function () {
-//                var url = $(this).find('Url').text();
-
-//                index++;
-
-//                if (pageIndex == index) {
-//                    str.push("<div class='text-center'>");
-//                    str.push("<img class='img-responsive img-rounded' src='", baseUrl, url, extention, "' />");
-//                    str.push("</div>");
-//                }
-//            });
-
-//            $('#Main').html(str.join(emptyStr));
-
-//            if (totalPhoto <= pageIndex) {
-//                $('#btnNext').attr('disabled', 'disabled');
-//            }
-//            else
-//                $('#btnNext').removeAttr('disabled', 'disabled');
-
-//            if (pageIndex == 1) {
-//                $('#btnPrev').attr('disabled', 'disabled');
-//            }
-//            else
-//                $('#btnPrev').removeAttr('disabled', 'disabled');
-
-//            var totalNumOfPages = totalPhoto;
-
-//            BuildNavBar(totalNumOfPages);
-//        }
-//    });
-//}
-
-function SetScreen(pageIndex, target) {
+function Refresh(target) {
     if (target != null)
         target.showProgressIndicator();
 
     var start = new Date().getTime();
-
+    var pageIndex = $('#hidCurrentPage').val();
 
     var pageSize = 9;
     var uri = "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=444944a3544fd05499d50adaaa0d5188&per_page={0}&page={1}&format=json&jsoncallback=onSuccess";

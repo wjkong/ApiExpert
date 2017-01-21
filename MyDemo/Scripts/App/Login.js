@@ -1,6 +1,11 @@
 ﻿"use strict";
 
+
 $(function () {
+    var RecaptchaOptions = {
+        lang: 'fr',
+    };
+
     var userName = getCookie("userName");
 
     if (userName != undefined && userName.length > 0) {

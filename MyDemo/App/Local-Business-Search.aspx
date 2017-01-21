@@ -75,27 +75,17 @@
 <div class="row text-info" >
      <div class="col-sm-6">
         <span>
-            Local Business Search Powered by <img src='https://s3-media2.fl.yelpcdn.com/assets/srv0/developer_pages/55e2efe681ed/assets/img/yelp_logo_50x25.png' alt="Yelp" />
+            Local Business Search Powered by <i class='fa fa-yelp'></i> 
         </span>
      </div>
      <div id=resultInfo class="col-sm-6 text-right">
-        
      </div>
 </div>
                              
 <div id="detail">
 </div>
-<div class=row>
-     <div class="col-xs-2 col-sm-1">
-        <button type="button" class="btn btn-success btn-lg" id=btnPrev style="display:none"><span class='glyphicon glyphicon-triangle-left'></span></button>
-     </div>
-     <div class="col-xs-8 col-sm-9 text-center">
-        <ul class="pagination">
-        </ul>
-     </div>
-     <div class="col-xs-2 col-sm-2 text-right">
-        <button type="button" class="btn btn-success btn-lg" id=btnNext style="display:none"><span class='glyphicon glyphicon-triangle-right'></span></button>
-     </div>
+<div class="row text-center">
+    <ul class="pagination"></ul>
 </div>
 
 <div class="modal fade" id="modalMapMarker" role="dialog">

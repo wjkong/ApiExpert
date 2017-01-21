@@ -95,7 +95,7 @@
 <br />
 <div class="row text-info" >
      <div class="col-sm-7">
-        Question/Answer Search Powered by Stack Exchange API
+        Powered by <i class='fa fa-stack-overflow'></i> Stackover Flow API
      </div>
      <div id=resultInfo class="col-sm-5 text-right">
         
@@ -104,15 +104,9 @@
     <div id="detail">
     </div>
   <div class=row>
-     <div class="col-xs-2 col-sm-1">
-        <button type="button" class="btn btn-success btn-lg" id=btnPrev style="display:none"><span class='glyphicon glyphicon-triangle-left'></span></button>
-     </div>
-     <div class="col-xs-8 col-sm-9 text-center">
+     <div class="col-xs-12 text-center">
         <ul class="pagination">
         </ul>
-     </div>
-     <div class="col-xs-2 col-sm-2 text-right">
-        <button type="button" class="btn btn-success btn-lg" id=btnNext style="display:none"><span class='glyphicon glyphicon-triangle-right'></span></button>
      </div>
   </div>
 </div>

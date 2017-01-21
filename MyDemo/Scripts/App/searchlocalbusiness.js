@@ -9,19 +9,7 @@ $(function () {
         fillInAddress();
     });
 
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
+  
 
     $('#ddlPageSize, #ddlRadius').change(function () {
         ResetCurrentPage($(this).prev());
@@ -38,18 +26,6 @@ $(function () {
 
             $('#btnSearch').click();
         }
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
     });
 
     $('#modalMap').on('shown.bs.modal', function (e) {
@@ -142,16 +118,6 @@ function fillInAddress() {
     $('#mapMarker').attr('data-latitude', place.geometry.location.G);
     $('#mapMarker').attr('data-longitude', place.geometry.location.K);
 
-}
-
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
-
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
 }
 
 function Refresh(target) {

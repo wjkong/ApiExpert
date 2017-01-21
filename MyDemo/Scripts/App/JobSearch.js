@@ -39,20 +39,6 @@ $(function () {
         $('#hidIpAddress').val(data.ip);
     });
 
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
     $('#btnSearch, #btnDone').click(function () {
         ResetCurrentPage($(this));
     });
@@ -69,18 +55,6 @@ $(function () {
 
             $('#btnSearch').click();
         }
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
     });
 
     $('#modalMap').on('shown.bs.modal', function (e) {
@@ -112,16 +86,6 @@ $(function () {
         google.maps.event.trigger(map, 'resize');
     });
 });
-
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
-
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
-}
 
 function Refresh(target) {
     var start = new Date().getTime();

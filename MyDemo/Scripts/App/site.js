@@ -12,6 +12,8 @@ var mapLink = "<span data-latitude='{0}' data-longitude='{1}' class='map text-in
 var imgLink = "<img src='{0}' alt=icon />";
 var jsonFormat = "application/json; charset=utf-8";
 
+
+
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -69,7 +71,7 @@ $.fn.stars = function () {
 
 $.fn.showProgressIndicator = function () {
     // To prevent double-click, create an invisible layer to cover the submit button. Also, display a progress indicator.
-    $(this).after("<span class='progressIndicator'><img src='{0}Images/loading.gif' /></span>".format(root));
+    $(this).after("<span class='progressIndicator'><i class='fa fa-spinner fa-2x'></i></span>");
 
     var position = $(this).position();
 
@@ -214,7 +216,41 @@ $(function () {
 
         google.maps.event.trigger(map, 'resize');
     });
+
+    $('.pagination').on('click', 'a', function () {
+        var nextPageIndex = $(this).data("value");
+        var currentPageIndex = parseInt($('#hidCurrentPage').val());
+        var lastPageIndex = parseInt($("#hidLastPageIndex").val());
+
+        switch (nextPageIndex) {
+            case "first":
+                nextPageIndex = 1;
+                break;
+            case "prev":
+                nextPageIndex = currentPageIndex - 1;
+                break;
+            case "next":
+                nextPageIndex = currentPageIndex + 1;
+                break;
+            case "last":
+                nextPageIndex = lastPageIndex;
+                break;
+        }
+
+        if (nextPageIndex >= 1 && nextPageIndex <= lastPageIndex && nextPageIndex != currentPageIndex)
+            ResetCurrentPage($(this).parent().parent(), nextPageIndex);
+    });
 });                // end ready
+
+function ResetCurrentPage(target, pageIndex) {
+    if (typeof pageIndex === 'undefined') {
+        pageIndex = 1;
+    }
+
+    $('#hidCurrentPage').val(pageIndex);
+
+    Refresh(target);
+}
 
 function GetParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -381,21 +417,29 @@ function ShowMap(id, lat, long, con) {
 function BuildNavBar(totalNumOfPages) {
     $('#hidLastPageIndex').val(totalNumOfPages);
 
+    var numOfPage = 5;
     var str = [];
     var currentIndex = $('#hidCurrentPage').val();
 
-    var currentWindowNum = parseInt((currentIndex - 1) / 10);
-    var startIndex = currentWindowNum * 10 + 1;
-    var lastIndex = (currentWindowNum + 1) * 10;
+    var currentWindowNum = parseInt((currentIndex - 1) / numOfPage);
+    var startIndex = currentWindowNum * numOfPage + 1;
+    var lastIndex = (currentWindowNum + 1) * numOfPage;
     lastIndex = Math.min(totalNumOfPages, lastIndex);
+
+    var button = "<li><a {0} data-value={1}><i class='fa {2}'></i></a></li>";
+    str.push(button.format(emptyStr, 'first', 'fa-angle-double-left'));
+    str.push(button.format(emptyStr, 'prev', 'fa-angle-left'));
 
     for (var i = startIndex; i <= lastIndex; i++) {
         if (i == currentIndex) {
-            str.push("<li class='active'><a>", i, "</a></li>");
+            str.push("<li class='active'><a data-value={0}>{0}</a></li>".format(i));
         }
         else
-            str.push("<li><a>", i, "</a></li>");
+            str.push("<li><a data-value={0}>{0}</a></li>".format(i));
     }
+
+    str.push(button.format(emptyStr, 'next', 'fa-angle-right'));
+    str.push(button.format(emptyStr, 'last', 'fa-angle-double-right'));
 
     $('.pagination').empty()
                     .append(str.join(emptyStr));

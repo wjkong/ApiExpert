@@ -13,7 +13,7 @@
     </div>
      <div class = "col-sm-3 col-lg-4">
         <div style="padding-top:10px">
-        <a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-modal-window"></span>Additional Filter</a>
+        <a data-toggle="modal" data-target="#myModal"><i class='fa fa-filter'></i>Additional Filter</a>
         </div>
     </div>
 </div>
@@ -56,17 +56,8 @@
                              
 <div id="detail">
 </div>
-<div class=row>
-     <div class="col-xs-2 col-sm-1">
-        <button type="button" class="btn btn-success btn-lg" id=btnPrev style="display:none"><span class='glyphicon glyphicon-triangle-left'></span></button>
-     </div>
-     <div class="col-xs-8 col-sm-9 text-center">
-        <ul class="pagination">
-        </ul>
-     </div>
-     <div class="col-xs-2 col-sm-2 text-right">
-        <button type="button" class="btn btn-success btn-lg" id=btnNext style="display:none"><span class='glyphicon glyphicon-triangle-right'></span></button>
-     </div>
+<div class="row text-center">
+   <ul class="pagination"></ul>
 </div>
  <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">

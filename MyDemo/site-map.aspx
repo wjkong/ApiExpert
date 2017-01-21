@@ -119,17 +119,17 @@
                 	<span class="glyphicon glyphicon-wrench parentIcon"></span><span><i class="icon-minus-sign"></i>Tool</span> 
                     <ul>
                           <li>
-	                        <a href="mortgage-calculator"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-piggy-bank"></span>Mortgage Calculator</span></a>
+	                        <a href="mortgage-calculator"><span><i class="icon-leaf"></i><i class='fa fa-calculator'></i>Mortgage Calculator</span></a>
                         </li>
                         <li>
-	                         <a href="currency-converter-yahoo"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-usd"></span>Currency Converter</span></a>
+	                         <a href="currency-converter-yahoo"><span><i class="icon-leaf"></i><i class='fa fa-exchange'></i>Currency Converter</span></a>
                         </li>
                         <li>
-	                         <a href="language-translator-mymemory"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-transfer"></span>Language Translator</span></a>
+	                         <a href="language-translator-mymemory"><span><i class="icon-leaf"></i><i class='fa fa-language'></i>Language Translator</span></a>
                         </li>
                        
                          <li>
-	                         <a href="world-weather-forecast-worldweatheronline"><span><i class="icon-leaf"></i><span class="glyphicon  glyphicon-cloud"></span>Weather Forecast</span></a>
+	                         <a href="world-weather-forecast-worldweatheronline"><span><i class="icon-leaf"></i><i class="fa fa-sun-o" aria-hidden="true"></i>Weather Forecast</span></a>
                         </li>
                     </ul>
                 </li>
@@ -140,7 +140,7 @@
                 	 <a href="FAQ.aspx"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-question-sign"></span>&nbsp;Frequence Ask Question</span></a>
                 </li>--%>
                 <li>
-                	 <a href="site-map"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-globe"></span>Site Map</span></a>
+                	 <a href="site-map"><span><i class="icon-minus-sign"></i><i class='fa fa-sitemap'></i>Site Map</span></a>
                 </li>
                 <li>
                 	 <a href="mailto:wjkonger@gmail.com"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-envelope"></span>Contact</span></a>
