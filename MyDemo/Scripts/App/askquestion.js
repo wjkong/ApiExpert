@@ -156,7 +156,7 @@ function Refresh(target) {
 
     });
 
-    objAjax.complete(function () {
+    objAjax.always(function () {
         if (target != null) {
             $('.progressIndicator').fadeOut(100).remove();
         }

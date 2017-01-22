@@ -218,8 +218,6 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Scripts\App\config.js" />
-    <Content Include="Scripts\App\autoNumeric-1.9.25.js" />
-    <Content Include="Scripts\autoNumeric-1.9.25.min.js" />
     <Content Include="Scripts\App\myphoto.js" />
     <Content Include="Scripts\App\currencyhistory.js" />
     <Content Include="Scripts\App\login.js" />

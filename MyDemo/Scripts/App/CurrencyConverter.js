@@ -126,7 +126,7 @@ function GetRate(fromCurrency, toCurrency, amt) {
         $('#detail').html(info + str.join(emptyStr));
     });
 
-    objAjax.complete(function () {
+    objAjax.always(function () {
         $('.progressIndicator').fadeOut(100).remove();
     });
 }

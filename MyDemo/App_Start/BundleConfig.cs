@@ -34,14 +34,14 @@ namespace Kong.ApiExpert.Web
             bundles.Add(new ScriptBundle("~/Scripts/PhotoGallery").Include("~/Scripts/App/photogallery.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/CurrencyConverter").Include(
-                "~/Scripts/autoNumeric-{version}.js",
+                "~/Scripts/autoNumeric/autoNumeric.js",
                 "~/Scripts/App/currencyconverter.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/LanguageTranslator")
                 .Include("~/Scripts/App/languagetranslator.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/MortgageCalculator").Include(
-                "~/Scripts/autoNumeric-{version}.js",
+                "~/Scripts/autoNumeric/autoNumeric.js",
                 "~/Scripts/App/mortgagecalculator.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/WeatherForecast").Include("~/Scripts/App/weatherforecast.js"));

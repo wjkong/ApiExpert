@@ -46,12 +46,12 @@ function Refresh(target) {
         translatedWords.html(data.responseData.translatedText);
     });
 
-    objAjax.error(function (status, error) {
+    objAjax.fail(function (status, error) {
         translatedWords.show();
         translatedWords.html(error);
     });
 
-    objAjax.complete(function () {
+    objAjax.always(function () {
         $('.progressIndicator').fadeOut(100).remove();
 
         var end = new Date().getTime();
