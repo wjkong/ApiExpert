@@ -236,6 +236,8 @@
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\autoNumeric\autoNumeric-min.js" />
     <Content Include="Scripts\autoNumeric\autoNumeric.js" />
+    <Content Include="Scripts\autosize.js" />
+    <Content Include="Scripts\autosize.min.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />

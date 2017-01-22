@@ -337,7 +337,7 @@
          <small>Max 400 characters</small>
     </div>
     <div class ="col-sm-12">
-        <textarea id="txtWords" class="form-control" placeholder="Enter your words..." rows=6 autofocus></textarea>
+        <textarea id="txtWords" class="form-control" placeholder="Enter your words..." autofocus></textarea>
     </div>
 </div>
 <br />

@@ -136,7 +136,7 @@
             </div>
             <div class="modal-body">
                 <div id="listOfComment"></div>
-              <textarea id="txtComment" class="form-control" placeholder="Enter Your Comment" rows=4></textarea>
+              <textarea id="txtComment" class="form-control" placeholder="Enter Your Comment"></textarea>
               
             </div>
             <div class="modal-footer">

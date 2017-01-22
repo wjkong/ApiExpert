@@ -19,7 +19,8 @@ namespace Kong.ApiExpert.Web
                      "~/Scripts/bootstrap.js",
                      "~/Scripts/respond.js",
                      "~/Scripts/App/config.js",
-                     "~/Scripts/App/site.js"));
+                     "~/Scripts/App/site.js",
+                     "~/Scripts/autosize.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/Modernizr").Include("~/Scripts/modernizr-*"));
 
@@ -37,8 +38,8 @@ namespace Kong.ApiExpert.Web
                 "~/Scripts/autoNumeric/autoNumeric.js",
                 "~/Scripts/App/currencyconverter.js"));
 
-            bundles.Add(new ScriptBundle("~/Scripts/LanguageTranslator")
-                .Include("~/Scripts/App/languagetranslator.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/LanguageTranslator").Include(
+                "~/Scripts/App/languagetranslator.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/MortgageCalculator").Include(
                 "~/Scripts/autoNumeric/autoNumeric.js",

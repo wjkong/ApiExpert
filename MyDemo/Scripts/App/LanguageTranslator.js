@@ -11,8 +11,6 @@ $(function () {
         if (txtWords.length > 0)
             Refresh($(this).prev());
     });
-
-
 });
 
 function Refresh(target) {

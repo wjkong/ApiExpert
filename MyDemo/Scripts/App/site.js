@@ -240,6 +240,8 @@ $(function () {
         if (nextPageIndex >= 1 && nextPageIndex <= lastPageIndex && nextPageIndex != currentPageIndex)
             ResetCurrentPage($(this).parent().parent(), nextPageIndex);
     });
+
+    autosize($('textarea'));
 });                // end ready
 
 function ResetCurrentPage(target, pageIndex) {
