@@ -21,21 +21,23 @@ namespace Kong.ApiExpert.Web.Service
     {
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string GetCommentByUrl(string url)
+        public static string GetCommentByUrl(string url)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
                 var commentMgr = new CommentMgr();
 
-                var feedback = new Feedback();
+                var feedback = new Feedback
+                {
+                    Url = url
+                };
 
-                feedback.Url = url;
-
+               
                 var listOfComment = commentMgr.GetByUrl(feedback);
 
-                JsonSerializer _jsonWriter = new JsonSerializer
+                var _jsonWriter = new JsonSerializer
                 {
                     NullValueHandling = NullValueHandling.Ignore
                 };
@@ -44,79 +46,81 @@ namespace Kong.ApiExpert.Web.Service
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string AddComment(string content, string url, int parentId)
+        public static string AddComment(string content, string url, int parentId)
         {
 
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
                 var commentMgr = new CommentMgr();
 
-                var feedback = new Feedback();
-
-                feedback.FullText = content;
-                feedback.Description = content;
-                feedback.Url = url;
-                feedback.Type = "COMMENT";
-                feedback.ParentId = parentId;
+                var feedback = new Feedback
+                {
+                    FullText = content,
+                    Description = content,
+                    Url = url,
+                    Type = "COMMENT",
+                    ParentId = parentId
+                };              
 
                 commentMgr.Add(feedback);
 
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string GetStat(string url)
+        public static string GetStat(string url)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
                 var commentMgr = new CommentMgr();
 
-                SiteStat siteStat = commentMgr.GetSiteStat(url);
+                var siteStat = commentMgr.GetSiteStat(url);
 
                 result = JsonConvert.SerializeObject(siteStat);
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string AddFeedback(string url, string type)
+        public static string AddFeedback(string url, string type)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
                 var commentMgr = new CommentMgr();
 
-                var feedback = new Feedback();
-
-                feedback.Url = url;
-                feedback.Type = type;
+                var feedback = new Feedback
+                {
+                    Url = url,
+                    Type = type
+                };
 
                 commentMgr.AddFeedback(feedback);
 
@@ -124,6 +128,7 @@ namespace Kong.ApiExpert.Web.Service
             }
             catch
             {
+                throw;
             }
 
             return result;
@@ -131,9 +136,9 @@ namespace Kong.ApiExpert.Web.Service
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string AddDislike()
+        public static string AddDislike()
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
@@ -141,23 +146,23 @@ namespace Kong.ApiExpert.Web.Service
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
 
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string GetCurrencyHistory()
+        public static string GetCurrencyHistory()
         {
 
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
-                string uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
+                var uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
 
                 using (WebClient client = new WebClient())
                 {
@@ -168,15 +173,15 @@ namespace Kong.ApiExpert.Web.Service
                 }
 
 
-                string newStr = result;
+                var newStr = result;
 
-                string k = newStr.Substring(0, 30);
+                var k = newStr.Substring(0, 30);
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
 
         }

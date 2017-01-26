@@ -16,15 +16,21 @@ namespace Kong.ApiExpert.DAL
         {
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static SqlCommand CreateCommand(string comText)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandText = comText;
-            command.CommandType = CommandType.StoredProcedure;
-            command.Connection = GetConnection();
+            var command = new SqlCommand
+            {
+                CommandText = comText,
+                CommandType = CommandType.StoredProcedure,
+                Connection = GetConnection()
+
+            };
+            
             return command;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static void CreateCommand(SqlCommand com, string comText)
         {
             com.CommandText = comText;
@@ -32,6 +38,7 @@ namespace Kong.ApiExpert.DAL
             com.Connection = GetConnection();
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static void CreateQuery(SqlCommand com, string comText)
         {
             com.CommandText = comText;
@@ -46,32 +53,40 @@ namespace Kong.ApiExpert.DAL
 
         public static SqlParameter PrepareOutputParam(SqlCommand com, string param)
         {
-            SqlParameter parameter = new SqlParameter(param, SqlDbType.Int);
-            parameter.Direction = ParameterDirection.Output;
-            parameter.Value = 0;
+            var parameter = new SqlParameter(param, SqlDbType.Int)
+            {
+                Direction = ParameterDirection.Output,
+                Value = 0
+            };
+            
             com.Parameters.Add(parameter);
             return parameter;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static DataSet PrepareTables(string[] comText)
         {
-            DataSet dataSet = new DataSet();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand com = new SqlCommand();
-            for (int i = 0; i < comText.Length; i++)
+            var dataSet = new DataSet();
+            var com = new SqlCommand();
+
+            using (var adapter = new SqlDataAdapter())
             {
-                if (i == Utility.FIRST_TIME)
+                for (int i = 0; i < comText.Length; i++)
                 {
-                    CreateCommand(com, comText[i]);
-                    com.Connection.Open();
+                    if (i == Utility.FIRST_TIME)
+                    {
+                        CreateCommand(com, comText[i]);
+                        com.Connection.Open();
+                    }
+                    else
+                    {
+                        com.CommandText = comText[i];
+                    }
+                    adapter.SelectCommand = com;
+                    adapter.Fill(dataSet, comText[i]);
                 }
-                else
-                {
-                    com.CommandText = comText[i];
-                }
-                adapter.SelectCommand = com;
-                adapter.Fill(dataSet, comText[i]);
             }
+          
             com.Connection.Close();
             return dataSet;
         }

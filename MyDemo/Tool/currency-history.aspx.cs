@@ -13,21 +13,17 @@ namespace Kong.ApiExpert.Web.Tool
 {
     public partial class currency_history : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
+   
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string GetCurrencyHistory()
         {
 
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
-                string uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
+                var uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
 
                 using (WebClient client = new WebClient())
                 {
@@ -39,9 +35,9 @@ namespace Kong.ApiExpert.Web.Tool
                         
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
 
         }

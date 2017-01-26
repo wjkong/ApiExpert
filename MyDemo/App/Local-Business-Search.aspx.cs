@@ -12,21 +12,17 @@ namespace Kong.ApiExpert.Web.Search
 {
     public partial class Local_Business_Search : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
+     
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         //public static string RetrieveLocalInfo(string term, string location, int startIndex, int pageSize, int radius)
         public static string RetrieveLocalInfo(ParamBusiness business)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
-                string uri = @"http://api.yelp.com/v2/search/?term={0}&location={1}&limit={2}&offset={3}&radius_filter={4}&sort=2";
+                var uri = @"http://api.yelp.com/v2/search/?term={0}&location={1}&limit={2}&offset={3}&radius_filter={4}&sort=2";
 
                 uri = string.Format(uri, HttpUtility.UrlEncode(business.Term), HttpUtility.UrlEncode(business.Location), business.PageSize, business.StartIndex, business.Radius);
 
@@ -45,16 +41,17 @@ namespace Kong.ApiExpert.Web.Search
                     }
                 ).WithEncryption(EncryptionMethod.HMACSHA1).InHeader();
 
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                var stream = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
-
-                result = stream.ReadToEnd();
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var stream = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
+                {
+                    result = stream.ReadToEnd();
+                }
 
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
