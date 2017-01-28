@@ -14,34 +14,21 @@ namespace Kong.ApiExpert.DAL
         public bool InsertUser()
         {
             var success = false;
-            SqlCommand cmd = null;
-
-            try
+            using (var connection = SQLHelper.GetConnection())
             {
-                using (var connection = SQLHelper.GetConnection())
+                using (var cmd = new SqlCommand())
                 {
-                    using (cmd = new SqlCommand())
-                    {
-                        cmd.CommandText = @"INSERT INTO [User] (UserName, Password) VALUES (@UserName, @Password)";
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Connection = connection;
-                        cmd.Parameters.AddWithValue("@UserName", UserName);
-                        cmd.Parameters.AddWithValue("@Password", Password);
+                    cmd.CommandText = @"INSERT INTO [User] (UserName, Password) VALUES (@UserName, @Password)";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
+                    cmd.Parameters.AddWithValue("@Password", Password);
 
-                        cmd.Connection.Open();
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.Connection.Open();
+                    cmd.ExecuteNonQuery();
+
+                    success = true;
                 }
-
-                success = true;
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                cmd.Connection.Close();
             }
 
             return success;

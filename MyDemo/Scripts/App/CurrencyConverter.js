@@ -84,10 +84,8 @@ function GetRate(fromCurrency, toCurrency, amt) {
 
         var columnTitle = ["From Currency", "To Currency", "Exchange Rate", "Yield Amount"];
         var rates = data.query.results.rate;
-        var items = [];
-        var i = 0;
 
-        var result = "Converting {0} {1} to {2} will yield {3} {2}. <br/> (Exchange rate = {4} at {5} on {6})";
+        //var result = "Converting {0} {1} to {2} will yield {3} {2}. <br/> (Exchange rate = {4} at {5} on {6})";
         var str = [];
 
         str.push("<table class='table table-striped'>");

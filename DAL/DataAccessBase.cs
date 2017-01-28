@@ -4,7 +4,6 @@ namespace Kong.ApiExpert.DAL
 {
     public abstract class DataAccessBase
     {
-        private readonly ConnectionStringSettings _connStrSetting = ConfigurationManager.ConnectionStrings["ApiExpertConn"];
         protected readonly string ConnectionString = ConfigurationManager.ConnectionStrings["ApiExpertConn"].ToString();
 
 

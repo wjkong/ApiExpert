@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Data;
+﻿using Kong.ApiExpert.Model;
 using System.Configuration;
-using Kong.ApiExpert.Model;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Kong.ApiExpert.DAL
 {
     public abstract class SQLHelper
     {
-        // Methods
-        protected SQLHelper()
-        {
-        }
-
+        
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static SqlCommand CreateCommand(string comText)
         {

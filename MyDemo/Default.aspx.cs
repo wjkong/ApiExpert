@@ -11,7 +11,7 @@ namespace Kong.ApiExpert.Web
         {
             logMgr.Info("Hello World");
 
-            string s = string.Empty;
+          
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Kong.ApiExpert.Model
+﻿namespace Kong.ApiExpert.Model
 {
     public abstract class Utility
     {

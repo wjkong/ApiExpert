@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Kong.ApiExpert.Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
 using System.Data;
-using Kong.ApiExpert.Model;
+using System.Data.SqlClient;
 
 namespace Kong.ApiExpert.DAL
 {
@@ -115,8 +113,6 @@ namespace Kong.ApiExpert.DAL
 
         public SiteStat SelectSiteStatByUrl(string url)
         {
-            var listOfComment = new List<Feedback>();
-
             var siteStat = new SiteStat();
 
             using (var connection = new SqlConnection(ConnectionString))

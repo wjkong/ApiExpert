@@ -1,7 +1,6 @@
 ﻿using Kong.ApiExpert.Logic;
 using Kong.ApiExpert.Model;
 using Newtonsoft.Json;
-using System;
 using System.Net;
 using System.Text;
 using System.Web.Script.Services;
@@ -175,7 +174,6 @@ namespace Kong.ApiExpert.Web.Service
 
                 var newStr = result;
 
-                var k = newStr.Substring(0, 30);
 
                 return result;
             }

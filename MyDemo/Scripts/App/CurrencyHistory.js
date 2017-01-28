@@ -1,9 +1,7 @@
 ﻿"use strict";
 
 $(function () {
-//    var url = "currency-history.aspx/GetCurrencyHistory";
     var url = "../Service/WebService.asmx/GetCurrencyHistory";
-    var str = [];
 
     $.ajax({
         type: 'POST',
@@ -13,7 +11,7 @@ $(function () {
         error: function (xhr, status, error) {
             alert(error);
         },
-        complete: function (xhr, status) {
+        complete: function () {
 
         }
     });
@@ -21,7 +19,7 @@ $(function () {
 });
 
 
-function OnSuccess(data, status) {
+function OnSuccess(data) {
 
     var jsonData = JSON.parse(data.d);
 }

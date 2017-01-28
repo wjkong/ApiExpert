@@ -1,11 +1,4 @@
-﻿using Kong.ApiExpert.Logic.AccountDemo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kong.ApiExpert.Logic.AccountDemo
+﻿namespace Kong.ApiExpert.Logic.AccountDemo
 {
     public abstract class AccountCreator
     {
