@@ -15,17 +15,22 @@ namespace Kong.ApiExpert.DAL
         public bool InsertFeedback(Feedback feedback)
         {
             var success = false;
-            SqlCommand cmd = null;
+
+            SqlConnection connection = null;
 
             try
             {
-                using (var connection = new SqlConnection(ConnectionString))
-                {
-                    cmd = new SqlCommand();
+                connection = new SqlConnection(ConnectionString);
 
-                    cmd.CommandText = @"INSERT INTO [dbo].[Feedback] ([Type] ,[Url]) VALUES (@Type, @Url)";
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = connection;
+                using (var cmd = new SqlCommand
+                {
+                    Connection = connection,
+                    CommandText = @"INSERT INTO [dbo].[Feedback] ([Type] ,[Url]) VALUES (@Type, @Url)",
+                    CommandType = CommandType.Text
+                })
+                {
+                    connection = null;
+
                     cmd.Parameters.AddWithValue("@Type", feedback.Type);
                     cmd.Parameters.AddWithValue("@Url", feedback.Url);
 
@@ -35,21 +40,18 @@ namespace Kong.ApiExpert.DAL
 
                 success = true;
             }
-            catch
-            {
-                throw;
-            }
             finally
             {
-                cmd.Connection.Close();
+                connection?.Dispose();
             }
+
 
             return success;
         }
 
         public bool InsertComment(Feedback feedback)
         {
-            bool success = false;
+            var success = false;
             SqlCommand cmd = null;
 
             try
@@ -89,48 +91,44 @@ namespace Kong.ApiExpert.DAL
         {
             var listOfComment = new List<Feedback>();
 
-             SqlCommand cmd = null;
-
-            try
+            using (var connection = new SqlConnection(ConnectionString))
             {
-                using (var connection = new SqlConnection(ConnectionString))
-                {
-                    cmd = new SqlCommand();
+                SqlCommand cmd = null;
 
-                    cmd.CommandText = @"SELECT Id, Description, CreatedDate, ParentId FROM [Feedback] WHERE URL = @Url AND TYPE = 'COMMENT'";
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = connection;
+                try
+                {
+                    cmd = new SqlCommand
+                    {
+                        CommandText =
+                            @"SELECT Id, Description, CreatedDate, ParentId FROM [Feedback] WHERE URL = @Url AND TYPE = 'COMMENT'",
+                        CommandType = CommandType.Text,
+                        Connection = connection
+                    };
 
                     cmd.Parameters.AddWithValue("@Url", comment.Url);
-
                     cmd.Connection.Open();
 
-                    dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        var comm = new Feedback();
-                        comm.Id = Convert.ToInt32(dr["Id"]);
-                        comm.Description = dr["Description"].ToString();
-                        comm.TimeCreated = Convert.ToDateTime(dr["CreatedDate"]);
-                        comm.ParentId = Convert.ToInt32(dr["ParentId"]);
+                        cmd = null;
+                        while (reader.Read())
+                        {
+                            var comm = new Feedback
+                            {
+                                Id = Convert.ToInt32(dr["Id"]),
+                                Description = dr["Description"].ToString(),
+                                TimeCreated = Convert.ToDateTime(dr["CreatedDate"]),
+                                ParentId = Convert.ToInt32(dr["ParentId"])
+                            };
 
-                        listOfComment.Add(comm);
+                            listOfComment.Add(comm);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                if (dr != null)
+                finally
                 {
-                    dr.Close();
+                    cmd?.Dispose();
                 }
-
-                cmd.Connection.Close();
             }
 
             return listOfComment;
@@ -139,8 +137,8 @@ namespace Kong.ApiExpert.DAL
         public SiteStat SelectSiteStatByUrl(string url)
         {
             var listOfComment = new List<Feedback>();
-            
-            SiteStat siteStat = new SiteStat();
+
+            var siteStat = new SiteStat();
 
             SqlCommand cmd = null;
 
@@ -186,10 +184,7 @@ namespace Kong.ApiExpert.DAL
             }
             finally
             {
-                if (dr != null)
-                {
-                    dr.Close();
-                }
+                dr?.Close();
 
                 cmd.Connection.Close();
             }
@@ -197,5 +192,5 @@ namespace Kong.ApiExpert.DAL
             return siteStat;
         }
     }
-   
+
 }

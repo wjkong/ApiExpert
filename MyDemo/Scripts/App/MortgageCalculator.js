@@ -28,7 +28,7 @@ $(function () {
             var rate = interestRate.autoNumeric('get');
 
             if (rate == 0)
-                interestRate.val(zero)
+                interestRate.val(zero);
 
             var mortgageAmount = mortgageAmt.autoNumeric('get');
 
@@ -61,7 +61,7 @@ $(function () {
         var str = [];
         var columnTitle = ["Payment Frequency", "Payment", "Monthly Payment", "Total Payment", "Cost of Borrow", "Save Money"];
         var freqName = ["Monthly", "Semi-monthly", "Bi-weekly", "Weekly"];
-        var hiddenColumn = ["Cost of Borrow", "Save Money"]
+        var hiddenColumn = ["Cost of Borrow", "Save Money"];
         var freq = [12, 24, 26, 52];
 
         str.push("<table class='table table-striped'>");
@@ -158,7 +158,7 @@ function CalculateMonthlyPayment(paymentPerPeriod, paymentFrequency) {
     monthlyPayment = paymentPerPeriod * paymentFrequency / 12;
     monthlyPayment = monthlyPayment;
 
-    return monthlyPayment
+    return monthlyPayment;
 }
 
 function CalculateTotalPayment(paymentPerPeriod, amortization, paymentFrequency) {
@@ -172,7 +172,7 @@ function CalculateTotalPayment(paymentPerPeriod, amortization, paymentFrequency)
     totalPayment = paymentPerPeriod * amortization * paymentFrequency;
     totalPayment = totalPayment;
 
-    return totalPayment
+    return totalPayment;
 }
 
 function CalculateCostOfBorrow(principal, totalPayment) {

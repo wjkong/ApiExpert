@@ -16,7 +16,8 @@ var jsonFormat = "application/json; charset=utf-8";
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+    m.parentNode.insertBefore(a, m);
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-65517203-1', 'auto');
@@ -178,7 +179,6 @@ $(function () {
     });
 
     $('#modalMap').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -203,7 +203,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({

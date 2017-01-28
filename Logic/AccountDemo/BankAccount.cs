@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.VisualBasic;
 
-namespace Kong.ApiExpert.Logic.Accounts
+namespace Kong.ApiExpert.Logic.AccountDemo
 {
     public partial class BankAccount : Account, IBankAccount
     {

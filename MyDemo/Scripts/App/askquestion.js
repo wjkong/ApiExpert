@@ -75,8 +75,8 @@ function Refresh(target) {
         BuildNavBar(totalNumOfPages);
 
         var columnTitle = ["Title of Question", "Votes", "Tags", "Answers", "Created", "Updated"];
-        var hiddenColumn = ["Tags", "Answers", "Created", "Updated"]
-        var sortColumn = ["Votes", "Created", "Updated"]
+        var hiddenColumn = ["Tags", "Answers", "Created", "Updated"];
+        var sortColumn = ["Votes", "Created", "Updated"];
         var sortValue = ["Title of Question", "votes", "tags", "Answers", "creation", "activity"];
 
         str.push("<table class='table table-striped table-bordered table-hover'>");

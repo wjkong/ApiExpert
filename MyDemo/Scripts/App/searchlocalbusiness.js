@@ -27,7 +27,6 @@ $(function () {
     });
 
     $('#modalMap').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -52,7 +51,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
         marker.setMap(map);
 
 
@@ -62,7 +61,6 @@ $(function () {
     });
 
     $('#modalMapMarker').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -79,7 +77,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({
@@ -130,7 +128,7 @@ function Refresh(target) {
     if ($.trim(location).length == 0)
         return false;
 
-    var url = "Local-Business-Search.aspx/RetrieveLocalInfo"
+    var url = "Local-Business-Search.aspx/RetrieveLocalInfo";
     var param = "{business: { 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }}";
     param = param.format(term, location, startIndex, pageSize, radius);
 
@@ -169,11 +167,11 @@ function OnSuccess(data, status) {
 
     $('#btnPrev, #btnNext, #mapMarker').show();
 
-    var jsonData = JSON.parse(data.d)
+    var jsonData = JSON.parse(data.d);
     var str = [];
 
     var tableHeaders = ["Business", "Rating", "Distance", "Description", "Address", "Phone"];
-    var hiddenColumn = ["Distance", "Description"]
+    var hiddenColumn = ["Distance", "Description"];
     var rateImg = "<img src='{0}' alt='{1}' title='{1} stars' />";
     var businessImg = "<img src='{0}' alt='{1}' />";
 

@@ -160,7 +160,7 @@ function onSuccess(data) {
         else
             $('#btnPrev').removeAttr('disabled', 'disabled');
 
-        totalPhoto = data.photos.total
+        totalPhoto = data.photos.total;
 
         if (currentPage * pageSize < totalPhoto) {
             $('#btnNext').removeAttr('disabled', 'disabled');

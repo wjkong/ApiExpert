@@ -9,19 +9,19 @@ namespace Kong.ApiExpert.Logic
 {
     public class AccountMgr : Account
     {
-        protected IAccountDacMgr dacMgr;  
+        protected IAccountDacMgr DacMgr;  
 
         public AccountMgr(IAccountDacMgr dacMgr)
         {
-            dacMgr = dacMgr;
+            DacMgr = dacMgr;
            
         }
 
         public bool Login()
         {
-            dacMgr.SetClone(this);
+            DacMgr.SetClone(this);
 
-            return dacMgr.LoginDAC();
+            return DacMgr.LoginDAC();
         }
     }
 }

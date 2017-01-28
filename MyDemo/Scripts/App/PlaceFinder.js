@@ -51,7 +51,6 @@ $(function () {
     });
 
     $('#modalMapMarker').on('shown.bs.modal', function (e) {
-        var map;
         var latitude = $('#hidLat').val();
         var longitude = $('#hidLng').val();
 
@@ -68,7 +67,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({

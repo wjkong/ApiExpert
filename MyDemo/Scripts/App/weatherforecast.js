@@ -78,10 +78,10 @@ function Refresh(target) {
         $('#winddir').html(current.winddir16Point);
 
         var columnTitle = [space, "Date", "Min Temp.", "Max Temp.", "UV Index", "Sun Rise", "Sun Set"];
-        var hiddenColumn = ["UV Index", "Sun Rise", "Sun Set"]
+        var hiddenColumn = ["UV Index", "Sun Rise", "Sun Set"];
 
         var hourColumnTitle = ["Time", "Weather", "Condition", "Temperature", "Humidity", "Wind", "Cloud"];
-        var hourHiddenColumn = ["Temperature", "Humidity", "Cloud", "Wind"]
+        var hourHiddenColumn = ["Temperature", "Humidity", "Cloud", "Wind"];
 
         var str = [];
 
@@ -176,7 +176,7 @@ function Refresh(target) {
 }
 
 function GetTemperture(tempC, tempF, onlyNumber) {
-    var temp = tempC
+    var temp = tempC;
     if (onlyNumber == undefined || onlyNumber == false)
         temp  += " &#176;C";
 
@@ -185,7 +185,7 @@ function GetTemperture(tempC, tempF, onlyNumber) {
         var tempType = selected.val();
 
         if (tempType == "fahrenheit") {
-            temp = tempF
+            temp = tempF;
 
             if (onlyNumber == undefined || onlyNumber == false)
                 temp += " &#176;F";
