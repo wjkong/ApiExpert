@@ -11,7 +11,7 @@ namespace Kong.ApiExpert.Web.Demos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 Page.Title = "Mortgage Calculator";
             }

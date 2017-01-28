@@ -13,13 +13,13 @@ namespace Kong.ApiExpert.Logic
 
         public AccountMgr(IAccountDacMgr dacMgr)
         {
-            this.dacMgr = dacMgr;
+            dacMgr = dacMgr;
            
         }
 
         public bool Login()
         {
-            this.dacMgr.SetClone(this);
+            dacMgr.SetClone(this);
 
             return dacMgr.LoginDAC();
         }

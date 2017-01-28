@@ -14,7 +14,7 @@ namespace Kong.ApiExpert.DAL
 
         public bool InsertFeedback(Feedback feedback)
         {
-            bool success = false;
+            var success = false;
             SqlCommand cmd = null;
 
             try
@@ -107,7 +107,7 @@ namespace Kong.ApiExpert.DAL
 
                     dr = cmd.ExecuteReader();
 
-                    while (this.dr.Read())
+                    while (dr.Read())
                     {
                         var comm = new Feedback();
                         comm.Id = Convert.ToInt32(dr["Id"]);
@@ -125,9 +125,9 @@ namespace Kong.ApiExpert.DAL
             }
             finally
             {
-                if (this.dr != null)
+                if (dr != null)
                 {
-                    this.dr.Close();
+                    dr.Close();
                 }
 
                 cmd.Connection.Close();
@@ -186,9 +186,9 @@ namespace Kong.ApiExpert.DAL
             }
             finally
             {
-                if (this.dr != null)
+                if (dr != null)
                 {
-                    this.dr.Close();
+                    dr.Close();
                 }
 
                 cmd.Connection.Close();

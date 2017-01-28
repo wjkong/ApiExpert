@@ -39,7 +39,7 @@ namespace Kong.ApiExpert.Model
 
         public Account(Account info)
         {
-            this.Clone(info);
+            Clone(info);
         }
 
         protected void Clone(Account info)

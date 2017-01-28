@@ -13,7 +13,7 @@ namespace Kong.ApiExpert.Model
         // Methods
         public StringValueAttribute(string value)
         {
-            this.mValue = value;
+            mValue = value;
         }
 
         // Properties
@@ -21,7 +21,7 @@ namespace Kong.ApiExpert.Model
         {
             get
             {
-                return this.mValue;
+                return mValue;
             }
         }
     }

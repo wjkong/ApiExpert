@@ -85,7 +85,7 @@
 <br class="visible-xs-block"/>
 <div class="col-sm-9 col-md-9 col-lg-10" >
  <div class="input-group">
-      <input type=text  id="txtQuestion" class="form-control" autocomplete="off"" placeholder="Ask question from Stack Overflow ..." autofocus/>
+      <input type=text  id="txtQuestion" class="form-control" autocomplete="off" placeholder="Ask question from Stack Overflow ..." autofocus/>
       <span class="input-group-btn">
         <button type="button" class="btn btn-success" id=btnSearch><span class="glyphicon glyphicon-search"></span></button>
       </span>

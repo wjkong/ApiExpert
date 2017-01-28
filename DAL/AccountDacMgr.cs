@@ -6,7 +6,7 @@ namespace Kong.ApiExpert.DAL
 {
     public class AccountDacMgr : Account, IAccountDacMgr
     {
-        protected SqlDataReader dreader;
+        private SqlDataReader _dreader;
 
         public void SetClone(Account account)
         {
@@ -15,23 +15,24 @@ namespace Kong.ApiExpert.DAL
 
         public bool InsertUser()
         {
-            bool success = false;
+            var success = false;
             SqlCommand cmd = null;
 
             try
             {
                 using (var connection = SQLHelper.GetConnection())
                 {
-                    cmd = new SqlCommand();
+                    using (cmd = new SqlCommand())
+                    {
+                        cmd.CommandText = @"INSERT INTO [User] (UserName, Password) VALUES (@UserName, @Password)";
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = connection;
+                        cmd.Parameters.AddWithValue("@UserName", UserName);
+                        cmd.Parameters.AddWithValue("@Password", Password);
 
-                    cmd.CommandText = @"INSERT INTO [User] (UserName, Password) VALUES (@UserName, @Password)";
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = connection;
-                    cmd.Parameters.AddWithValue("@UserName", UserName);
-                    cmd.Parameters.AddWithValue("@Password", Password);
-
-                    cmd.Connection.Open();
-                    cmd.ExecuteNonQuery();
+                        cmd.Connection.Open();
+                        cmd.ExecuteNonQuery();
+                    }
                 }
 
                 success = true;
@@ -73,9 +74,9 @@ namespace Kong.ApiExpert.DAL
                         cmd.Connection.Open();
                     }
 
-                    this.dreader = cmd.ExecuteReader();
+                    _dreader = cmd.ExecuteReader();
 
-                    if (this.dreader.Read())
+                    if (_dreader.Read())
                     {
                         flag = true;
                     }
@@ -88,9 +89,9 @@ namespace Kong.ApiExpert.DAL
             }
             finally
             {
-                if (this.dreader != null)
+                if (_dreader != null)
                 {
-                    this.dreader.Close();
+                    _dreader.Close();
                 }
 
                 cmd.Connection.Close();

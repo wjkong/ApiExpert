@@ -24,7 +24,7 @@ $(function () {
             var currentOrder = $('#hidCurrentOrder').val();
 
             if ($('#hidCurrentSort').val() == sort) {
-                if (currentOrder == "desc")
+                if (currentOrder === "desc")
                     $('#hidCurrentOrder').val('asc');
                 else
                     $('#hidCurrentOrder').val('desc');
@@ -43,7 +43,7 @@ $(function () {
 
 function Refresh(target) {
     var start = new Date().getTime();
-    if (target != null) {
+    if (target !== null) {
         target.showProgressIndicator();
     }
 

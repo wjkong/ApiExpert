@@ -9,8 +9,6 @@ $(function () {
         fillInAddress();
     });
 
-  
-
     $('#ddlPageSize, #ddlRadius').change(function () {
         ResetCurrentPage($(this).prev());
     });

@@ -9,7 +9,7 @@ namespace Kong.ApiExpert.Logic
 {
     public class CommentMgr
     {
-        CommentDacMgr commentDac = new CommentDacMgr();
+         CommentDacMgr commentDac = new CommentDacMgr();
 
         public bool Add(Feedback feedback)
         {

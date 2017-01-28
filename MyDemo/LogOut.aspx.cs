@@ -13,9 +13,9 @@ namespace Kong.ApiExpert.Web
         protected void Page_PreInit(object sender, EventArgs e)
         {
             FormsAuthentication.SignOut();
-            this.Session.Clear();
-            this.Session.Abandon();
-            base.Response.Redirect("~/Default.aspx") ;
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Default.aspx") ;
         }
     }
 }
