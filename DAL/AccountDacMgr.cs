@@ -6,11 +6,9 @@ namespace Kong.ApiExpert.DAL
 {
     public class AccountDacMgr : Account, IAccountDacMgr
     {
-        private SqlDataReader _dreader;
-
         public void SetClone(Account account)
         {
-            base.Clone(account);
+            Clone(account);
         }
 
         public bool InsertUser()
@@ -53,47 +51,27 @@ namespace Kong.ApiExpert.DAL
         {
             var flag = false;
 
-
-            SqlCommand cmd = null;
-
-            try
+            using (var connection = SQLHelper.GetConnection())
             {
-                using (var connection = SQLHelper.GetConnection())
+                using (var cmd = new SqlCommand())
                 {
-                    using (cmd = new SqlCommand())
+                    cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
+                    cmd.Parameters.AddWithValue("@Password", Password);
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
+
+
+                    if (cmd.Connection.State == ConnectionState.Closed)
                     {
-                        cmd.CommandText = @"SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password";
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Connection = connection;
-                        cmd.Parameters.AddWithValue("@Password", Password);
-                        cmd.Parameters.AddWithValue("@UserName", UserName);
+                        cmd.Connection.Open();
+                    }
 
-
-                        if (cmd.Connection.State == ConnectionState.Closed)
-                        {
-                            cmd.Connection.Open();
-                        }
-
-                        _dreader = cmd.ExecuteReader();
-
-                        if (_dreader.Read())
-                        {
-                            flag = true;
-                        }
+                    using (var dreader = cmd.ExecuteReader())
+                    {
+                        flag |= dreader.Read();
                     }
                 }
-
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                _dreader?.Close();
-                
-
-                cmd.Connection.Close();
             }
 
             return flag;

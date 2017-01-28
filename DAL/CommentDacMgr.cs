@@ -10,8 +10,6 @@ namespace Kong.ApiExpert.DAL
 {
     public class CommentDacMgr : DataAccessBase
     {
-        private SqlDataReader dr;
-
         public bool InsertFeedback(Feedback feedback)
         {
             var success = false;
@@ -52,14 +50,11 @@ namespace Kong.ApiExpert.DAL
         public bool InsertComment(Feedback feedback)
         {
             var success = false;
-            SqlCommand cmd = null;
 
-            try
+            using (var connection = new SqlConnection(ConnectionString))
             {
-                using (var connection = new SqlConnection(ConnectionString))
+                using (var cmd = new SqlCommand())
                 {
-                    cmd = new SqlCommand();
-
                     cmd.CommandText = @"INSERT INTO [dbo].[Feedback] ([FullText], [Description], [Url], Type, parentId) VALUES (@FullText, @Description, @Url, @Type, @ParentId)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
@@ -71,17 +66,9 @@ namespace Kong.ApiExpert.DAL
 
                     cmd.Connection.Open();
                     cmd.ExecuteNonQuery();
-                }
 
-                success = true;
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                cmd.Connection.Close();
+                    success = true;
+                }
             }
 
             return success;
@@ -93,41 +80,33 @@ namespace Kong.ApiExpert.DAL
 
             using (var connection = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = null;
 
-                try
+                using (var cmd = new SqlCommand
                 {
-                    cmd = new SqlCommand
-                    {
-                        CommandText =
-                            @"SELECT Id, Description, CreatedDate, ParentId FROM [Feedback] WHERE URL = @Url AND TYPE = 'COMMENT'",
-                        CommandType = CommandType.Text,
-                        Connection = connection
-                    };
-
+                    CommandText =
+                        @"SELECT Id, Description, CreatedDate, ParentId FROM [Feedback] WHERE URL = @Url AND TYPE = 'COMMENT'",
+                    CommandType = CommandType.Text,
+                    Connection = connection
+                })
+                {
                     cmd.Parameters.AddWithValue("@Url", comment.Url);
                     cmd.Connection.Open();
 
                     using (var reader = cmd.ExecuteReader())
                     {
-                        cmd = null;
                         while (reader.Read())
                         {
                             var comm = new Feedback
                             {
-                                Id = Convert.ToInt32(dr["Id"]),
-                                Description = dr["Description"].ToString(),
-                                TimeCreated = Convert.ToDateTime(dr["CreatedDate"]),
-                                ParentId = Convert.ToInt32(dr["ParentId"])
+                                Id = Convert.ToInt32(reader["Id"]),
+                                Description = reader["Description"].ToString(),
+                                TimeCreated = Convert.ToDateTime(reader["CreatedDate"]),
+                                ParentId = Convert.ToInt32(reader["ParentId"])
                             };
 
                             listOfComment.Add(comm);
                         }
                     }
-                }
-                finally
-                {
-                    cmd?.Dispose();
                 }
             }
 
@@ -140,27 +119,23 @@ namespace Kong.ApiExpert.DAL
 
             var siteStat = new SiteStat();
 
-            SqlCommand cmd = null;
-
-            try
+            using (var connection = new SqlConnection(ConnectionString))
             {
-                using (var connection = new SqlConnection(ConnectionString))
+                using (var cmd = new SqlCommand())
                 {
-                    cmd = new SqlCommand();
-
                     cmd.CommandText = @"DECLARE @totalLike int, @totalDislike int, @totalComment int
-                                        SELECT @totalLike = count([Id])
-                                        FROM [dbo].[Feedback]
-                                        WHERE TYPE = 'LIKE' AND URL = @URL
-                                        SELECT @totalDislike = count([Id])
-                                        FROM [dbo].[Feedback]
-                                        WHERE TYPE = 'DISLIKE' AND URL = @URL
-                                        SELECT @totalComment = count([Id])
-                                        FROM [dbo].[Feedback]
-                                        WHERE TYPE = 'COMMENT' AND URL = @URL
+                                    SELECT @totalLike = count([Id])
+                                    FROM [dbo].[Feedback]
+                                    WHERE TYPE = 'LIKE' AND URL = @URL
+                                    SELECT @totalDislike = count([Id])
+                                    FROM [dbo].[Feedback]
+                                    WHERE TYPE = 'DISLIKE' AND URL = @URL
+                                    SELECT @totalComment = count([Id])
+                                    FROM [dbo].[Feedback]
+                                    WHERE TYPE = 'COMMENT' AND URL = @URL
 
-                                        select @totalLike AS totalLike, @totalDislike AS totalDislike, @totalComment AS totalComment
-                                    ";
+                                    select @totalLike AS totalLike, @totalDislike AS totalDislike, @totalComment AS totalComment
+                                ";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
 
@@ -168,25 +143,16 @@ namespace Kong.ApiExpert.DAL
 
                     cmd.Connection.Open();
 
-                    dr = cmd.ExecuteReader(CommandBehavior.SingleRow);
-
-                    if (dr.Read())
+                    using (var reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
                     {
-                        siteStat.TotalLike = Convert.ToInt32(dr["TotalLike"]);
-                        siteStat.TotalDislike = Convert.ToInt32(dr["TotalDislike"]);
-                        siteStat.TotalComment = Convert.ToInt32(dr["TotalComment"]);
+                        if (reader.Read())
+                        {
+                            siteStat.TotalLike = Convert.ToInt32(reader["TotalLike"]);
+                            siteStat.TotalDislike = Convert.ToInt32(reader["TotalDislike"]);
+                            siteStat.TotalComment = Convert.ToInt32(reader["TotalComment"]);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                dr?.Close();
-
-                cmd.Connection.Close();
             }
 
             return siteStat;
