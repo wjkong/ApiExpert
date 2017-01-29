@@ -34,7 +34,6 @@ namespace Kong.ApiExpert.Web.Service
                     Url = url
                 };
 
-               
                 var listOfComment = commentMgr.GetByUrl(feedback);
 
                 var _jsonWriter = new JsonSerializer
@@ -162,7 +161,7 @@ namespace Kong.ApiExpert.Web.Service
 
             try
             {
-                var uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
+                const string uri = "http://currencies.apps.grandtrunk.net/getrange/2015-07-01/2015-08-01/usd/cad";
 
                 using (WebClient client = new WebClient())
                 {

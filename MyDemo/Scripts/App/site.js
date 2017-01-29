@@ -377,6 +377,8 @@ function GetDayOfWeek(dateStr) {
 }
 
 function GetSiteStat() {
+    debugger;
+
     var url = root + "Service/WebService.asmx/GetStat";
     var param = "{ 'url': '{0}' }";
     param = param.format(window.location.href);
