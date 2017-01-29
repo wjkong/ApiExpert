@@ -1,40 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using Common.Interfaces;
 using Kong.ApiExpert.Model;
-using Kong.ApiExpert.DAL;
+using Microsoft.Practices.ServiceLocation;
+using System.Collections.Generic;
 
 namespace Kong.ApiExpert.Logic
 {
-    public class CommentMgr
+    public class CommentMgr : ICommentMgr
     {
-         CommentDacMgr commentDac = new CommentDacMgr();
-
         public bool Add(Feedback feedback)
         {
+            var dacMgr = ServiceLocator.Current.GetInstance<ICommentDacMgr>();
+
             if (feedback.Description.Length > 200)
                 feedback.Description = feedback.Description.Substring(0, 196) + " ...";
                     
-            return commentDac.InsertComment(feedback);
+            return  dacMgr.InsertComment(feedback);
         }
 
         public bool AddFeedback(Feedback feedback)
         {
-            return commentDac.InsertFeedback(feedback);
+            var dacMgr = ServiceLocator.Current.GetInstance<ICommentDacMgr>();
+
+            return dacMgr.InsertFeedback(feedback);
         }
 
 
         public List<Feedback> GetByUrl(Feedback feedback)
         {
-            return commentDac.SelectByUrl(feedback);
+            var dacMgr = ServiceLocator.Current.GetInstance<ICommentDacMgr>();
+
+            return dacMgr.SelectByUrl(feedback);
         }
 
 
 
         public SiteStat GetSiteStat(string url)
         {
+            var dacMgr = ServiceLocator.Current.GetInstance<ICommentDacMgr>();
+
             if (!string.IsNullOrEmpty(url) && url == "http://apiexpert.net/")
                 url = "http://apiexpert.net/Default.aspx";
 
-            return commentDac.SelectSiteStatByUrl(url);
+            return dacMgr.SelectSiteStatByUrl(url);
         }
     }
 }

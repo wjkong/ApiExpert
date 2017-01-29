@@ -1,4 +1,5 @@
-﻿using Kong.ApiExpert.Model;
+﻿using Common.Interfaces;
+using Kong.ApiExpert.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Kong.ApiExpert.DAL
 {
-    public class CommentDacMgr : DataAccessBase
+    public class CommentDacMgr : DataAccessBase, ICommentDacMgr
     {
         public bool InsertFeedback(Feedback feedback)
         {

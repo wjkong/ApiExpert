@@ -1,4 +1,5 @@
-﻿using Kong.ApiExpert.Model;
+﻿using Common.Interfaces;
+using Kong.ApiExpert.Model;
 using System.Data;
 using System.Data.SqlClient;
 

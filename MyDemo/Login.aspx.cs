@@ -1,7 +1,6 @@
-﻿using Kong.ApiExpert.DAL;
-using Kong.ApiExpert.Logic;
+﻿using Common.Interfaces;
 using Kong.ApiExpert.Model;
-using Microsoft.Practices.Unity;
+using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -36,20 +35,20 @@ namespace Kong.ApiExpert.Web
             {
                 if (!IsRobot(response))
                 {
-                    IUnityContainer container = new UnityContainer();
-                    container.RegisterType<AccountMgr>();
-                    container.RegisterType<IAccountDacMgr, AccountDacMgr>();
+               
+                    var accountMgr = ServiceLocator.Current.GetInstance<IAccountMgr>();
 
+                    var account = new Account
+                    {
+                        UserName = username,
+                        Password = password
+                    };
 
-                    AccountMgr accountMgr = container.Resolve<AccountMgr>();
-
-                    accountMgr.UserName = username;
-                    accountMgr.Password = password;
-
+                    accountMgr.SetClone(account);                    
 
                     if (accountMgr.Login())
                     {
-                        FormsAuthentication.SetAuthCookie(accountMgr.UserName, false);
+                        FormsAuthentication.SetAuthCookie(username, false);
 
                         result = "OK";
                     }

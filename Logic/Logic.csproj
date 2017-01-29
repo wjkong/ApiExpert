@@ -71,6 +71,7 @@
     <Compile Include="AccountDemo\SavingAccount.cs" />
     <Compile Include="AccountMgr.cs" />
     <Compile Include="CommentMgr.cs" />
+    <Compile Include="Initialization\Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Users\AdminUser.cs" />
@@ -79,9 +80,9 @@
     <Compile Include="Users\UserFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{B22B1239-144A-416B-AF54-5E55602ACA91}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2240012f-41dc-4831-87aa-4be5107b2cea}</Project>
+      <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{75164F04-72FA-461A-BAFC-DC2983A5CE7D}</Project>

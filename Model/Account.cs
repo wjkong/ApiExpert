@@ -4,12 +4,7 @@ using System.Reflection;
 
 namespace Kong.ApiExpert.Model
 {
-    public interface IAccountDacMgr
-    {
-        bool InsertUser();
-        bool LoginDAC();
-        void SetClone(Account account);
-    }
+   
 
     public class Account
     {

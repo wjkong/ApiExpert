@@ -1,22 +1,25 @@
-﻿using Kong.ApiExpert.Model;
+﻿using System;
+using Common.Interfaces;
+using Kong.ApiExpert.Model;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Kong.ApiExpert.Logic
 {
-    public class AccountMgr : Account
+    public class AccountMgr : Account, IAccountMgr
     {
-        protected IAccountDacMgr DacMgr;  
-
-        public AccountMgr(IAccountDacMgr dacMgr)
-        {
-            DacMgr = dacMgr;
-           
-        }
-
         public bool Login()
         {
-            DacMgr.SetClone(this);
+            var dacMgr = ServiceLocator.Current.GetInstance<IAccountDacMgr>();
+            
+            return dacMgr.LoginDAC();
+        }
 
-            return DacMgr.LoginDAC();
+  
+        public void SetClone(Account account)
+        {
+            var dacMgr = ServiceLocator.Current.GetInstance<IAccountDacMgr>();
+
+            dacMgr.SetClone(account);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Kong.ApiExpert.Logic.Users;
-using NLog;
+﻿using NLog;
 using System;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -14,9 +13,10 @@ namespace Kong.ApiExpert.Web
         {
             logMgr.Info("ApiExpert Application Start");
 
-            UserFactory.RegisterAllUser();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Bootstrapper.Bootstrapper.Initialise();
         }
 
         protected void Session_Start(object sender, EventArgs e)

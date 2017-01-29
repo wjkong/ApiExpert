@@ -1,5 +1,6 @@
-﻿using Kong.ApiExpert.Logic;
+﻿using Common.Interfaces;
 using Kong.ApiExpert.Model;
+using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Kong.ApiExpert.Web.Service
 
             try
             {
-                var commentMgr = new CommentMgr();
+                var commentMgr = ServiceLocator.Current.GetInstance<ICommentMgr>();
 
                 var feedback = new Feedback
                 {
@@ -61,7 +62,7 @@ namespace Kong.ApiExpert.Web.Service
 
             try
             {
-                var commentMgr = new CommentMgr();
+                var commentMgr = ServiceLocator.Current.GetInstance<ICommentMgr>();
 
                 var feedback = new Feedback
                 {
@@ -91,7 +92,7 @@ namespace Kong.ApiExpert.Web.Service
 
             try
             {
-                var commentMgr = new CommentMgr();
+                var commentMgr = ServiceLocator.Current.GetInstance<ICommentMgr>();
 
                 var siteStat = commentMgr.GetSiteStat(url);
 
@@ -113,7 +114,7 @@ namespace Kong.ApiExpert.Web.Service
 
             try
             {
-                var commentMgr = new CommentMgr();
+                var commentMgr = ServiceLocator.Current.GetInstance<ICommentMgr>();
 
                 var feedback = new Feedback
                 {
