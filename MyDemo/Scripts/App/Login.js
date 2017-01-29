@@ -15,7 +15,6 @@ $(function () {
     }
 
     $('#btnLogin').click(function () {
-        debugger;
         $(this).showProgressIndicator();
 
         var username = $.trim($('#txtUsername').val());

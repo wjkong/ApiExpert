@@ -15,7 +15,7 @@ namespace Kong.ApiExpert.Web.Service
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
     [System.Web.Script.Services.ScriptService]
     public class WebService : System.Web.Services.WebService
     {
@@ -70,7 +70,7 @@ namespace Kong.ApiExpert.Web.Service
                     Url = url,
                     Type = "COMMENT",
                     ParentId = parentId
-                };              
+                };
 
                 commentMgr.Add(feedback);
 
