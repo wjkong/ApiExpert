@@ -20,22 +20,16 @@ namespace Kong.ApiExpert.Web
             public List<string> ErrorCodes { get; set; }
         }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string LoginUser(string username, string password, string response)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             try
             {
                 if (!IsRobot(response))
                 {
-               
                     var accountMgr = ServiceLocator.Current.GetInstance<IAccountMgr>();
 
                     var account = new Account
@@ -44,7 +38,7 @@ namespace Kong.ApiExpert.Web
                         Password = password
                     };
 
-                    accountMgr.SetClone(account);                    
+                    accountMgr.SetClone(account);
 
                     if (accountMgr.Login())
                     {
@@ -64,12 +58,11 @@ namespace Kong.ApiExpert.Web
 
         private static bool IsRobot(string response)
         {
-            bool result = true;
+            var result = true;
             return !result;
-           
 
             var secret = @"6Lfi5QoTAAAAACkJ1jBQveoORsrsUsHl2Op8pHUt";
-            string uri = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
+            var uri = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
             uri = string.Format(uri, secret, response);
 
             using (WebClient client = new WebClient())
@@ -79,7 +72,7 @@ namespace Kong.ApiExpert.Web
 
                 var googleResponse = client.DownloadString(uri);
 
-                RecaptchaApiResponse apiResponse = JsonConvert.DeserializeObject<RecaptchaApiResponse>(googleResponse);
+                var apiResponse = JsonConvert.DeserializeObject<RecaptchaApiResponse>(googleResponse);
 
                 result = !apiResponse.Success;
             }

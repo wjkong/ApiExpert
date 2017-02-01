@@ -378,6 +378,7 @@ function GetDayOfWeek(dateStr) {
 }
 
 function GetSiteStat() {
+    debugger;
     var url = root + "Service/WebService.asmx/GetStat";
     var param = "{ 'url': '{0}' }";
     param = param.format(window.location.href);
@@ -388,14 +389,14 @@ function GetSiteStat() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: param,
-        success: function (data, status) {
+        done: function (data, status) {
             var jsonData = JSON.parse(data.d);
 
             $('.glyphicon-thumbs-up').next().html(jsonData.TotalLike);
             $('.glyphicon-thumbs-down').next().html(jsonData.TotalDislike);
             $('.glyphicon-comment').next().html(jsonData.TotalComment);
         },
-        error: function (xhr, status, error) {
+        fail: function (xhr, status, error) {
             alert(error);
         }
     });
