@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kong.ApiExpert.Web {
-    
-    
+namespace Kong.ApiExpert.Web
+{
+
+
     public partial class LogOut {
     }
 }

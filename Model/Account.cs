@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Kong.ApiExpert.Model
 {
-   
+
 
     public class Account
     {

@@ -2,7 +2,6 @@
 using Kong.ApiExpert.Model;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;

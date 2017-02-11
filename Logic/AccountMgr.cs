@@ -1,5 +1,4 @@
-﻿using System;
-using Common.Interfaces;
+﻿using Common.Interfaces;
 using Kong.ApiExpert.Model;
 using Microsoft.Practices.ServiceLocation;
 

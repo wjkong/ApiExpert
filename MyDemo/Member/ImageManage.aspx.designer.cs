@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kong.ApiExpert.Web.Member {
-    
-    
+namespace Kong.ApiExpert.Web.Member
+{
+
+
     public partial class ImageManage {
         
         /// <summary>

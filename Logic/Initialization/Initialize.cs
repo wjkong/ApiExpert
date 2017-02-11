@@ -1,5 +1,5 @@
-﻿using Microsoft.Practices.Unity;
-using Common.Interfaces;
+﻿using Common.Interfaces;
+using Microsoft.Practices.Unity;
 
 namespace Kong.ApiExpert.Logic.Initialization
 {

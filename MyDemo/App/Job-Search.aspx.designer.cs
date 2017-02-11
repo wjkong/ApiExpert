@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kong.ApiExpert.Web.Search {
-    
-    
+namespace Kong.ApiExpert.Web.Search
+{
+
+
     public partial class Job_Search {
         
         /// <summary>

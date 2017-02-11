@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kong.ApiExpert.Web.Blog {
-    
-    
+namespace Kong.ApiExpert.Web.Blog
+{
+
+
     public partial class Blog {
         
         /// <summary>
