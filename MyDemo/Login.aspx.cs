@@ -60,9 +60,9 @@ namespace Kong.ApiExpert.Web
             var result = true;
             return !result;
 
-            var secret = @"6Lfi5QoTAAAAACkJ1jBQveoORsrsUsHl2Op8pHUt";
+            const string SECRET = @"6Lfi5QoTAAAAACkJ1jBQveoORsrsUsHl2Op8pHUt";
             var uri = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
-            uri = string.Format(uri, secret, response);
+            uri = string.Format(uri, SECRET, response);
 
             using (WebClient client = new WebClient())
             {
@@ -78,21 +78,5 @@ namespace Kong.ApiExpert.Web
 
             return result;
         }
-
-        //private string GetUserIp()
-        //{
-        //    var visitorsIpAddr = string.Empty;
-
-        //    if (Request.ServerVariables["HTTP_X_FORWARDED_FOR"] != null)
-        //    {
-        //        visitorsIpAddr = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
-        //    }
-        //    else if (!string.IsNullOrEmpty(Request.UserHostAddress))
-        //    {
-        //        visitorsIpAddr = Request.UserHostAddress;
-        //    }
-
-        //    return visitorsIpAddr;
-        //}
     }
 }

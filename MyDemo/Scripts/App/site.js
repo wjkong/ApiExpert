@@ -55,11 +55,11 @@ String.prototype.formatNumber = function () {
 };
 
 
-$.fn.stars = function () {
-    
+$.fn.stars = function() {
+
     var strStar = "<span style='width: {0}px;'></span>";
 
-    return $(this).each(function () {
+    return $(this).each(function() {
         // Get the value
         var val = parseFloat($(this).html());
         // Make sure that the value is in 0 - 5 range, multiply to get width
@@ -68,9 +68,9 @@ $.fn.stars = function () {
         // Replace the numerical value with stars
         $(this).html(strStar.format(size));
     });
-}
+};
 
-$.fn.showProgressIndicator = function () {
+$.fn.showProgressIndicator = function() {
     // To prevent double-click, create an invisible layer to cover the submit button. Also, display a progress indicator.
     $(this).after("<span class='progressIndicator'><i class='fa fa-spinner fa-2x'></i></span>");
 
@@ -82,11 +82,11 @@ $.fn.showProgressIndicator = function () {
     var width = $(this).outerWidth() + 4;
 
     $('.progressIndicator').css('left', left)
-                                      .css('top', top)
-                                      .css('width', width)
-                                      .css('height', height)
-                                      .show();
-}
+        .css('top', top)
+        .css('width', width)
+        .css('height', height)
+        .show();
+};
 
 
 $(function () {
@@ -108,7 +108,7 @@ $(function () {
     }).resize();
 
   
-    GetSiteStat();
+    //GetSiteStat();
 
     $('.glyphicon-thumbs-up, .glyphicon-thumbs-down').click(function (evt) {
         var numOfLike = $(this).next().text();
@@ -356,7 +356,7 @@ function getScriptCache(url, callback) {
         dataType: "script",
         cache: true
     });
-};
+}
 
 function GetDayOfWeek(dateStr) {
 //     var dte = new Date(dateStr);
@@ -378,7 +378,6 @@ function GetDayOfWeek(dateStr) {
 }
 
 function GetSiteStat() {
-    debugger;
     var url = root + "Service/WebService.asmx/GetStat";
     var param = "{ 'url': '{0}' }";
     param = param.format(window.location.href);
