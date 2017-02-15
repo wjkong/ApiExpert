@@ -1,6 +1,11 @@
 ﻿"use strict";
 
+
 $(function () {
+    var RecaptchaOptions = {
+        lang: 'fr',
+    };
+
     var userName = getCookie("userName");
 
     if (userName != undefined && userName.length > 0) {
@@ -16,7 +21,7 @@ $(function () {
         var password = $.trim($('#txtPassword').val());
         var response = grecaptcha.getResponse();
 
-        if (username.length > 0 && password.length > 0 && response.length > 0) {
+        if (username.length > 0 && password.length > 0) {
             var url = "Login.aspx/LoginUser";
 
             var param = "{ 'username': '{0}', 'password': '{1}', 'response': '{2}' }";

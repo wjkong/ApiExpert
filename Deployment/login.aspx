@@ -23,7 +23,7 @@
   </div>
    <div class="form-group">
    <div class="col-sm-offset-3 col-sm-9">
-          <div class="g-recaptcha" id=googleRecaptcha data-sitekey="6Lfi5QoTAAAAAJihj7N_tR-INl_Z15okAEeg3EZ2">
+          <div class="g-recaptcha" id=googleRecaptcha data-sitekey="6Lfi5QoTAAAAAJihj7N_tR-INl_Z15okAEeg3EZ2" lang="es">
           </div>
    </div>
   </div>
@@ -52,6 +52,6 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="ScriptSection" ID="pageScript" runat="server">
-    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js?&hl=fr' type="text/javascript" lang="es"></script>
     <%: System.Web.Optimization.Scripts.Render("~/Scripts/Login") %>
 </asp:Content>

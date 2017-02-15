@@ -96,11 +96,11 @@ label.required:after
         </select>
     </div>
    <div class="col-sm-6 col-md-3 col-lg-2 text-right mControl">
-        <label class="control-label" for=txtAddress>Phone</label>
+        <label class="control-label" for=txtPhone>Phone</label>
     </div>
 
     <div class="col-sm-6 col-md-3 col-lg-2 text-left mControl">
-        <input type="tel" id=txtAddress class="form-control" />
+        <input type="tel" id=txtPhone class="form-control" />
     </div>
 </div>
 </form>

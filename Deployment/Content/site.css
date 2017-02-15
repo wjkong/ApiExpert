@@ -1,4 +1,9 @@
-﻿body, html
+﻿* {
+    font-family: 'open_sansregular', sans-serif;
+    font-size: 16px;
+}
+
+body, html
 {
      height:100%;
 }
@@ -75,18 +80,18 @@ footer {
     vertical-align:super;
 }
 
-#navbarCollapse .glyphicon
+#navbarCollapse .glyphicon, #navbarCollapse .fa
 {
     color: #FF6600;
 }
 
-#navbarCollapse .dropdown-menu .glyphicon
+#navbarCollapse .dropdown-menu .glyphicon, #navbarCollapse .dropdown-menu .fa
 {
    /* color:#E65C00;*/
     color:#CF5300;
 }
 
-.glyphicon
+.glyphicon, .fa
 {
      padding-right: 5px;
 }
@@ -123,7 +128,7 @@ footer {
 background-color: #3399FF;
 color: #FFF;
 float: left;
-font-size: 48px;
+font-size: 36px;
 margin-right: 10px;
 margin-top: 4px;
 border-radius: 5px;
@@ -157,14 +162,14 @@ span.stars span {
 /*==========  Non-Mobile First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+/*@media only screen and (max-width : 1200px) {
  
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
-}
+}*/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {

@@ -10,10 +10,7 @@
  </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
-  <script type="text/javascript">
-     
-  </script>
-  
+
   <div id="Main" class="row">
   </div>
   <br />

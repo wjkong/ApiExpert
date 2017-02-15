@@ -12,45 +12,46 @@
     cursor: pointer;
 }
 
-.ui-autocomplete {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  float: left;
-  display: none;
-  min-width: 160px;
-  _width: 160px;
-  padding: 4px 0;
-  margin: 2px 0 0 0;
-  list-style: none;
-  background-color: #ffffff;
-  border-color: #ccc;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  *border-right-width: 2px;
-  *border-bottom-width: 2px;
+    .ui-autocomplete {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        float: left;
+        display: none;
+        min-width: 160px;
+        _width: 160px;
+        padding: 4px 0;
+        margin: 2px 0 0 0;
+        list-style: none;
+        background-color: #ffffff;
+        border-color: #ccc;
+        border-color: rgba(0, 0, 0, 0.2);
+        border-style: solid;
+        border-width: 1px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        *border-right-width: 2px;
+        *border-bottom-width: 2px;
+     }
+     .ui-menu-item > a.ui-corner-all {
+        display: block;
+        padding: 3px 15px;
+        clear: both;
+        font-weight: normal;
+        line-height: 18px;
+        color: #555555;
+        white-space: nowrap;
+    }
 
-  .ui-menu-item > a.ui-corner-all {
-    display: block;
-    padding: 3px 15px;
-    clear: both;
-    font-weight: normal;
-    line-height: 18px;
-    color: #555555;
-    white-space: nowrap;
-
-    &.ui-state-hover, &.ui-state-active {
+    .ui-state-hover, .ui-state-active {
       color: #ffffff;
       text-decoration: none;
       background-color: #0088cc;
@@ -85,7 +86,7 @@
 <br class="visible-xs-block"/>
 <div class="col-sm-9 col-md-9 col-lg-10" >
  <div class="input-group">
-      <input type=text  id="txtQuestion" class="form-control" autocomplete="off"" placeholder="Ask question from Stack Overflow ..." autofocus/>
+      <input type=text  id="txtQuestion" class="form-control" autocomplete="off" placeholder="Ask question from Stack Overflow ..." autofocus/>
       <span class="input-group-btn">
         <button type="button" class="btn btn-success" id=btnSearch><span class="glyphicon glyphicon-search"></span></button>
       </span>
@@ -95,7 +96,7 @@
 <br />
 <div class="row text-info" >
      <div class="col-sm-7">
-        Question/Answer Search Powered by Stack Exchange API
+        Powered by <i class='fa fa-stack-overflow'></i> Stackover Flow API
      </div>
      <div id=resultInfo class="col-sm-5 text-right">
         
@@ -104,15 +105,9 @@
     <div id="detail">
     </div>
   <div class=row>
-     <div class="col-xs-2 col-sm-1">
-        <button type="button" class="btn btn-success btn-lg" id=btnPrev style="display:none"><span class='glyphicon glyphicon-triangle-left'></span></button>
-     </div>
-     <div class="col-xs-8 col-sm-9 text-center">
+     <div class="col-xs-12 text-center">
         <ul class="pagination">
         </ul>
-     </div>
-     <div class="col-xs-2 col-sm-2 text-right">
-        <button type="button" class="btn btn-success btn-lg" id=btnNext style="display:none"><span class='glyphicon glyphicon-triangle-right'></span></button>
      </div>
   </div>
 </div>

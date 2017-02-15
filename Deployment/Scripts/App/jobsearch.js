@@ -39,20 +39,6 @@ $(function () {
         $('#hidIpAddress').val(data.ip);
     });
 
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
     $('#btnSearch, #btnDone').click(function () {
         ResetCurrentPage($(this));
     });
@@ -71,20 +57,7 @@ $(function () {
         }
     });
 
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
     $('#modalMap').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -103,7 +76,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
         marker.setMap(map);
 
 
@@ -112,16 +85,6 @@ $(function () {
         google.maps.event.trigger(map, 'resize');
     });
 });
-
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
-
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
-}
 
 function Refresh(target) {
     var start = new Date().getTime();
@@ -184,7 +147,7 @@ function OnSuccess(data, status) {
     var str = [];
 
     var tableHeaders = ["Job Title", "Company", "Job Description", "Location", "Published"];
-    var hiddenColumn = ["Job Description", "Location", "Published"]
+    var hiddenColumn = ["Job Description", "Location", "Published"];
     var linkedTitle = "<a target=_blank href={0}>{1}</a>";
 
     str.push("<table class='table table-striped table-bordered table-hover'>");

@@ -10,71 +10,36 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 <div class=wrapper>
-<div class=row>
-    <div class="col-sm-5 hidden-xs">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <a href="App/Job-Search.aspx"><img src="Images/JobSearch.PNG" alt="Job Search" /></a>
-                <div class="carousel-caption" style="color:Red">Job Search<br />Powered by Indeed API</div>
-            </div>
-            <div class="item">
-                <a href="App/Local-Business-Search.aspx"><img src="Images/BusinessSearch2.PNG" alt="Local Business Search" /></a>
-                <div class="carousel-caption" style="color:Red">Local Business Search<br />Power by Yelp API</div>
-            </div>
-            <div class="item">
-                <a href="App/Ask-StackOverflow.aspx"><img src="Images/AskQuestion.PNG" alt="Ask Question" /></a>
-                <div class="carousel-caption" style="color:Red">Question Search<br />Powered by Stack Exchange API</div>
-            </div>
-             <div class="item">
-                <a href="Tool/world-weather-forecast.aspx"><img src="Images/WeatherForecast.PNG" alt="Ask Question" /></a>
-                <div class="carousel-caption" style="color:Red">World Weather Forecast<br />Powered by World Forecast Online</div>
-            </div>
-            <div class="item">
-                <a href="Tool/Currency-Converter.aspx"><img src="Images/CurrencyConverter.PNG" alt="Ask Question" /></a>
-                <div class="carousel-caption" style="color:Red">Currency Converter<br />Powered by Yahoo Financial API </div>
-            </div>
-              <div class="item">
-                <a href="Tool/language-translator.aspx"><img src="Images/LanguageTranslator.PNG" alt="Ask Question" /></a>
-                <div class="carousel-caption" style="color:Red">Lanuage Translator<br />Powered by MyMemory API </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="col-sm-7">
-        <p>
-            <span class="firstLetter">A</span>pi Expert is owned by a small group of talented .NET web developers. Each of team members has 10+ years of solid experience in designing & developing scalable and enterprise web application. The site is constructed from scratch by following the best practice guideline of building a modern and mobile web application with the following features, 
+        <p><span class="firstLetter">A</span>
+            pi Expert is owned by a small group of talented .NET web developers. Each of team members has 10+ years of solid experience in designing & developing scalable and enterprise web application. This site is designed and implemented from scratch by following the best practice guideline of building a modern and mobile web application with the following features: high performance, user intuitive, scalability and maintenable. 
+            (.NET, MVC, Restful API, HTML5, JQuery, Bootstrap, Angular, JSON, Google Map API, Font Awesome, and CSS3)
         </p>
-        <ul>
-            <li>Responsive Web Design (Mobile first)
-            </li>
-            <li>Browser Agnostic
-            </li>
-            <li>Single-Page Applications (SPAs) 
-            </li>
-            <li>High Performance 
-            </li>
-            <li>User Intuitive 
-            </li>
-            <li>Scalability and Maintenance
-            </li>
-        </ul>
-        <p>This site is takes advantage of Service Oriented Architecture open data platform with REST-based APIs and heavily leverages API-based access to data and services.  </p>
-   
-        <p>Since open source is the trend of programming industry. Thus, we carefully choose open source technologies and heavily use for development, such as HTML5, JQuery, Bootstrap, Angular, JSON, Google Map API and CSS3. 
+
+        <p><span class="firstLetter">R</span>
+            esponsive Web Design (mobile friendly): An approach to web design aimed at crafting sites to provide an optimal viewing and interaction experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from desktop computer monitors to mobile phones). Responsive web design is becoming more important as the amount of mobile traffic now accounts for more than half of total internet traffic.
         </p>
-     </div>
-</div>
+        <p class="text-center">
+            <i class="fa fa-mobile fa-3x"  aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-tablet fa-4x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-desktop fa-5x" aria-hidden="true"></i>
+        </p>
+            <p><span class="firstLetter">C</span>
+            ross-Browser Compatibility (browser agnostic): A website is compatible with multiple major Web browsers, such as Chrome, Internet Explorer, Safari, and Firefox. 
+                This means a website must ensure that their design works properly and that its appearance is error-free and functional on any platform used to view it, which includes Windows, Macintosh, IOS, and Andriod. 
+            </p>
+       <p class="text-center">
+       
+            <img src="Images/Google-Chrome-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Internet-Explorer-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Firefox-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Safari-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Windows-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Systems-Mac-Os-icon.png" />&nbsp;&nbsp;
+            <img src="Images/ios-icon.png" />&nbsp;&nbsp;
+            <img src="Images/android-platform-icon.png" />&nbsp;&nbsp;
+            <img src="Images/Blackberry-icon.png" />
+        </p>
 </div>
 <input type=hidden id=hidActiveMenu value="hypHome" />
 

@@ -41,7 +41,7 @@ $(function () {
 
 function Refresh(target) {
     var start = new Date().getTime();
-    txtLocation = $.trim($('#txtLocation').val());
+    var txtLocation = $.trim($('#txtLocation').val());
     if (txtLocation.length == 0) {
         $('.progressIndicator').fadeOut(100).remove();
         return false;
@@ -60,7 +60,7 @@ function Refresh(target) {
     url = url.format(txtLocation);
 
     var objAjax = $.getJSON(url, function (result) {
-        current = result.data.current_condition[0];
+        var current = result.data.current_condition[0];
         var imgIcon = "<img src='{0}' title='{1}' />";
         
         var temp = "{0} &#176;C | {1} &#176;F";
@@ -78,10 +78,10 @@ function Refresh(target) {
         $('#winddir').html(current.winddir16Point);
 
         var columnTitle = [space, "Date", "Min Temp.", "Max Temp.", "UV Index", "Sun Rise", "Sun Set"];
-        var hiddenColumn = ["UV Index", "Sun Rise", "Sun Set"]
+        var hiddenColumn = ["UV Index", "Sun Rise", "Sun Set"];
 
         var hourColumnTitle = ["Time", "Weather", "Condition", "Temperature", "Humidity", "Wind", "Cloud"];
-        var hourHiddenColumn = ["Temperature", "Humidity", "Cloud", "Wind"]
+        var hourHiddenColumn = ["Temperature", "Humidity", "Cloud", "Wind"];
 
         var str = [];
 
@@ -160,12 +160,12 @@ function Refresh(target) {
         drawChart(data);
     });
 
-    objAjax.error(function (status, error) {
+    objAjax.fail(function (status, error) {
         $('.progressIndicator').fadeOut(100).remove();
         alert(error);
     });
 
-    objAjax.complete(function () {
+    objAjax.always(function () {
         $('.progressIndicator').fadeOut(100).remove();
 
         var end = new Date().getTime();
@@ -176,16 +176,16 @@ function Refresh(target) {
 }
 
 function GetTemperture(tempC, tempF, onlyNumber) {
-    var temp = tempC
+    var temp = tempC;
     if (onlyNumber == undefined || onlyNumber == false)
         temp  += " &#176;C";
 
     var selected = $("input[type='radio'][name='type']:checked");
     if (selected.length > 0) {
-        tempType = selected.val();
+        var tempType = selected.val();
 
         if (tempType == "fahrenheit") {
-            temp = tempF
+            temp = tempF;
 
             if (onlyNumber == undefined || onlyNumber == false)
                 temp += " &#176;F";

@@ -1,21 +1,7 @@
 ﻿"use strict";
 
 $(function () {
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnSearch').click(function () {
+     $('#btnSearch').click(function () {
         ResetCurrentPage($(this));
     });
 
@@ -38,7 +24,7 @@ $(function () {
             var currentOrder = $('#hidCurrentOrder').val();
 
             if ($('#hidCurrentSort').val() == sort) {
-                if (currentOrder == "desc")
+                if (currentOrder === "desc")
                     $('#hidCurrentOrder').val('asc');
                 else
                     $('#hidCurrentOrder').val('desc');
@@ -51,58 +37,13 @@ $(function () {
             ResetCurrentPage($(this));
         }
     });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-//    var availableTags = [
-//      "ActionScript",
-//      "AppleScript",
-//      "Asp",
-//      "BASIC",
-//      "C",
-//      "C++",
-//      "Clojure",
-//      "COBOL",
-//      "ColdFusion",
-//      "Erlang",
-//      "Fortran",
-//      "Groovy",
-//      "Haskell",
-//      "Java",
-//      "JavaScript",
-//      "Lisp",
-//      "Perl",
-//      "PHP",
-//      "Python",
-//      "Ruby",
-//      "Scala",
-//      "Scheme"
-//    ];
-//    $("#txtQuestion").autocomplete({
-//        source: availableTags
-//    });
-
-
-  
 });
 
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
 
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
-}
 
 function Refresh(target) {
     var start = new Date().getTime();
-    if (target != null) {
+    if (target !== null) {
         target.showProgressIndicator();
     }
 
@@ -134,8 +75,8 @@ function Refresh(target) {
         BuildNavBar(totalNumOfPages);
 
         var columnTitle = ["Title of Question", "Votes", "Tags", "Answers", "Created", "Updated"];
-        var hiddenColumn = ["Tags", "Answers", "Created", "Updated"]
-        var sortColumn = ["Votes", "Created", "Updated"]
+        var hiddenColumn = ["Tags", "Answers", "Created", "Updated"];
+        var sortColumn = ["Votes", "Created", "Updated"];
         var sortValue = ["Title of Question", "votes", "tags", "Answers", "creation", "activity"];
 
         str.push("<table class='table table-striped table-bordered table-hover'>");
@@ -215,7 +156,7 @@ function Refresh(target) {
 
     });
 
-    objAjax.complete(function () {
+    objAjax.always(function () {
         if (target != null) {
             $('.progressIndicator').fadeOut(100).remove();
         }

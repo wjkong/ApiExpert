@@ -9,20 +9,6 @@ $(function () {
         fillInAddress();
     });
 
-    $('#btnNext').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage++;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
-    $('#btnPrev').click(function () {
-        var currentPage = $('#hidCurrentPage').val();
-        currentPage--;
-
-        ResetCurrentPage($(this), currentPage);
-    });
-
     $('#ddlPageSize, #ddlRadius').change(function () {
         ResetCurrentPage($(this).prev());
     });
@@ -40,20 +26,7 @@ $(function () {
         }
     });
 
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
-    $('.pagination').on('click', 'a', function () {
-        var currentPage = $(this).text();
-
-        ResetCurrentPage($(this).parent().parent(), currentPage);
-    });
-
     $('#modalMap').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -78,7 +51,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
         marker.setMap(map);
 
 
@@ -88,7 +61,6 @@ $(function () {
     });
 
     $('#modalMapMarker').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -105,7 +77,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("mapMarker-canvas"), mapProp);
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({
@@ -144,16 +116,6 @@ function fillInAddress() {
 
 }
 
-function ResetCurrentPage(target, pageIndex) {
-    if (typeof pageIndex === 'undefined') {
-        pageIndex = 1;
-    }
-
-    $('#hidCurrentPage').val(pageIndex);
-
-    Refresh(target);
-}
-
 function Refresh(target) {
     var start = new Date().getTime();
 
@@ -166,7 +128,7 @@ function Refresh(target) {
     if ($.trim(location).length == 0)
         return false;
 
-    var url = "Local-Business-Search.aspx/RetrieveLocalInfo"
+    var url = "Local-Business-Search.aspx/RetrieveLocalInfo";
     var param = "{business: { 'term': '{0}', 'location': '{1}', 'startIndex': '{2}', 'pageSize': '{3}', 'radius': '{4}' }}";
     param = param.format(term, location, startIndex, pageSize, radius);
 
@@ -205,11 +167,11 @@ function OnSuccess(data, status) {
 
     $('#btnPrev, #btnNext, #mapMarker').show();
 
-    var jsonData = JSON.parse(data.d)
+    var jsonData = JSON.parse(data.d);
     var str = [];
 
     var tableHeaders = ["Business", "Rating", "Distance", "Description", "Address", "Phone"];
-    var hiddenColumn = ["Distance", "Description"]
+    var hiddenColumn = ["Distance", "Description"];
     var rateImg = "<img src='{0}' alt='{1}' title='{1} stars' />";
     var businessImg = "<img src='{0}' alt='{1}' />";
 

@@ -12,9 +12,12 @@ var mapLink = "<span data-latitude='{0}' data-longitude='{1}' class='map text-in
 var imgLink = "<img src='{0}' alt=icon />";
 var jsonFormat = "application/json; charset=utf-8";
 
+
+
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+    m.parentNode.insertBefore(a, m);
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-65517203-1', 'auto');
@@ -52,11 +55,11 @@ String.prototype.formatNumber = function () {
 };
 
 
-$.fn.stars = function () {
-    
+$.fn.stars = function() {
+
     var strStar = "<span style='width: {0}px;'></span>";
 
-    return $(this).each(function () {
+    return $(this).each(function() {
         // Get the value
         var val = parseFloat($(this).html());
         // Make sure that the value is in 0 - 5 range, multiply to get width
@@ -65,11 +68,11 @@ $.fn.stars = function () {
         // Replace the numerical value with stars
         $(this).html(strStar.format(size));
     });
-}
+};
 
-$.fn.showProgressIndicator = function () {
+$.fn.showProgressIndicator = function() {
     // To prevent double-click, create an invisible layer to cover the submit button. Also, display a progress indicator.
-    $(this).after("<span class='progressIndicator'><img src='{0}Images/loading.gif' /></span>".format(root));
+    $(this).after("<span class='progressIndicator'><i class='fa fa-spinner fa-2x'></i></span>");
 
     var position = $(this).position();
 
@@ -79,11 +82,11 @@ $.fn.showProgressIndicator = function () {
     var width = $(this).outerWidth() + 4;
 
     $('.progressIndicator').css('left', left)
-                                      .css('top', top)
-                                      .css('width', width)
-                                      .css('height', height)
-                                      .show();
-}
+        .css('top', top)
+        .css('width', width)
+        .css('height', height)
+        .show();
+};
 
 
 $(function () {
@@ -104,7 +107,8 @@ $(function () {
         }
     }).resize();
 
-    GetSiteStat();
+  
+    //GetSiteStat();
 
     $('.glyphicon-thumbs-up, .glyphicon-thumbs-down').click(function (evt) {
         var numOfLike = $(this).next().text();
@@ -176,7 +180,6 @@ $(function () {
     });
 
     $('#modalMap').on('shown.bs.modal', function (e) {
-        var map;
         var element = $(e.relatedTarget);
         var latitude = element.data("latitude");
         var longitude = element.data("longitude");
@@ -201,7 +204,7 @@ $(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({
@@ -214,7 +217,43 @@ $(function () {
 
         google.maps.event.trigger(map, 'resize');
     });
+
+    $('.pagination').on('click', 'a', function () {
+        var nextPageIndex = $(this).data("value");
+        var currentPageIndex = parseInt($('#hidCurrentPage').val());
+        var lastPageIndex = parseInt($("#hidLastPageIndex").val());
+
+        switch (nextPageIndex) {
+            case "first":
+                nextPageIndex = 1;
+                break;
+            case "prev":
+                nextPageIndex = currentPageIndex - 1;
+                break;
+            case "next":
+                nextPageIndex = currentPageIndex + 1;
+                break;
+            case "last":
+                nextPageIndex = lastPageIndex;
+                break;
+        }
+
+        if (nextPageIndex >= 1 && nextPageIndex <= lastPageIndex && nextPageIndex != currentPageIndex)
+            ResetCurrentPage($(this).parent().parent(), nextPageIndex);
+    });
+
+    autosize($('textarea'));
 });                // end ready
+
+function ResetCurrentPage(target, pageIndex) {
+    if (typeof pageIndex === 'undefined') {
+        pageIndex = 1;
+    }
+
+    $('#hidCurrentPage').val(pageIndex);
+
+    Refresh(target);
+}
 
 function GetParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -317,7 +356,7 @@ function getScriptCache(url, callback) {
         dataType: "script",
         cache: true
     });
-};
+}
 
 function GetDayOfWeek(dateStr) {
 //     var dte = new Date(dateStr);
@@ -349,14 +388,14 @@ function GetSiteStat() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: param,
-        success: function (data, status) {
+        done: function (data, status) {
             var jsonData = JSON.parse(data.d);
 
             $('.glyphicon-thumbs-up').next().html(jsonData.TotalLike);
             $('.glyphicon-thumbs-down').next().html(jsonData.TotalDislike);
             $('.glyphicon-comment').next().html(jsonData.TotalComment);
         },
-        error: function (xhr, status, error) {
+        fail: function (xhr, status, error) {
             alert(error);
         }
     });
@@ -381,21 +420,29 @@ function ShowMap(id, lat, long, con) {
 function BuildNavBar(totalNumOfPages) {
     $('#hidLastPageIndex').val(totalNumOfPages);
 
+    var numOfPage = 5;
     var str = [];
     var currentIndex = $('#hidCurrentPage').val();
 
-    var currentWindowNum = parseInt((currentIndex - 1) / 10);
-    var startIndex = currentWindowNum * 10 + 1;
-    var lastIndex = (currentWindowNum + 1) * 10;
+    var currentWindowNum = parseInt((currentIndex - 1) / numOfPage);
+    var startIndex = currentWindowNum * numOfPage + 1;
+    var lastIndex = (currentWindowNum + 1) * numOfPage;
     lastIndex = Math.min(totalNumOfPages, lastIndex);
+
+    var button = "<li><a {0} data-value={1}><i class='fa {2}'></i></a></li>";
+    str.push(button.format(emptyStr, 'first', 'fa-angle-double-left'));
+    str.push(button.format(emptyStr, 'prev', 'fa-angle-left'));
 
     for (var i = startIndex; i <= lastIndex; i++) {
         if (i == currentIndex) {
-            str.push("<li class='active'><a>", i, "</a></li>");
+            str.push("<li class='active'><a data-value={0}>{0}</a></li>".format(i));
         }
         else
-            str.push("<li><a>", i, "</a></li>");
+            str.push("<li><a data-value={0}>{0}</a></li>".format(i));
     }
+
+    str.push(button.format(emptyStr, 'next', 'fa-angle-right'));
+    str.push(button.format(emptyStr, 'last', 'fa-angle-double-right'));
 
     $('.pagination').empty()
                     .append(str.join(emptyStr));
