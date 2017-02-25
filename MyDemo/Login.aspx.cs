@@ -58,7 +58,6 @@ namespace Kong.ApiExpert.Web
         private static bool IsRobot(string response)
         {
             var result = true;
-            return !result;
 
             const string SECRET = @"6Lfi5QoTAAAAACkJ1jBQveoORsrsUsHl2Op8pHUt";
             var uri = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
@@ -74,6 +73,7 @@ namespace Kong.ApiExpert.Web
                 var apiResponse = JsonConvert.DeserializeObject<RecaptchaApiResponse>(googleResponse);
 
                 result = !apiResponse.Success;
+                result = true;
             }
 
             return result;
