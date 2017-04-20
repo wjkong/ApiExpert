@@ -176,6 +176,47 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\android-platform-icon.png" />
+    <Content Include="Images\Angular.png" />
+    <Content Include="Images\AskQuestion.PNG" />
+    <Content Include="Images\AskQuestion_sm.png" />
+    <Content Include="Images\ASPNET.jpg" />
+    <Content Include="Images\Blackberry-icon.png" />
+    <Content Include="Images\BootStrap.jpg" />
+    <Content Include="Images\BusinessSearch.PNG" />
+    <Content Include="Images\BusinessSearch2.PNG" />
+    <Content Include="Images\C.jpg" />
+    <Content Include="Images\CSharp.jpg" />
+    <Content Include="Images\CSS3.jpg" />
+    <Content Include="Images\CurrencyConverter.PNG" />
+    <Content Include="Images\favicon.jpg" />
+    <Content Include="Images\Firefox-icon.png" />
+    <Content Include="Images\glyphicons-324-calculator.png" />
+    <Content Include="Images\Google-Chrome-icon.png" />
+    <Content Include="Images\html5.png" />
+    <Content Include="Images\IMG_0017.JPG" />
+    <Content Include="Images\Internet-Explorer-icon.png" />
+    <Content Include="Images\ios-icon.png" />
+    <Content Include="Images\JobSearch.PNG" />
+    <Content Include="Images\JobSearch_sm.png" />
+    <Content Include="Images\JQuery.jpg" />
+    <Content Include="Images\languageTranslator.PNG" />
+    <Content Include="Images\linkined.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\mcad.gif" />
+    <Content Include="Images\mcsd.gif" />
+    <Content Include="Images\MsSql.jpg" />
+    <Content Include="Images\Portait_xs.jpg" />
+    <Content Include="Images\Portait_xs2.jpg" />
+    <Content Include="Images\Portrait_sm2.jpg" />
+    <Content Include="Images\Safari-icon.png" />
+    <Content Include="Images\stars.png" />
+    <Content Include="Images\Systems-Mac-Os-icon.png" />
+    <Content Include="Images\WeatherForecast.PNG" />
+    <Content Include="Images\Web Browser.png" />
+    <Content Include="Images\Windows-icon.png" />
+    <Content Include="Images\YinYang.ico" />
+    <Content Include="Images\YinYangM.ico" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -227,6 +268,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\apps\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
