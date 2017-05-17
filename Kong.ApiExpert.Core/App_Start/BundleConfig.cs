@@ -11,7 +11,7 @@ namespace Kong.ApiExpert.Core
                    "~/Content/bootstrap.css",
                    "~/Content/bootstrap-theme.css",
                    "~/Content/font-awesome.min.css",
-                   "~/Content/site.css"));
+                   "~/Content/Site.css"));
 
             bundles.Add(new ScriptBundle("~/Scripts/Library").Include(
                      "~/Scripts/jquery-{version}.js",
@@ -21,6 +21,11 @@ namespace Kong.ApiExpert.Core
                      "~/Scripts/App/config.js",
                      "~/Scripts/App/site.js",
                      "~/Scripts/autosize.js"));
+
+
+            bundles.Add(new ScriptBundle("~/Scripts/App/SiteMap").Include(
+                "~/Scripts/app/siteMap.js"));
+                  
 
             bundles.Add(new ScriptBundle("~/Scripts/Modernizr").Include("~/Scripts/modernizr-*"));
         }
