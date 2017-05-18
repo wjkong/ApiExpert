@@ -17,17 +17,19 @@ namespace Kong.ApiExpert.Core
                      "~/Scripts/jquery-{version}.js",
                      "~/Scripts/jquery-ui-{version}.js",
                      "~/Scripts/bootstrap.js",
+                     "~/Scripts/modernizr-*",
                      "~/Scripts/respond.js",
-                     "~/Scripts/App/config.js",
-                     "~/Scripts/App/site.js",
+                     "~/Scripts/app/config.js",
+                     "~/Scripts/app/site.js",
                      "~/Scripts/autosize.js"));
 
 
             bundles.Add(new ScriptBundle("~/Scripts/App/SiteMap").Include(
                 "~/Scripts/app/siteMap.js"));
-                  
 
-            bundles.Add(new ScriptBundle("~/Scripts/Modernizr").Include("~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/Scripts/App/MortgageCalculator")
+                .Include("~/Scripts/app/mortgageCalculator.js")
+                .Include("~/Scripts/autoNumeric/autoNumeric.js"));
         }
     }
 }

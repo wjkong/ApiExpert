@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Michael Kong API Expert">
+    <meta name="description" content="Michael Kong API Expert">
+    <meta name="author" content="Michael Kong">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>@ViewBag.Title - API Expert</title>
+    <link rel="icon" href="Images/YinYang.ico" />
+
+    @Styles.Render("~/Content/Style")
+    @Scripts.Render("~/Scripts/Modernizr")
+</head>
+<body>
+<div class="row" id="wrap">
+    @Html.Partial("_Header")
+    @RenderBody()
+</div>
+    @Html.Partial("_Footer")
+
+
+   @Scripts.Render("~/Scripts/Library")
+   @RenderSection("scripts", required: false)
+
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBn29JtdRi1q9yt7HV2DCBl_zvtxiBpnaE&libraries=places" type="text/javascript"></script>
+    
+</body>
+
+</html>
