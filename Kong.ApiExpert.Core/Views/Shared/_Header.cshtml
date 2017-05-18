@@ -15,9 +15,15 @@
             <ul class="nav navbar-nav">
                 <li><a id="hypHome" href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-home"></span>@Resources.Content.Home</a></li>
                 <li class="dropdown">
-                    <a id="hypTool" href="@Url.Action("MortgageCalculator", "Tool")" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>@Resources.Content.Tool<span class="caret"></span></a>
+                    <a id="hypTool" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>@Resources.Content.Tool<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="@Url.Action("MortgageCalculator", "Tool")"><i class='fa fa-calculator'></i>@Resources.Content.MortgageCalculator</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="hypApp" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>@Resources.Content.Application<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("AskStackOverFlow", "ApiApp")"><i class='fa fa-calculator'></i>@Resources.Content.AskStackOverFlow</a></li>
                     </ul>
                 </li>
                 <li><a id="hypSiteMap" href="@Url.Action("SiteMap", "Home")"><i class='fa fa-sitemap'></i>@Resources.Content.SiteMap</a></li>

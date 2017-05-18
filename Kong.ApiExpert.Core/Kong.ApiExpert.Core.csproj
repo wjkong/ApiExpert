@@ -160,6 +160,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\ApiAppController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ToolController.cs" />
@@ -243,6 +244,7 @@
     </None>
     <None Include="Properties\PublishProfiles\Deployment.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\app\askquestion.js" />
     <Content Include="Scripts\app\mortgageCalculator.js" />
     <Content Include="Scripts\app\site.js" />
     <Content Include="Scripts\app\siteMap.js" />
@@ -294,6 +296,9 @@
     <Content Include="Views\Home\SiteMap.cshtml" />
     <Content Include="Views\Tool\MortgageCalculator.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\ApiApp\AskStackOverFlow.cshtml" />
+    <Content Include="Views\Tool\Index.cshtml" />
+    <Content Include="Views\ApiApp\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -16,17 +16,17 @@
     @Scripts.Render("~/Scripts/Library")
 </head>
 <body>
+@Html.Partial("_Header")
 <div class="row" id="wrap">
-    @Html.Partial("_Header")
     @RenderBody()
 </div>
-    @Html.Partial("_Footer")
-   
+@Html.Partial("_Footer")
 
-   @RenderSection("scripts", required: false)
 
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBn29JtdRi1q9yt7HV2DCBl_zvtxiBpnaE&libraries=places" type="text/javascript"></script>
-    
+@RenderSection("scripts", required: false)
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBn29JtdRi1q9yt7HV2DCBl_zvtxiBpnaE&libraries=places" type="text/javascript"></script>
+
 </body>
 
 </html>

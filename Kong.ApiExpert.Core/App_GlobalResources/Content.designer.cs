@@ -61,6 +61,69 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Accelerated Bi-weekly.
+        /// </summary>
+        internal static string AcceleratedBiWeekly {
+            get {
+                return ResourceManager.GetString("AcceleratedBiWeekly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accelerated Weekly.
+        /// </summary>
+        internal static string AcceleratedWeekly {
+            get {
+                return ResourceManager.GetString("AcceleratedWeekly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amortization Period.
+        /// </summary>
+        internal static string AmortizationPeriod {
+            get {
+                return ResourceManager.GetString("AmortizationPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application.
+        /// </summary>
+        internal static string Application {
+            get {
+                return ResourceManager.GetString("Application", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AskStackOverFlow.
+        /// </summary>
+        internal static string AskStackOverFlow {
+            get {
+                return ResourceManager.GetString("AskStackOverFlow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bi-weekly.
+        /// </summary>
+        internal static string Biweekly {
+            get {
+                return ResourceManager.GetString("Biweekly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate.
+        /// </summary>
+        internal static string Calculate {
+            get {
+                return ResourceManager.GetString("Calculate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
         internal static string Contact {
@@ -79,11 +142,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Interest Rate.
+        /// </summary>
+        internal static string InterestRate {
+            get {
+                return ResourceManager.GetString("InterestRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly.
+        /// </summary>
+        internal static string Monthly {
+            get {
+                return ResourceManager.GetString("Monthly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mortgage Amount.
+        /// </summary>
+        internal static string MortgageAmount {
+            get {
+                return ResourceManager.GetString("MortgageAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mortgage Calculator.
         /// </summary>
         internal static string MortgageCalculator {
             get {
                 return ResourceManager.GetString("MortgageCalculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Frequency.
+        /// </summary>
+        internal static string PaymentFrequency {
+            get {
+                return ResourceManager.GetString("PaymentFrequency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semi-monthly.
+        /// </summary>
+        internal static string SemiMonthly {
+            get {
+                return ResourceManager.GetString("SemiMonthly", resourceCulture);
             }
         }
         
@@ -97,11 +205,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start Over.
+        /// </summary>
+        internal static string StartOver {
+            get {
+                return ResourceManager.GetString("StartOver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter interest rate in percentage.
+        /// </summary>
+        internal static string TipsInterestRate {
+            get {
+                return ResourceManager.GetString("TipsInterestRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter total mortgage amount.
+        /// </summary>
+        internal static string TipsMortgageAmount {
+            get {
+                return ResourceManager.GetString("TipsMortgageAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tool.
         /// </summary>
         internal static string Tool {
             get {
                 return ResourceManager.GetString("Tool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weekly.
+        /// </summary>
+        internal static string Weekly {
+            get {
+                return ResourceManager.GetString("Weekly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        internal static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
     }

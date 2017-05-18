@@ -11,32 +11,27 @@ $(function () {
     interestRate.autoNumeric('init', { aSign: '%', pSign: 's', vMax: '100.00' });
     paymentAmtRow.hide();
 
-    for (var i = 1; i <= 30; i++) {
-        var text = i + " year";
-        var option = new Option(i, i);
-        $(option).html(text);
-        $('#ddlAmortizationPeriod').append(option);
-    }
-
+  
     amortizationPeriod.val(5);
 
     $('#btnCalculate').click(function (evt) {
         //        $('.page-header').hide();
         $('.page-header-xs').hide().removeClass('visible-xs');
-        if ($(this).text() == 'Calculate') {
+        if ($(this).data("state") === 'Calculate') {
 
             var rate = interestRate.autoNumeric('get');
 
-            if (rate == 0)
+            if (rate === 0)
                 interestRate.val(zero);
 
             var mortgageAmount = mortgageAmt.autoNumeric('get');
 
-            if (mortgageAmount == 0) {
+            if (mortgageAmount === 0) {
                 return false;
             }
 
-            $(this).text("Startover");
+            $(this).data("state", "Startover");
+            $(this).text($("#hidStateStartOver").val());
 
             $('#txtMortgageAmt, #txtInterestRate, #ddlPaymentFrequency, #ddlAmortizationPeriod').attr('disabled', 'true');
 
@@ -51,7 +46,9 @@ $(function () {
             Compare();
         }
         else {
-            $(this).text("Calculate");
+            $(this).data("state", "Calculate");
+            $(this).text($("#hidStateCalculate").val());
+
             $('#txtMortgageAmt, #txtInterestRate, #ddlPaymentFrequency, #ddlAmortizationPeriod').removeAttr('disabled');
             paymentAmtRow.hide();
         }

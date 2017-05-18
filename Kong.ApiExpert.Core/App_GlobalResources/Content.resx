@@ -117,19 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcceleratedBiWeekly" xml:space="preserve">
+    <value>Accelerated Bi-weekly</value>
+  </data>
+  <data name="AcceleratedWeekly" xml:space="preserve">
+    <value>Accelerated Weekly</value>
+  </data>
+  <data name="AmortizationPeriod" xml:space="preserve">
+    <value>Amortization Period</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="AskStackOverFlow" xml:space="preserve">
+    <value>AskStackOverFlow</value>
+  </data>
+  <data name="Biweekly" xml:space="preserve">
+    <value>Bi-weekly</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Interest Rate</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="MortgageAmount" xml:space="preserve">
+    <value>Mortgage Amount</value>
+  </data>
   <data name="MortgageCalculator" xml:space="preserve">
     <value>Mortgage Calculator</value>
+  </data>
+  <data name="PaymentFrequency" xml:space="preserve">
+    <value>Payment Frequency</value>
+  </data>
+  <data name="SemiMonthly" xml:space="preserve">
+    <value>Semi-monthly</value>
   </data>
   <data name="SiteMap" xml:space="preserve">
     <value>SiteMap</value>
   </data>
+  <data name="StartOver" xml:space="preserve">
+    <value>Start Over</value>
+  </data>
+  <data name="TipsInterestRate" xml:space="preserve">
+    <value>Enter interest rate in percentage</value>
+  </data>
+  <data name="TipsMortgageAmount" xml:space="preserve">
+    <value>Enter total mortgage amount</value>
+  </data>
   <data name="Tool" xml:space="preserve">
     <value>Tool</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
   </data>
 </root>

@@ -30,6 +30,8 @@ namespace Kong.ApiExpert.Core
             bundles.Add(new ScriptBundle("~/Scripts/App/MortgageCalculator")
                 .Include("~/Scripts/app/mortgageCalculator.js")
                 .Include("~/Scripts/autoNumeric/autoNumeric.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/AskQuestion").Include("~/Scripts/app/askquestion.js"));
         }
     }
 }

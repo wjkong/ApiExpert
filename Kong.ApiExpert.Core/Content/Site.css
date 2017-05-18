@@ -3,26 +3,27 @@
     font-size: 16px;
 }
 
-body, html
-{
-     height:100%;
+body, html {
+    height: 100%;
 }
 
 #wrap {
-  min-height: 100%;
+    min-height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #main {
-  overflow:auto;
-  padding-bottom:130px; /* this needs to be bigger than footer height*/
+    overflow: auto;
+    padding-bottom: 130px; /* this needs to be bigger than footer height*/
 }
 
 footer {
-  position: relative;
-  margin-top: -130px; /* negative value of footer height */
-  height: 130px;
-  clear:both;
-} 
+    position: relative;
+    margin-top: -130px; /* negative value of footer height */
+    height: 130px;
+    clear: both;
+}
 
 
 
@@ -32,117 +33,102 @@ footer {
     float: none;
 }
 
-.reply
-{
-    padding-left:20px;
-} 
-
-section
-{
-    text-align:left;
+.reply {
+    padding-left: 20px;
 }
 
-label, td, th
-{
-    text-align:right;
+section {
+    text-align: left;
+}
+
+label, td, th {
+    text-align: right;
 }
 
 footer {
-   position:relative;
-   bottom:0;
-   width:100%;
-   height:100px; 
-   clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    clear: both;
 }
 
-.form-group.required .control-label:after{
+.form-group.required .control-label:after {
     color: red;
     content: "*";
     position: absolute;
     margin-left: 5px;
-   
     font-family: 'Glyphicons Halflings';
     font-weight: normal;
     font-size: 12px;
 }
 
-.progressIndicator
-{
-    background-color:transparent;
-    position: absolute; 
+.progressIndicator {
+    background-color: transparent;
+    position: absolute;
     z-index: 100;
-    display: none; 
+    display: none;
     text-align: center;
 }
 
-.badge
-{
-    vertical-align:super;
+.badge {
+    vertical-align: super;
 }
 
-#navbarCollapse .glyphicon, #navbarCollapse .fa
-{
+#navbarCollapse .glyphicon, #navbarCollapse .fa {
     color: #FF6600;
 }
 
-#navbarCollapse .dropdown-menu .glyphicon, #navbarCollapse .dropdown-menu .fa
-{
-   /* color:#E65C00;*/
-    color:#CF5300;
+#navbarCollapse .dropdown-menu .glyphicon, #navbarCollapse .dropdown-menu .fa {
+    /* color:#E65C00;*/
+    color: #CF5300;
 }
 
-.glyphicon, .fa
-{
-     padding-right: 5px;
+.glyphicon, .fa {
+    padding-right: 5px;
 }
 
-.glyphicon-thumbs-up, .glyphicon-thumbs-down, .glyphicon-comment
-{
+.glyphicon-thumbs-up, .glyphicon-thumbs-down, .glyphicon-comment {
     cursor: pointer;
     cursor: hand;
-       
     font-family: 'Glyphicons Halflings';
     font-weight: normal;
     font-size: 18px;
 }
 
-#map-canvas
-{
+#map-canvas {
     width: 100%;
     height: 400px;
 }
 
-#mapMarker-canvas
-{
+#mapMarker-canvas {
     width: 100%;
     height: 500px;
 }
 
-[data-toggle='modal'], .glyphicon-bookmark, .glyphicon-print, .reply, #detail a
-{
+[data-toggle='modal'], .glyphicon-bookmark, .glyphicon-print, .reply, #detail a {
     cursor: pointer;
     cursor: hand;
-} 
+}
 
 .firstLetter {
-background-color: #3399FF;
-color: #FFF;
-float: left;
-font-size: 36px;
-margin-right: 10px;
-margin-top: 4px;
-border-radius: 5px;
-box-shadow: 0 0 10px -2px #999999;
-padding-left: 14px;
- padding-right:14px
+    background-color: #3399FF;
+    color: #FFF;
+    float: left;
+    font-size: 36px;
+    margin-right: 10px;
+    margin-top: 4px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -2px #999999;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-   background-color: #dff0d8;
+    background-color: #dff0d8;
 }
 
-.pagination a
-{
+.pagination a {
     cursor: pointer;
     cursor: hand;
 }
@@ -154,9 +140,9 @@ span.stars, span.stars span {
     height: 16px;
 }
 
-span.stars span {
-    background-position: 0 0;
-}
+    span.stars span {
+        background-position: 0 0;
+    }
 
 .input-group-addon label {
     margin-bottom: 0;
@@ -171,145 +157,126 @@ span.caret {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    .text-right
-    {
-        text-align:left;
+    .text-right {
+        text-align: left;
     }
-    
-    .wrapper
-    {
-       padding-left: 5px;
-          
+
+    .wrapper {
+        padding-left: 5px;
     }
-    
-    .text-center-xs
-    {
-        text-align:center;
+
+    .text-center-xs {
+        text-align: center;
     }
-    
-    
-   
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) 
-{
-   
-    .text-right
-    {
-        text-align:left;
-    }
-    
-    .wrapper
-    {
-       padding-left: 5px;
-          
-    }
-    
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
 
+    .text-right {
+        text-align: left;
+    }
+
+    .wrapper {
+        padding-left: 5px;
+    }
 }
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-    label, .text-right
-    {
-        text-align:left;
+    label, .text-right {
+        text-align: left;
     }
-    
-    .wrapper
-    {
-       padding-left: 5px;
-          
+
+    .wrapper {
+        padding-left: 5px;
     }
 }
 
 
 @media print {
-    .hiddenPrint
-    {
-        display:none;
+    .hiddenPrint {
+        display: none;
     }
 }
 
 
 
- .tree {
-        min-height: 20px;
-        padding: 19px;
-        margin-bottom: 20px;
-        background-color: #fbfbfb;
-        border: 1px solid #999;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+.tree {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #fbfbfb;
+    border: 1px solid #999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+    .tree li {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 5px 0 5px;
+        position: relative;
     }
 
-        .tree li {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px 5px 0 5px;
-            position: relative;
+        .tree li::before, .tree li::after {
+            content: '';
+            left: -20px;
+            position: absolute;
+            right: auto;
         }
 
-            .tree li::before, .tree li::after {
-                content: '';
-                left: -20px;
-                position: absolute;
-                right: auto;
-            }
+        .tree li::before {
+            border-left: 1px solid #999;
+            bottom: 50px;
+            height: 100%;
+            top: 0;
+            width: 1px;
+        }
 
-            .tree li::before {
-                border-left: 1px solid #999;
-                bottom: 50px;
-                height: 100%;
-                top: 0;
-                width: 1px;
-            }
+        .tree li::after {
+            border-top: 1px solid #999;
+            height: 20px;
+            top: 25px;
+            width: 25px;
+        }
 
-            .tree li::after {
-                border-top: 1px solid #999;
-                height: 20px;
-                top: 25px;
-                width: 25px;
-            }
-
-            .tree li span {
-                /*
+        .tree li span {
+            /*
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border:1px solid #999;
     border-radius:5px;
     */
-                display: inline-block;
-                padding: 3px 8px;
-                text-decoration: none;
-            }
-
-            .tree li.parent_li > span {
-                cursor: pointer;
-            }
-
-        .tree > ul > li::before, .tree > ul > li::after {
-            border: 0;
+            display: inline-block;
+            padding: 3px 8px;
+            text-decoration: none;
         }
 
-        .tree li:last-child::before {
-            height: 30px;
+        .tree li.parent_li > span {
+            cursor: pointer;
         }
 
-        .tree li.parent_li > span:hover, .tree li.parent_li > span:hover + ul li span {
-            background: #eee;
-            /*border:1px solid #94a0b4; */
-            color: #000;
-        }
-
-    .parentIcon {
-        margin-left: 2px;
-        color: Green;
-        font-size: 1.5em;
+    .tree > ul > li::before, .tree > ul > li::after {
+        border: 0;
     }
 
+    .tree li:last-child::before {
+        height: 30px;
+    }
 
+    .tree li.parent_li > span:hover, .tree li.parent_li > span:hover + ul li span {
+        background: #eee;
+        /*border:1px solid #94a0b4; */
+        color: #000;
+    }
+
+.parentIcon {
+    margin-left: 2px;
+    color: Green;
+    font-size: 1.5em;
+}
