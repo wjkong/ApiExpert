@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Kong.ApiExpert.Core.Controllers
 {
@@ -23,6 +22,11 @@ namespace Kong.ApiExpert.Core.Controllers
             HttpContext.Session["culture"] = language;
 
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Contact()
+        {
+            return View("Contact");
         }
     }
 }

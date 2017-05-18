@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        internal static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         internal static string Home {
@@ -84,6 +93,15 @@ namespace Resources {
         internal static string SiteMap {
             get {
                 return ResourceManager.GetString("SiteMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tool.
+        /// </summary>
+        internal static string Tool {
+            get {
+                return ResourceManager.GetString("Tool", resourceCulture);
             }
         }
     }

@@ -292,11 +292,11 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_ModalWindow.cshtml" />
     <Content Include="Views\Home\SiteMap.cshtml" />
-    <Content Include="Views\Tool\mortgage-calculator.cshtml" />
+    <Content Include="Views\Tool\MortgageCalculator.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -162,6 +162,9 @@ span.stars span {
     margin-bottom: 0;
 }
 
+span.caret {
+    margin-left: 5px;
+}
 /*==========  Non-Mobile First Method  ==========*/
 
 

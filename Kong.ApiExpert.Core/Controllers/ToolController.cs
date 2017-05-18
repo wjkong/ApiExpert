@@ -13,7 +13,7 @@ namespace Kong.ApiExpert.Core.Controllers
         // GET: Tool
         public ActionResult MortgageCalculator()
         {
-            return View("mortgage-calculator");
+            return View("MortgageCalculator");
         }
     }
 }
