@@ -28,5 +28,16 @@ namespace Kong.ApiExpert.Core.Controllers
         {
             return View("Contact");
         }
+
+        public ActionResult Login()
+        {
+            return View("Login");
+        }
+
+        [HttpPost]
+        public ActionResult LoginUser()
+        {
+            return View("Login");
+        }
     }
 }

@@ -147,6 +147,9 @@
   <data name="InterestRate" xml:space="preserve">
     <value>Interest Rate</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="Monthly" xml:space="preserve">
     <value>Monthly</value>
   </data>

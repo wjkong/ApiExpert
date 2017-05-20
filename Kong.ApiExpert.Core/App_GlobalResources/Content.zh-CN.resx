@@ -147,6 +147,9 @@
   <data name="InterestRate" xml:space="preserve">
     <value>利率</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>登陆</value>
+  </data>
   <data name="Monthly" xml:space="preserve">
     <value>每月还款</value>
   </data>

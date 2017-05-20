@@ -33,16 +33,22 @@
                 <li>
                     @if (System.Web.HttpContext.Current.Session["culture"] != null && System.Web.HttpContext.Current.Session["culture"].ToString() == "zh-CN")
                     {
-                        <a href="@Url.Action("SetLanguage", "Home", new {@language = "en-CA"})">English</a>
+                        <a href="@Url.Action("SetLanguage", "Home", new {language = "en-CA"})">English</a>
                     }
                     else
                     {
-                        <a href="@Url.Action("SetLanguage", "Home", new {@language = "zh-CN"})">中文</a>
+                        <a href="@Url.Action("SetLanguage", "Home", new {language = "zh-CN"})">中文</a>
                     }
                    
                 
+
+
                     @*<asp:HyperLink ID="hypLogOut" NavigateUrl="~/logout.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>
                     <asp:HyperLink ID="hypLogin" NavigateUrl="login" runat=server><span class="glyphicon glyphicon-log-in"></span>Login</asp:HyperLink>*@
+                </li>
+                <li>
+                    @*<asp:HyperLink ID="hypLogOut" NavigateUrl="~/logout.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>*@
+                    <a id="hypLogin" href="@Url.Action("Login", "Home")"><span class="glyphicon glyphicon-log-in"></span>@Resources.Content.Login</a>
                 </li>
             </ul>
         </div>

@@ -32,6 +32,8 @@ namespace Kong.ApiExpert.Core
                 .Include("~/Scripts/autoNumeric/autoNumeric.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/AskQuestion").Include("~/Scripts/app/askquestion.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/Login").Include("~/Scripts/app/login.js"));
         }
     }
 }
