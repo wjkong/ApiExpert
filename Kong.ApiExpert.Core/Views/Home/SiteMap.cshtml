@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+
+<div class="tree">
+    <ul>
+        <li>
+            <span class="glyphicon glyphicon-home parentIcon"></span><a href="home"><span><i class="icon-folder-open"></i>Home</span></a>
+            <ul>
+                <li>
+                    <span class="glyphicon glyphicon-th parentIcon"></span><span><i class="icon-minus-sign"></i>Application</span>
+                    <ul>
+                        <li>
+                            <a href="place-finder-google"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Place Finder</span></a>
+                        </li>
+                        <li>
+                            <a href="job-search-indeed"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-search"></span>Job Search</span></a>
+                        </li>
+                        <li>
+                            <a href="ask-question-stackoverflow"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-question-sign"></span>Question Search</span></a>
+                        </li>
+
+                        <li>
+                            <a href="app/local-business-search.aspx"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-shopping-cart"></span>Local Business Search</span></a>
+                        </li>
+                        <li>
+                            <a href="photo-gallery-flickr"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-picture"></span>Photo Gallery</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-wrench parentIcon"></span><span><i class="icon-minus-sign"></i>Tool</span>
+                    <ul>
+                        <li>
+                            <a href="mortgage-calculator"><span><i class="icon-leaf"></i><i class='fa fa-calculator'></i>Mortgage Calculator</span></a>
+                        </li>
+                        <li>
+                            <a href="currency-converter-yahoo"><span><i class="icon-leaf"></i><i class='fa fa-exchange'></i>Currency Converter</span></a>
+                        </li>
+                        <li>
+                            <a href="language-translator-mymemory"><span><i class="icon-leaf"></i><i class='fa fa-language'></i>Language Translator</span></a>
+                        </li>
+
+                        <li>
+                            <a href="world-weather-forecast-worldweatheronline"><span><i class="icon-leaf"></i><i class="fa fa-sun-o" aria-hidden="true"></i>Weather Forecast</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="blog"><span><i class="icon-leaf"></i><span class="glyphicon glyphicon-list-alt"></span>Documentaton</span></a>
+                </li>
+                <li>
+                    <a href="site-map"><span><i class="icon-minus-sign"></i><i class='fa fa-sitemap'></i>Site Map</span></a>
+                </li>
+                <li>
+                    <a href="mailto:wjkonger@gmail.com"><span><i class="icon-minus-sign"></i><span class="glyphicon glyphicon-envelope"></span>Contact</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<input type=hidden id=hidActiveMenu value="hypSiteMap" />
+@Scripts.Render("~/Scripts/App/SiteMap");
+

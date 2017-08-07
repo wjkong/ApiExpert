@@ -36,12 +36,13 @@ namespace Kong.ApiExpert.Web.Service
 
                 var listOfComment = commentMgr.GetByUrl(feedback);
 
-                var _jsonWriter = new JsonSerializer
+                var setting = new JsonSerializerSettings
                 {
-                    NullValueHandling = NullValueHandling.Ignore
+                    NullValueHandling = NullValueHandling.Ignore,
+                    DefaultValueHandling = DefaultValueHandling.Ignore,
                 };
 
-                result = JsonConvert.SerializeObject(listOfComment, new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                result = JsonConvert.SerializeObject(listOfComment, Formatting.None, setting);
 
                 return result;
             }

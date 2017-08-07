@@ -1,0 +1,57 @@
+﻿<header>
+    <nav role="navigation" class="navbar navbar-default" style="padding-right:10px; padding-left:15px">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <asp:HyperLink ID="HyperLink1" class="navbar-brand" NavigateUrl="home" runat=server><span style="font-family:Script MT Bold">&nbsp;&nbsp;Api Expert&nbsp;&nbsp;</span></asp:HyperLink>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a id="hypHome" href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-home"></span>@Resources.Content.Home</a></li>
+                <li class="dropdown">
+                    <a id="hypTool" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>@Resources.Content.Tool<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("MortgageCalculator", "Tool")"><i class='fa fa-calculator'></i>@Resources.Content.MortgageCalculator</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="hypApp" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>@Resources.Content.Application<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("AskStackOverFlow", "ApiApp")"><i class='fa fa-calculator'></i>@Resources.Content.AskStackOverFlow</a></li>
+                    </ul>
+                </li>
+                <li><a id="hypSiteMap" href="@Url.Action("SiteMap", "Home")"><i class='fa fa-sitemap'></i>@Resources.Content.SiteMap</a></li>
+                <li><a id="hypContact" href="@Url.Action("Contact", "Home")"><span class="glyphicon glyphicon-envelope"></span>@Resources.Content.Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @if (System.Web.HttpContext.Current.Session["culture"] != null && System.Web.HttpContext.Current.Session["culture"].ToString() == "zh-CN")
+                    {
+                        <a href="@Url.Action("SetLanguage", "Home", new {language = "en-CA"})">English</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("SetLanguage", "Home", new {language = "zh-CN"})">中文</a>
+                    }
+                   
+                
+
+
+                    @*<asp:HyperLink ID="hypLogOut" NavigateUrl="~/logout.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>
+                    <asp:HyperLink ID="hypLogin" NavigateUrl="login" runat=server><span class="glyphicon glyphicon-log-in"></span>Login</asp:HyperLink>*@
+                </li>
+                <li>
+                    @*<asp:HyperLink ID="hypLogOut" NavigateUrl="~/logout.aspx" runat=server><span class="glyphicon glyphicon-log-out"></span>Logout</asp:HyperLink>*@
+                    <a id="hypLogin" href="@Url.Action("Login", "Home")"><span class="glyphicon glyphicon-log-in"></span>@Resources.Content.Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+

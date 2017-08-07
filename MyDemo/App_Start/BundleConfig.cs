@@ -18,6 +18,7 @@ namespace Kong.ApiExpert.Web
                      "~/Scripts/jquery-ui-{version}.js",
                      "~/Scripts/bootstrap.js",
                      "~/Scripts/respond.js",
+                     "~/Scripts/modernizr-*",
                      "~/Scripts/App/config.js",
                      "~/Scripts/App/site.js",
                      "~/Scripts/autosize.js"));
